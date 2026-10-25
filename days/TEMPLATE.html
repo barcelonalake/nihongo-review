@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日課堂範本（YYYY-MM-DD）</title>
+<meta name="description" content="每日課堂頁面範本：複製這個檔案，改名成 days/YYYY-MM-DD.html。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%87%AF%F0%9F%87%B5%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main>
+<h1>YYYY/MM/DD 每日課堂（範本）</h1>
+<p class="lead">一句話重點寫在這裡。這是範本頁：複製後改名成 <code>days/YYYY-MM-DD.html</code>，再到 <code>assets/common.js</code> 的 DAYS 加一行。</p>
+<div class="toc"></div>
+
+<section>
+<h2 id="kana" data-short="今天的假名">今天的假名</h2>
+<div class="vocab">
+がっこう | 学校 | gakkou | 學校 | っ 停一拍
+</div>
+</section>
+
+<section>
+<h2 id="pattern" data-short="今天的句型">今天的句型</h2>
+<div class="rows">
+私は学生です。 | watashi wa gakusei desu. | 我是學生。
+</div>
+</section>
+
+<section>
+<h2 id="dialog" data-short="課本對話">課本對話</h2>
+<div class="rows dlg">
+これはいくらですか。 | kore wa ikura desuka. | 這個多少錢？ | sp=A
+300円です。 | sanbyakuen desu. | 300 日圓。 | sp=B;say=さんびゃくえんです。
+</div>
+</section>
+
+<section>
+<h2 id="games" data-short="小遊戲">小遊戲</h2>
+<div id="g1"></div>
+</section>
+
+<section>
+<h2 id="end" data-short="重點＆複習">今天的重點・作業・15 分鐘</h2>
+<div class="wrap3">
+<div class="box"><h3>📌 今天的重點</h3><ul><li>…</li></ul></div>
+<div class="box"><h3>⏰ 作業和明天的小考</h3><ul><li>…</li></ul></div>
+<div class="box method"><h3>⏱ 15 分鐘複習法</h3><ol><li>0–5 分：…</li><li>5–10 分：…</li><li>10–15 分：…</li></ol></div>
+</div>
+</section>
+
+<script>
+window.pageInit = function () {
+  G.mcq('#g1', '① 範例選擇題', '說明文字', [
+    { q: '題目', o: ['正解', '錯的', '錯的'], a: '正解', ex: '解說' }
+  ]);
+};
+</script>
+</main>
+<script src="../assets/common.js"></script>
+</body>
+</html>
