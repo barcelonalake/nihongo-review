@@ -21,6 +21,7 @@
      例：{ date: '2026-10-27', title: '第5課 …', desc: '一句話重點' }
      檔案放在 days/2026-10-27.html */
   var DAYS = [
+    { date: '2026-10-27', title: '漢字開課＋第5課 週末', desc: 'ました／ませんでした、どこかへ・どこへも、〔人〕と、それから；漢字 川・山・田・日' }
   ];
   window.SITE = { PAGES: PAGES, DAYS: DAYS, BASE: BASE };
 
