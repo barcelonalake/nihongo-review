@@ -139,3 +139,10 @@ summary{cursor:pointer;font-weight:600}
 footer.f{max-width:880px;margin:0 auto;padding:16px;color:var(--mute);font-size:.82rem}
 @media (max-width:420px){h1{font-size:1.4rem}.row .ja{font-size:1.05rem}.kana td{font-size:1.25rem}table.t{font-size:.86rem}}
 table.t th small{display:block;font-weight:400;color:var(--mute);font-size:.72rem;line-height:1.2}
+
+/* comic review blocks */
+.comic{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0}
+.comic img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);margin:6px 0 10px}
+.comic .cap{font-weight:700;margin:0 0 4px}
+.comic .life{background:var(--soft);border-radius:8px;padding:6px 10px;margin:8px 0 0;font-size:.9rem;color:#7a5a00}
+.comic .life b{color:#8a5a00}
