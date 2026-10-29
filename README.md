@@ -1,6 +1,6 @@
 # 日語複習網站（できる日本語 初級）
 
-初級日語的複習網站：五十音＋第1–5課（2026/10/08–10/28）。
+初級日語的複習網站：五十音＋第1–5課（2026/10/08–10/29）。
 純靜態 HTML／CSS／JS，沒有 build 步驟，用 GitHub Pages 直接發布。唯一的外部資源是 Google Fonts（Noto Sans JP／Noto Sans TC）。
 
 ## 功能
@@ -24,8 +24,8 @@ ichinichi.html    10/20 私の1日：〜ます、助詞、どこへも／何も
 lesson4.html      第4課 私の国・町：方位、どのくらい、形容詞、否定、あります、に／で、發表
 review.html       總複習：助詞總表、最常錯的 12 句、自測 12 題
 exam.html         總考試：20 題
-notes/            每日課堂整理（Markdown，notes/YYYY-MM-DD.md）；目前有 2026-10-27、2026-10-28
-days/             每日課堂頁面（days/YYYY-MM-DD.html），TEMPLATE.html 是範本；目前有 2026-10-27、2026-10-28
+notes/            每日課堂整理（Markdown，notes/YYYY-MM-DD.md）；目前有 2026-10-27、2026-10-28、2026-10-29
+days/             每日課堂頁面（days/YYYY-MM-DD.html），TEMPLATE.html 是範本；目前有 2026-10-27、2026-10-28、2026-10-29
 assets/style.css  共用樣式（淺色背景、手機 16px 邊距、不橫向捲動）
 assets/common.js  共用 JS：say()、複製、拼音開關、跟讀模式、導覽列、小遊戲 G.*
 ```
