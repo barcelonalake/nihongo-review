@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>概念解剖：授受（あげます・もらいます・くれます）｜11/16 ljg-learn 複習頁＋Kahoot</title>
+<meta name="description" content="用 ljg-learn 概念解剖法（定錨→八刀→內觀→壓縮）重新整理 2026/11/16 課堂：あげます・もらいます・くれます、送ります・借ります・教えます，加上漢字 何・時・生・先・今、もうすぐ、よかったですね、11/20 結核檢診。頁內直接玩 Kahoot 20 題。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%94%AA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700;800&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ljg-learn：紙本筆記風（淺色背景） */
+.fm{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f6f4ee;border:1px dashed #cfc8b6;border-radius:10px;padding:10px 14px;font-size:.88rem;color:#5b6370;margin:14px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.hero{border-left:6px solid #1f2328;padding:6px 0 6px 14px;margin:14px 0}
+.hero h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.75rem;line-height:1.3;margin:0 0 6px}
+.hero p{margin:0;color:#5b6370}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.steps a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none;color:var(--ink);font-weight:700;font-size:.92rem}
+.steps a.kh{background:#46178f;color:#fff;border-color:#46178f}
+h2.part{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.5rem;border-bottom:3px solid #1f2328;padding-bottom:4px;margin-top:34px}
+h2.part small{font-family:"Noto Sans TC",sans-serif;font-weight:400;font-size:.85rem;color:var(--mute);margin-left:8px}
+.knife{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px 8px;margin:14px 0;position:relative}
+.knife h3{margin:0 0 6px;font-size:1.12rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.knife h3 .no{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#1f2328;color:#fff;font-size:.9rem;font-weight:800;flex:none}
+.knife h3 .en{font-weight:400;color:var(--mute);font-size:.85rem}
+.knife p{margin:.35em 0}
+.arrow{color:#c0392b;font-weight:800}
+.mis{background:#fdecea;border-left:4px solid #c0392b;border-radius:8px;padding:8px 12px;margin:8px 0}
+.good{background:#e6f6ea;border-left:4px solid #1a7f37;border-radius:8px;padding:8px 12px;margin:8px 0}
+.gl{background:#eef6ff;border-radius:8px;padding:6px 10px;margin:6px 0;font-size:.92rem;color:#334155}
+.morph{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0}
+.morph div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.morph b.k{font-size:1.4rem;font-family:"Noto Sans JP",sans-serif}
+.morph .ro{color:var(--ro)}
+.inner{background:#fffaf0;border:2px solid #e0a100;border-radius:14px;padding:12px 16px;margin:12px 0}
+.inner p{margin:.4em 0}
+.formula{font-family:ui-monospace,Menlo,Consolas,monospace;background:#1f2328;color:#fff;border-radius:12px;padding:14px 16px;font-size:1rem;line-height:1.6;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.one{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.35rem;line-height:1.5;text-align:center;background:#fff;border:2px solid #1f2328;border-radius:14px;padding:16px 14px;margin:12px 0}
+.ascii{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f6f4ee;border:1px solid #cfc8b6;border-radius:12px;padding:12px;font-size:.82rem;line-height:1.35;overflow-x:auto;white-space:pre;margin:10px 0}
+.compare{width:100%;border-collapse:collapse;margin:8px 0;font-size:.93rem}
+.compare th,.compare td{border:1px solid #d8dee8;padding:6px 8px;text-align:left;vertical-align:top}
+.compare th{background:#f4f7fb}
+.tblwrap{overflow-x:auto}
+.notice{background:#fff4f4;border:2px solid #e74c3c;border-radius:14px;padding:12px 16px;margin:10px 0}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0}
+.links a{display:block;background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.links a b{display:block;font-size:1.08rem}
+.links a span{display:block;color:var(--mute);font-size:.9rem}
+.links a.m{border-color:#c0392b}.links a.h{border-color:#1368ce}.links a.d{border-color:#5b6370}
+/* Kahoot（頁內） */
+#kahoot-sec{background:#f3effa;border-radius:18px;padding:6px 12px 14px;margin-top:30px}
+.kh-hero{background:linear-gradient(135deg,#46178f,#7b3fe4);color:#fff;border-radius:16px;padding:16px;margin:12px 0}
+.kh-hero h3{margin:0 0 6px;font-size:1.4rem}
+.kh-hero p{margin:0 0 4px}
+.kh-stats{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin:8px 0 12px}
+.kh-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.92rem;font-weight:700}
+.kh-chip .n{color:#46178f}
+.kh-timer{height:10px;background:#e2dcef;border-radius:999px;overflow:hidden;margin:0 0 14px}
+.kh-timer i{display:block;height:100%;width:100%;background:#1a7f37;transition:width .1s linear,background .2s}
+.kh-timer.warn i{background:#e0a100}.kh-timer.hot i{background:#c0392b}
+.kh-q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 14px;margin:0 0 14px;min-height:88px}
+.kh-q .tag{font-size:.78rem;color:var(--mute);margin:0 0 6px}
+.kh-q .qt{font-size:1.25rem;line-height:1.45;font-weight:700}
+.kh-play{display:inline-flex;align-items:center;gap:6px;margin-top:10px;border:none;background:#1f6feb;color:#fff;border-radius:999px;padding:8px 14px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.kh-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kh-opt{position:relative;border:none;color:#fff;border-radius:14px;padding:18px 12px 18px 46px;min-height:84px;font-size:1.08rem;font-weight:700;line-height:1.35;text-align:left;cursor:pointer;font-family:"Noto Sans JP","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+.kh-opt .shape{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1.35rem;line-height:1}
+.kh-opt.red{background:#e21b3c}.kh-opt.blue{background:#1368ce}.kh-opt.yellow{background:#c88800}.kh-opt.green{background:#26890c}
+.kh-opt:disabled{cursor:default}
+.kh-opt.pick-bad{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #7a1010;filter:brightness(.85)}
+.kh-opt.pick-ok{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #0b4a04}
+.kh-opt.dim{opacity:.45}
+.kh-fb{margin:14px 0 0;padding:12px 14px;border-radius:14px;background:#fff;border:2px solid var(--line)}
+.kh-fb.ok{border-color:var(--ok);background:#e6f6ea}.kh-fb.bad{border-color:var(--bad);background:#fdecea}
+.kh-fb .result{font-size:1.15rem;font-weight:800;margin:0 0 6px}
+.kh-fb .pts{font-weight:700;color:#8a5a00;margin:0 0 8px}
+.kh-ex{font-size:.97rem}.kh-ex p{margin:.3em 0}.kh-ex .en{color:#334155;font-size:.92rem}.kh-ex .ro{color:var(--ro)}
+.kh-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.kh-btn{border:none;background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block}
+.kh-btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.kh-btn.hot{background:#46178f}
+.kh-end{text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 14px;margin:12px 0}
+.kh-end .score{font-size:3rem;font-weight:800;line-height:1.1;color:#46178f}
+.kh-end .rank{display:inline-block;margin:8px 0 12px;background:#fff6e5;border-radius:999px;padding:4px 14px;font-weight:800}
+.kh-podium{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:16px auto;max-width:420px}
+.kh-podium .p{flex:1;border-radius:12px 12px 0 0;padding:10px 6px;color:#fff;font-weight:800}
+.kh-podium .p b{display:block;font-size:1.4rem}.kh-podium .p span{display:block;font-size:.78rem;opacity:.9}
+.kh-podium .p1{background:#c88800;min-height:110px;order:2}.kh-podium .p2{background:#5b6370;min-height:86px;order:1}.kh-podium .p3{background:#8a5a2b;min-height:70px;order:3}
+.kh-board{width:100%;border-collapse:collapse;margin:12px 0;text-align:left}
+.kh-board th,.kh-board td{border-bottom:1px solid var(--line);padding:8px 6px;font-size:.92rem}
+.kh-board tr.me{background:#fff6e5;font-weight:700}
+.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;text-align:left}
+@media (max-width:420px){.hero h1{font-size:1.45rem}.kh-q .qt{font-size:1.08rem}.kh-opt{min-height:74px;padding:14px 10px 14px 40px;font-size:1rem}.kh-end .score{font-size:2.4rem}.one{font-size:1.15rem}}
+</style>
+</head>
+<body>
+<main>
+<p class="lead" style="margin-top:14px"><a href="2026-11-16.html">← 11/16 原本的課堂頁</a>　·　<a href="2026-11-16-manga.html">📖 漫畫</a>　·　<a href="2026-11-16-hotseat.html">🪑 Hot Seat</a></p>
+
+<div class="fm">---
+title: 概念解剖：授受（あげます・もらいます・くれます）
+tags: concept
+date: 2026-11-16
+method: ljg-learn（定錨 → 八刀 → 內觀 → 壓縮）
+---</div>
+
+<div class="hero">
+<h1>🔪 概念解剖：授受<br><span lang="ja">あげます・もらいます・くれます</span></h1>
+<p>同一個「給東西」的動作，日語要先問一句：<b>箭頭朝哪裡？我站在哪裡？</b>這頁用 ljg-learn 的方法把它切八刀，最後壓成一句話。看完直接在頁面最下面玩 Kahoot。</p>
+</div>
+
+<div class="notice">
+<b>🏥 先記住：11月20日（金）結核検診</b>　穿 T 恤到校，不要請假。老師有請部分同學確認一張表，<b>請自己確認有沒有東西要交</b>。
+<div class="rows">
+11月20日、金曜日に結核検診があります。 | juuichigatsu hatsuka, kin'youbi ni kekkaku kenshin ga arimasu. | 11 月 20 日星期五有結核檢查（20 日念 はつか）。 | say=じゅういちがつはつか、きんようびにけっかくけんしんがあります。
+Tシャツを着て学校に来てください。 | ti-shatsu o kite gakkou ni kite kudasai. | 請穿 T 恤來學校。 | say=ティーシャツをきてがっこうにきてください。
+休まないでください。 | yasumanaide kudasai. | 請不要缺席。 | say=やすまないでください。
+</div>
+</div>
+
+<div class="steps">
+<a href="#anchor">① 定錨</a><a href="#knives">② 八刀</a><a href="#inner">③ 內觀</a><a href="#compress">④ 壓縮</a><a href="#extra">⑤ 今天其他的</a><a class="kh" href="#kahoot">🎯 Kahoot</a>
+</div>
+<div class="toc"></div>
+
+<!-- ===================== 1. 定錨 ===================== -->
+<section>
+<h2 class="part" id="anchor" data-short="① 定錨">一、定錨<small>最通行的定義・常見誤解・核心詞素</small></h2>
+
+<p><b>最通行的定義：</b>授受表現就是「誰把東西給誰」。日語有三個動詞，差別<b>不在動作，而在視點（從誰的角度說）</b>。</p>
+<div class="tblwrap"><table class="compare">
+<thead><tr><th>動詞</th><th>箭頭</th><th>句型</th><th>中文</th><th>English／ไทย</th></tr></thead>
+<tbody>
+<tr><td lang="ja"><b>あげます</b><br><small>agemasu</small></td><td>我（或別人）→ 別人</td><td lang="ja">A は B <b>に</b> N を あげます</td><td>A 給 B</td><td>A gives B ／ ให้ (A ให้ B)</td></tr>
+<tr><td lang="ja"><b>もらいます</b><br><small>moraimasu</small></td><td>我 ← 別人（我是主語）</td><td lang="ja">A は B <b>に／から</b> N を もらいます</td><td>A 從 B 收到</td><td>A receives from B ／ ได้รับจาก</td></tr>
+<tr><td lang="ja"><b>くれます</b><br><small>kuremasu</small></td><td>別人 → <b>我</b></td><td lang="ja">B が（私に）N を くれます</td><td>B 給我</td><td>B gives (to me) ／ ให้ (ฉัน)</td></tr>
+</tbody></table></div>
+
+<div class="rows">
+私は友だちに本をあげます。 | watashi wa tomodachi ni hon o agemasu. | 我送朋友書。EN: I give my friend a book. TH: ฉันให้หนังสือเพื่อน
+私は友だちに本をもらいました。 | watashi wa tomodachi ni hon o moraimashita. | 我從朋友那裡收到書。EN: I received a book from my friend.
+友だちが私に本をくれました。 | tomodachi ga watashi ni hon o kuremashita. | 朋友送了我書。EN: My friend gave me a book.
+</div>
+
+<p><b>常見誤解（課堂上真的出現過的）：</b></p>
+<div class="mis">✗ 父が時計をくれました。誰に？—「父」　→　✓ <b>私に</b>くれました。<br><small>くれます 的收東西的人永遠是「我」（或我這邊的人）。</small></div>
+<div class="mis">✗ 友だちは私に本を<b>あげました</b>。　→　✓ 友だちが私に本を<b>くれました</b>。<br><small>東西送到「我」這邊，不能用 あげます。</small></div>
+<div class="mis">✗ 私は母にカバンを<b>借ります</b>。　→　✓ 母にカバンを<b>もらいます</b>。<br><small>借ります＝借，要還；もらいます＝收下，不用還。</small></div>
+<div class="mis">✗ <b>そば</b>（蕎麥麵）がくれました　→　✓ <b>そぼ</b>（祖母）がくれました。</div>
+
+<p><b>核心詞素：</b></p>
+<div class="morph">
+<div><b class="k" lang="ja">あげる（上げる）</b><br><span class="ro">ageru</span><br>「往上舉」→ 把東西<b>舉起來遞出去</b>。</div>
+<div><b class="k" lang="ja">もらう（貰う）</b><br><span class="ro">morau</span><br>「收下、領受」→ 主角是<b>收的人</b>。</div>
+<div><b class="k" lang="ja">くれる（呉れる）</b><br><span class="ro">kureru</span><br>「給（到我這邊）」→ 終點固定是<b>我</b>。「呉」只是借來的漢字。</div>
+<div><b class="k" lang="ja">に</b><br><span class="ro">ni</span><br>老師說：「ここが『に』です。『に』が大事です。」に 標出<b>對方</b>（あげます 的收方、もらいます 的給方）。</div>
+</div>
+</section>
+
+<!-- ===================== 2. 八刀 ===================== -->
+<section>
+<h2 class="part" id="knives" data-short="② 八刀">二、八刀<small>八個方向各切一刀，每刀只留筋骨</small></h2>
+
+<div class="knife"><h3><span class="no">1</span>歷史 <span class="en">History</span></h3>
+<p>「あげる」本來是「上げる＝往上舉」，是把東西<b>恭敬地往上遞</b>給地位高的人 <span class="arrow">→</span> 用久了敬意被磨掉，變成普通的「給」<span class="arrow">→</span> 現在要對上位者表示恭敬，就換成更高一級的「差し上げる」。</p>
+<p>「くれる」在古日語裡是從上往下「賞給」的意思，<b>後來方向固定成「朝向說話人」</b>，就是今天的「給我」。</p>
+<div class="rows">
+先生に花をあげます。 | sensei ni hana o agemasu. | 送老師花（日常會話 OK；更有禮貌是 差し上げます）。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">2</span>辯證 <span class="en">Dialectics</span></h3>
+<p><b>正：</b>あげます（我給出去）。<b>反：</b>もらいます（我收進來）。兩個看似相反，<b>其實是同一件事的兩面</b>：</p>
+<div class="rows">
+私は姉にカメラをあげました。 | watashi wa ane ni kamera o agemashita. | 我把相機給了姊姊。
+姉は私にカメラをもらいました。 | ane wa watashi ni kamera o moraimashita. | 姊姊從我這裡收到相機。
+</div>
+<p><b>合（更高一層）：</b>日語不只描述「東西怎麼移動」，還要說「<b>誰是這件事的主角</b>」。而當東西送到「我」這邊，日語特別給了一個字：<b>くれます</b>。所以三個動詞＝一個動作 × 三種站位。</p>
+</div>
+
+<div class="knife"><h3><span class="no">3</span>現象 <span class="en">Phenomenology</span></h3>
+<p>拋開文法，回到生日那天：派對很開心，吃了蛋糕，去唱了卡拉 OK，朋友遞來一張 CD。這時你心裡的感覺是「<b>哇，他送<u>我</u>的</b>」，這個「我」的溫度就是 くれます。</p>
+<div class="rows dlg">
+誕生日パーティーはどうでしたか。 | tanjoubi pa-ti- wa dou deshita ka. | 生日派對怎麼樣？ | sp=A
+とても楽しかったです。友だちがCDをくれました。 | totemo tanoshikatta desu. tomodachi ga shi-di- o kuremashita. | 非常開心，朋友送了我 CD。 | sp=B;say=とてもたのしかったです。ともだちがシーディーをくれました。
+そうですか。よかったですね。 | sou desu ka. yokatta desu ne. | 這樣啊，太好了呢。 | sp=A
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">4</span>語言 <span class="en">Linguistics</span></h3>
+<p><b>拆字源：</b>上げる＝raise（往上）／貰う＝receive（收下）／呉れる＝「呉」是借字，意思還是「給」。中文的「授受」也一樣：授＝給出去，受＝接進來。</p>
+<p><b>語義網（相鄰概念）：</b></p>
+<div class="ascii">            [借ります kariru: 借，要還]
+                     |
+ [送ります okuru] -- (授受) -- [教えます oshieru]
+   寄、送出去        /    \      教（把知識「給」人）
+                 あげます  もらいます
+                     \    /
+                    くれます (-> 私)</div>
+<div class="rows">
+母にカードを送ります。 | haha ni ka-do o okurimasu. | 寄卡片給媽媽。EN: I send my mom a card.
+友だちにお金を借りました。 | tomodachi ni okane o karimashita. | 跟朋友借了錢（要還）。EN: I borrowed money from a friend.
+先生が日本語を教えます。 | sensei ga nihongo o oshiemasu. | 老師教日語。EN: The teacher teaches Japanese.
+</div>
+<p><b>隱喻：</b>授受動詞把人際關係想成<b>一條有方向的路</b>，東西在路上「上去」或「過來」。</p>
+</div>
+
+<div class="knife"><h3><span class="no">5</span>形式 <span class="en">Formalization</span></h3>
+<div class="formula">give(X → Y, N)
+  if Y == 私 :  X が（私に）N を くれます
+  else       :  X は Y に N を あげます
+  receive    :  Y は X に／から N を もらいます</div>
+<p><b>公式在哪裡失效？</b></p>
+<p>① 「我給我自己」沒有意義。② 「私は友だちにくれます」✗，因為 くれます 的終點只能是我這邊。③ 借ります 看起來也是「從 X 拿到 N」，但東西<b>要還</b>，不是授受。④ 家人（我這邊的人）收到時也能用 くれます：友だちが<b>妹に</b>本をくれました。</p>
+<div class="gl">EN: The formula breaks when the receiver is "me" (must switch to くれます) or when the object must be returned (借ります). TH: ถ้าผู้รับคือ "ฉัน" ต้องใช้ くれます</div>
+</div>
+
+<div class="knife"><h3><span class="no">6</span>存在 <span class="en">Existential</span></h3>
+<p>用了 くれます，你每天說話時都會順便<b>記下「別人為我做了什麼」</b>。在日本生活，這就是感謝的習慣：先說「謝謝」，再說是誰給的。</p>
+<div class="rows">
+そのカバン、いいですね。 | sono kaban, ii desu ne. | 那個包包真好看。
+ありがとうございます。母にもらいました。 | arigatou gozaimasu. haha ni moraimashita. | 謝謝，是媽媽給我的。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">7</span>美感 <span class="en">Aesthetics</span></h3>
+<p>想像一個畫面：<b>祖母寄來的一封手寫信，穿過整個城市，落在你手上</b>。くれます 美在「終點是我」，あげます 美在「我把心意舉起來遞出去」。</p>
+<div class="rows">
+祖母が手紙をくれました。 | sobo ga tegami o kuremashita. | 奶奶寄了信給我。
+もうすぐクリスマスです。家族にプレゼントを送ります。 | mousugu kurisumasu desu. kazoku ni purezento o okurimasu. | 快聖誕節了，我要寄禮物給家人。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">8</span>元反思 <span class="en">Meta</span></h3>
+<p><b>我們用什麼隱喻理解它？</b>「箭頭」：東西從 A 飛到 B。</p>
+<p><b>這個隱喻擋住了什麼？</b>箭頭只畫出東西怎麼走，<b>看不到「我站在哪裡」</b>。所以學生常把「父が時計をくれました」的收方答成「父」。</p>
+<p><b>換一個隱喻：「攝影機」。</b>あげます＝鏡頭跟著送的人；もらいます＝鏡頭跟著收的人；くれます＝鏡頭裝在<b>我的眼睛</b>上，看著東西朝我過來。換成攝影機，選哪個動詞就很直覺。</p>
+</div>
+</section>
+
+<!-- ===================== 3. 內觀 ===================== -->
+<section>
+<h2 class="part" id="inner" data-short="③ 內觀">三、內觀<small>變成這個概念本身</small></h2>
+<div class="inner">
+<p>我是「くれます」。我只認得一個終點：<b>你</b>。</p>
+<p>不管東西從誰的手上出發，母親、祖母、老師、朋友，只要它朝你過來，就要用我來說。</p>
+<p>「あげます」是我的影子，它往外走；「もらいます」是我的鏡子，它站在你身上往回看。</p>
+<p>我讓你每說一次話，就記得一次：<b>有人對你好</b>。</p>
+</div>
+<p><b>哪幾刀指向同一個深層結構？</b>辯證、元反思、存在三刀都指向同一件事：<b>日語的授受動詞編碼的不是「物」的移動，而是「我」的位置（視點）</b>。あげます／くれます 是同一個動作，只是我站在不同邊。</p>
+</section>
+
+<!-- ===================== 4. 壓縮 ===================== -->
+<section>
+<h2 class="part" id="compress" data-short="④ 壓縮">四、壓縮<small>公式・一句話・結構圖</small></h2>
+<div class="formula">授受 = 東西的移動 × 我站在哪一邊
+     = あげます（我這邊 → 外面）
+     + もらいます（主角在收的那一端，に／から = 給的人）
+     + くれます（外面 → 我這邊）</div>
+<div class="one">東西往外走用 あげます，<br>朝我來用 くれます，<br>我當主角收下用 もらいます。</div>
+<div class="gl">EN: Out = agemasu, toward me = kuremasu, I receive = moraimasu.　TH: ให้ออกไป = あげます ／ มาหาฉัน = くれます ／ ฉันได้รับ = もらいます</div>
+<div class="ascii">  [ 別人 B ] --- くれます ---> [ 私 ]
+        B が（私に）N を くれます
+
+  [ 私 ] --- あげます ---> [ 別人 C ]
+        私は C に N を あげます
+
+  [ 私 ] <=== もらいます === [ 別人 B ]
+        私は B に／から N を もらいます
+
+  借ります : 拿到，但要還  !=  もらいます
+  送ります : 寄出去
+  教えます : 把知識「給」人</div>
+<p><b>記憶法：</b>粵語 くれ 想成「畀我」（一定送到我手上）；普通話 あげ ≈「啊，給！」；English: <b>a</b>ge = <b>a</b>way, <b>k</b>ure → (<b>c</b>ome) to me；ไทย：くれ ≈ ให้ฉัน。</p>
+</section>
+<!-- ===================== 5. 今天其他的 ===================== -->
+<section>
+<h2 class="part" id="extra" data-short="⑤ 漢字・單字">五、今天的其他重點<small>漢字・もうすぐ・よかったですね</small></h2>
+<p><b>漢字（何・時・生・先・今）：</b>點卡片可以聽讀音。</p>
+<div class="cards">
+何 | なに／なん | nani / nan | 何ですか　什麼
+時 | じ／とき | ji / toki | 時間 じかん・時々 ときどき | hl
+生 | せい／う(まれる) | sei / u(mareru) | 生活 せいかつ・生まれました
+先 | せん／さき | sen / saki | 先生・先月・お先に
+今 | いま／こん | ima / kon | 今月 こんげつ・今日＝きょう（特別讀法） | hl
+</div>
+<div class="rows">
+時々レストランで晩ごはんを食べます。 | tokidoki resutoran de bangohan o tabemasu. | 有時候在餐廳吃晚餐。（々＝重複上一個字，と→ど 連濁）
+先月、新しい生活が始まりました。 | sengetsu, atarashii seikatsu ga hajimarimashita. | 上個月開始了新生活。
+8月8日に生まれました。 | hachigatsu youka ni umaremashita. | 8 月 8 日出生。 | say=はちがつようかにうまれました。
+お先にどうぞ。 | osaki ni douzo. | 您先請。
+もうすぐ電車が来ます。 | mousugu densha ga kimasu. | 電車快來了。EN: soon. TH: อีกไม่นาน
+テストは100点でした。—よかったですね。 | tesuto wa hyakuten deshita. — yokatta desu ne. | 考試 100 分。—太好了呢。 | say=テストはひゃくてんでした。よかったですね。
+</div>
+<div class="tip"><b>易混：</b>すぐ＝立刻（動作）；もうすぐ＝快到了（時間）。粵語「就快喇」＝もうすぐ。</div>
+
+<h3>本課單字（點一下聽）</h3>
+<div class="vocab">
+あげます | あげます | agemasu | 給（別人） | 英 away：送出去
+もらいます | もらいます | moraimasu | 收到 | 我是主角
+くれます | くれます | kuremasu | （別人）給我 | 粵「畀我」
+おくります | 送ります | okurimasu | 寄、送 | 
+かります | 借ります | karimasu | 借（要還） | 借＝かり，還要還
+おしえます | 教えます | oshiemasu | 教 | 
+そぼ | 祖母 | sobo | 祖母、奶奶 | 不是 そば 蕎麥麵
+てがみ | 手紙 | tegami | 信 | 不是衛生紙！
+くつした | 靴下 | kutsushita | 襪子 | 鞋子的下面
+ネックレス | ネックレス | nekkuresu | 項鍊 | necklace
+けっこんしき | 結婚式 | kekkonshiki | 婚禮 | 
+バレンタインデー | バレンタインデー | barentainde- | 情人節 | Valentine's Day
+</div>
+</section>
+
+<!-- ===================== Kahoot ===================== -->
+<section id="kahoot-sec">
+<h2 class="part" id="kahoot" data-short="🎯 Kahoot">🎯 Kahoot 20 題<small>四色選項・20 秒・速度計分・連對加分</small></h2>
+<div id="khApp"></div>
+</section>
+
+<section>
+<h2 class="part" id="more" data-short="更多">更多玩法</h2>
+<div class="links">
+<a class="m" href="2026-11-16-manga.html"><b>📖 12 頁漫畫</b><span>ハルト × ミキ先生的授受故事</span></a>
+<a class="h" href="2026-11-16-hotseat.html"><b>🪑 Hot Seat 熱座</b><span>20 張卡片，和朋友一起玩</span></a>
+<a class="d" href="2026-11-16.html"><b>📒 原本的課堂頁</b><span>8 個小遊戲＋20 題總考試（三條命）</span></a>
+</div>
+
+<h2 class="part" id="today" data-short="今天的重點">今天的重點・提醒・15 分鐘</h2>
+<div class="good"><b>今天的重點：</b>東西往外走用 あげます，朝我來用 くれます，我收下用 もらいます（に／から＝給的人）。借ります 要還，不是授受。</div>
+<div class="mis"><b>提醒：</b>11/20（金）結核檢診，穿 T 恤、不要請假；確認有沒有表單要交。作文老師下週發還。</div>
+<ol>
+<li><b>0–5 分：</b>只看「四、壓縮」那一句話和結構圖，閉眼講一次。</li>
+<li><b>5–10 分：</b>用 あげます・もらいます・くれます 各說一句自己的真實經驗，按 ▶ 跟著念例句。</li>
+<li><b>10–15 分：</b>玩一輪上面的 Kahoot，錯題抄一次。</li>
+</ol>
+<p class="lead" style="font-size:.85rem">方法來源：李繼剛 ljg-learn「概念解剖」（定錨 → 八刀 → 內觀 → 壓縮）。內容整理自 11/16 課堂，僅供個人複習。</p>
+</section>
+</main>
+<script src="../assets/common.js"></script>
+<script>
+(function () {
+  'use strict';
+  var TIME = 20;
+  var SHAPES = [{ cls: 'red', shape: '▲' }, { cls: 'blue', shape: '◆' }, { cls: 'yellow', shape: '●' }, { cls: 'green', shape: '■' }];
+  var LS = 'nr_kahoot_20261116_learn';
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function sayJa(t) { if (window.sayJa) window.sayJa(t); else if (window.say) window.say(t, 0.9); }
+  function loadBoard() { try { return JSON.parse(localStorage.getItem(LS) || '[]'); } catch (e) { return []; } }
+  function saveBoard(rows) { try { localStorage.setItem(LS, JSON.stringify(rows.slice(0, 8))); } catch (e) {} }
+  function ex(ja, ro, zh, en) { return '<p lang="ja"><b>' + ja + '</b></p><p class="ro">' + ro + '</p><p>' + zh + '</p>' + (en ? '<p class="en">' + en + '</p>' : ''); }
+
+  var Q = [
+    { tag: '定錨・あげます', q: '私は友だち（　）花をあげます。', o: ['に', 'を', 'が', 'で'], a: 'に', sa: 'わたしはともだちにはなをあげます。',
+      ex: ex('私は友だちに花をあげます。', 'watashi wa tomodachi ni hana o agemasu.', '我送朋友花。に＝收的人。', 'EN: に marks the receiver. TH: に = ผู้รับ') },
+    { tag: '定錨・くれます', q: '「朋友送了我 CD」怎麼說？', o: ['友だちがCDをくれました。', '友だちがCDをあげました。', '友だちにCDをくれました。', '友だちはCDをもらいました。'], a: '友だちがCDをくれました。', sa: 'ともだちがシーディーをくれました。',
+      ex: ex('友だちが（私に）CDをくれました。', 'tomodachi ga (watashi ni) shi-di- o kuremashita.', '東西朝「我」來 → くれます。', 'EN: Toward me = kuremasu. TH: มาหาฉัน = くれます') },
+    { tag: '定錨・もらいます', q: '私は母（　）カバンをもらいました。', o: ['に', 'を', 'へ', 'が'], a: 'に', sa: 'わたしはははにカバンをもらいました。',
+      ex: ex('私は母に（から）カバンをもらいました。', 'watashi wa haha ni (kara) kaban o moraimashita.', 'もらいます 的 に／から＝給的人。', 'EN: With moraimasu, に/から marks the giver.') },
+    { tag: '常見誤解', q: '「父が時計をくれました。」誰收到手錶？', o: ['我', '爸爸', '老師', '朋友'], a: '我', sa: 'ちちがわたしにとけいをくれました。',
+      ex: ex('父が私に時計をくれました。', 'chichi ga watashi ni tokei o kuremashita.', 'くれます 的收方永遠是我（或我這邊的人）。', 'EN: The receiver of kuremasu is always me / my side.') },
+    { tag: '常見誤解', q: '哪一句是<b>錯</b>的？', o: ['友だちは私に本をあげました。', '友だちが私に本をくれました。', '私は友だちに本をもらいました。', '私は友だちに本をあげました。'], a: '友だちは私に本をあげました。', sa: 'ともだちがわたしにほんをくれました。',
+      ex: ex('✓ 友だちが私に本をくれました。', 'tomodachi ga watashi ni hon o kuremashita.', '給「我」不能用 あげます。', 'EN: Never あげます toward "me".') },
+    { tag: '語言・借ります', q: '跟朋友借錢（之後要還）：友だちにお金を（　）。', o: ['借りました', 'もらいました', 'くれました', 'あげました'], a: '借りました', sa: 'ともだちにおかねをかりました。',
+      ex: ex('友だちにお金を借りました。', 'tomodachi ni okane o karimashita.', '借ります＝借，要還；もらいます＝收下，不用還。', 'EN: karimasu = borrow; moraimasu = receive (keep). TH: ยืม vs ได้รับ') },
+    { tag: '語言・送ります', q: '寄卡片給媽媽：母にカードを（　）。', o: ['送ります', '借ります', 'くれます', 'もらいます'], a: '送ります', sa: 'ははにカードをおくります。',
+      ex: ex('母にカードを送ります。', 'haha ni ka-do o okurimasu.', '寄卡片給媽媽。', 'EN: send. TH: ส่ง') },
+    { tag: '語言・教えます', q: '「先生が日本語を（　）。」老師教日語。', o: ['教えます', 'もらいます', '借ります', 'くれます'], a: '教えます', sa: 'せんせいがにほんごをおしえます。',
+      ex: ex('先生が日本語を教えます。', 'sensei ga nihongo o oshiemasu.', '老師教日語。教えます 也是把知識「給」人。', 'EN: teach. TH: สอน') },
+    { tag: '辯證', q: '「私は姉にカメラをあげました。」換成姊姊當主角：', o: ['姉は私にカメラをもらいました。', '姉は私にカメラをあげました。', '姉が私にカメラをくれました。', '私は姉にカメラをもらいました。'], a: '姉は私にカメラをもらいました。', sa: 'あねはわたしにカメラをもらいました。',
+      ex: ex('姉は私にカメラをもらいました。', 'ane wa watashi ni kamera o moraimashita.', '同一件事的兩面：我 あげました ＝ 姊姊 もらいました。', 'EN: Same event, two viewpoints.') },
+    { tag: '會話', q: '「そのカバン、いいですね。」「ありがとうございます。母に（　）。」', o: ['もらいました', 'あげました', 'くれました', '借りました'], a: 'もらいました', sa: 'ありがとうございます。ははにもらいました。',
+      ex: ex('ありがとうございます。母にもらいました。', 'arigatou gozaimasu. haha ni moraimashita.', '謝謝，是媽媽給的。', '') },
+    { tag: '會話', q: '「友だちがCDをくれました。」聽到好消息要回：', o: ['よかったですね。', 'すみません。', 'お先にどうぞ。', 'いただきます。'], a: 'よかったですね。', sa: 'そうですか。よかったですね。',
+      ex: ex('そうですか。よかったですね。', 'sou desu ka. yokatta desu ne.', '這樣啊，太好了呢。', 'EN: That\'s great! TH: ดีจังเลยนะ') },
+    { tag: '漢字・時', q: '「時々」怎麼念？', o: ['ときどき', 'ときとき', 'じじ', 'じかん'], a: 'ときどき', sa: 'ときどき',
+      ex: ex('時々（ときどき）', 'tokidoki', '有時候。々＝重複上一個字，と→ど 連濁。', 'EN: sometimes. TH: บางครั้ง') },
+    { tag: '漢字・今', q: '「今日」怎麼念？', o: ['きょう', 'いまにち', 'いまひ', 'こんび'], a: 'きょう', sa: 'きょう',
+      ex: ex('今日（きょう）', 'kyou', '今天。老師說這是特別讀法。', 'EN: today (special reading)') },
+    { tag: '漢字・先', q: '「先月」是什麼意思？', o: ['上個月', '這個月', '下個月', '老師'], a: '上個月', sa: 'せんげつ',
+      ex: ex('先月（せんげつ）', 'sengetsu', '上個月。先月→今月→来月。', 'EN: last month') },
+    { tag: '漢字・生', q: '「8月8日に（生）まれました。」的「生」念：', o: ['う', 'せい', 'しょう', 'い'], a: 'う', sa: 'はちがつようかにうまれました。',
+      ex: ex('8月8日に生まれました。', 'hachigatsu youka ni umaremashita.', '8 月 8 日出生。生まれます＝うまれます。', 'EN: I was born on August 8.') },
+    { tag: 'もうすぐ', q: '「快聖誕節了」怎麼說？', o: ['もうすぐクリスマスです。', 'すぐクリスマスでした。', 'もうクリスマスじゃありません。', 'クリスマスはどうでしたか。'], a: 'もうすぐクリスマスです。', sa: 'もうすぐクリスマスです。',
+      ex: ex('もうすぐクリスマスです。', 'mousugu kurisumasu desu.', '快聖誕節了。もうすぐ＝快到了（時間）。', 'EN: Christmas is coming soon. TH: อีกไม่นานก็คริสต์มาส') },
+    { tag: '聽力', listen: 1, q: '你聽到哪一句？（按 🔊）', o: ['祖母が手紙をくれました。', 'そばが手紙をくれました。', '祖母に手紙をあげました。', '祖母に手紙を借りました。'], a: '祖母が手紙をくれました。', say: 'そぼがてがみをくれました。', sa: 'そぼがてがみをくれました。',
+      ex: ex('祖母が手紙をくれました。', 'sobo ga tegami o kuremashita.', '奶奶寄了信給我。祖母＝そぼ，不是 そば（蕎麥麵）。', '') },
+    { tag: '聽力', listen: 1, q: '你聽到哪一句？（按 🔊）', o: ['一緒にプレゼントをあげませんか。', '一緒にプレゼントをもらいませんか。', 'プレゼントをくれませんか。', '一緒にプレゼントを送りましたか。'], a: '一緒にプレゼントをあげませんか。', say: 'いっしょにプレゼントをあげませんか。', sa: 'いっしょにプレゼントをあげませんか。',
+      ex: ex('一緒にプレゼントをあげませんか。', 'issho ni purezento o agemasen ka.', '要不要一起送禮物？', 'EN: Shall we give a present together?') },
+    { tag: '聽力', listen: 1, q: '聽一聽：誰給了誰什麼？（按 🔊）', o: ['朋友送我襪子', '我送朋友襪子', '我跟朋友借襪子', '朋友送媽媽襪子'], a: '朋友送我襪子', say: 'ともだちがくつしたをくれました。', sa: 'ともだちがくつしたをくれました。',
+      ex: ex('友だちが靴下をくれました。', 'tomodachi ga kutsushita o kuremashita.', '朋友送了我襪子。くれました → 給我。', '') },
+    { tag: '聽力・通知', listen: 1, q: '聽通知：結核檢診是哪一天？（按 🔊）', o: ['11月20日（金）', '11月2日（金）', '11月10日（金）', '11月24日（金）'], a: '11月20日（金）', say: 'けっかくけんしんは、じゅういちがつはつか、きんようびです。ティーシャツをきてきてください。', sa: 'じゅういちがつはつか',
+      ex: ex('結核検診は11月20日（金）です。Tシャツを着て来てください。', 'kekkaku kenshin wa juuichigatsu hatsuka (kin\'youbi) desu. ti-shatsu o kite kite kudasai.', '20 日念 はつか。穿 T 恤來，不要請假。', '') }
+  ];
+
+  var app = document.getElementById('khApp');
+  var state;
+  function pointsFor(left, limit) { var e = Math.max(0, limit - left); return Math.round((1 - (e / limit) / 2) * 1000); }
+  function streakBonus(s) { return s < 2 ? 0 : Math.min(500, (s - 1) * 100); }
+  function rankOf(score, total) { var r = score / (total * 1000); return r >= 0.88 ? '🏆 天才！' : r >= 0.72 ? '🎉 很厲害' : r >= 0.55 ? '👍 不錯喔' : '💪 再練一次會更好'; }
+  function top() { var s = document.getElementById('kahoot'); if (s) s.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
+
+  function renderBoard(mine) {
+    var rows = loadBoard().slice().sort(function (a, b) { return b.score - a.score; });
+    if (mine) { var shown = false; rows = rows.map(function (r) { if (!shown && r.t === mine.t) { shown = true; return Object.assign({ me: true }, r); } return r; }); }
+    if (!rows.length) return '<p class="lead">還沒有本機紀錄，來拿第一名吧！</p>';
+    var h = '<h3>本機排行榜</h3><div class="tblwrap"><table class="kh-board"><thead><tr><th>#</th><th>分數</th><th>答對</th><th>連對</th><th>時間（東京）</th></tr></thead><tbody>';
+    rows.forEach(function (r, i) { h += '<tr' + (r.me ? ' class="me"' : '') + '><td>' + (i + 1) + '</td><td>' + r.score + '</td><td>' + r.correct + '/' + r.total + '</td><td>' + r.maxStreak + '</td><td>' + esc(r.when) + (r.me ? '　← 本次' : '') + '</td></tr>'; });
+    return h + '</tbody></table></div><p class="lead" style="font-size:.85rem">只存在這個瀏覽器，不會上傳，也不會出現名字。</p>';
+  }
+  function startScreen() {
+    app.innerHTML = '<div class="kh-hero"><h3>🎯 授受 Kahoot</h3><p>照「定錨 → 八刀 → 壓縮」出題，加上漢字、もうすぐ、檢診通知。共 <b>' + Q.length + ' 題</b>，其中 4 題聽力。</p><p>每題 20 秒，答得越快分越高，連對有加分。請打開聲音 🔊</p></div>' +
+      '<div class="kh-actions"><button class="kh-btn hot" id="khGo">▶ 開始</button></div>' + renderBoard(null);
+    document.getElementById('khGo').onclick = begin;
+  }
+  function begin() { state = { items: shuffle(Q), i: 0, score: 0, correct: 0, streak: 0, maxStreak: 0, log: [], left: TIME, timer: null, answered: false }; showQ(); top(); }
+  function showQ() {
+    var it = state.items[state.i];
+    var opts = shuffle(it.o).map(function (t, i) { return { text: t, color: SHAPES[i] }; });
+    state.answered = false; state.left = TIME;
+    app.innerHTML = '<div class="kh-stats"><span class="kh-chip">第 <span class="n">' + (state.i + 1) + '</span> / ' + state.items.length + '</span><span class="kh-chip">🔥 連對 <span class="n">' + state.streak + '</span></span><span class="kh-chip">分數 <span class="n">' + state.score + '</span></span><span class="kh-chip" id="khClock">⏱ ' + TIME + ' 秒</span></div>' +
+      '<div class="kh-timer" id="khBar"><i id="khBarI"></i></div>' +
+      '<div class="kh-q"><div class="tag">' + esc(it.tag) + (it.listen ? '　🎧 聽力題' : '') + '</div><div class="qt" lang="ja">' + it.q + '</div>' +
+      (it.say ? '<button class="kh-play" type="button" id="khListen">🔊 播放題目</button>' : '') + '</div>' +
+      '<div class="kh-grid" id="khOpts"></div><div id="khFb"></div>';
+    var box = document.getElementById('khOpts');
+    opts.forEach(function (op) {
+      var b = document.createElement('button');
+      b.className = 'kh-opt ' + op.color.cls; b.setAttribute('data-answer', op.text); b.lang = 'ja';
+      b.innerHTML = '<span class="shape">' + op.color.shape + '</span>' + esc(op.text);
+      b.onclick = function () { lock(op.text, box); };
+      box.appendChild(b);
+    });
+    var pl = document.getElementById('khListen');
+    if (pl) { pl.onclick = function () { sayJa(it.say); }; setTimeout(function () { sayJa(it.say); }, 280); }
+    tick();
+  }
+  function tick() {
+    clearInterval(state.timer);
+    var bar = document.getElementById('khBar'), barI = document.getElementById('khBarI'), clock = document.getElementById('khClock');
+    function paint() { barI.style.width = (state.left / TIME * 100) + '%'; bar.className = 'kh-timer' + (state.left <= 5 ? ' hot' : state.left <= 10 ? ' warn' : ''); clock.textContent = '⏱ ' + Math.ceil(state.left) + ' 秒'; }
+    paint();
+    var last = Date.now();
+    state.timer = setInterval(function () {
+      if (state.answered) { clearInterval(state.timer); return; }
+      var now = Date.now(); state.left -= (now - last) / 1000; last = now;
+      if (state.left <= 0) { state.left = 0; paint(); clearInterval(state.timer); lock(null, document.getElementById('khOpts')); return; }
+      paint();
+    }, 80);
+  }
+  function lock(choice, box) {
+    if (state.answered) return;
+    state.answered = true; clearInterval(state.timer);
+    var it = state.items[state.i], ok = choice === it.a, pts = 0, bonus = 0;
+    if (ok) { pts = pointsFor(state.left, TIME); state.streak++; if (state.streak > state.maxStreak) state.maxStreak = state.streak; bonus = streakBonus(state.streak); state.score += pts + bonus; state.correct++; }
+    else state.streak = 0;
+    state.log.push({ it: it, mine: choice, ok: ok });
+    Array.prototype.forEach.call(box.querySelectorAll('.kh-opt'), function (b) {
+      b.disabled = true; var l = b.getAttribute('data-answer');
+      if (l === it.a) b.classList.add('pick-ok'); else if (choice && l === choice) b.classList.add('pick-bad'); else b.classList.add('dim');
+    });
+    document.getElementById('khFb').innerHTML = '<div class="kh-fb ' + (ok ? 'ok' : 'bad') + '"><div class="result">' + (ok ? '✅ 答對了！' : choice == null ? '⏰ 時間到了' : '❌ 再記一下') + '</div>' +
+      (ok ? '<div class="pts">＋' + pts + ' 分' + (bonus ? '　連對加分 ＋' + bonus : '') + '　目前 ' + state.score + ' 分</div>' : '<div class="pts">正確答案：<b>' + esc(it.a) + '</b>　連對中斷，分數 ' + state.score + '</div>') +
+      '<div class="kh-ex">' + it.ex + '</div><div class="kh-actions"><button class="kh-btn hot" id="khNext">' + (state.i + 1 >= state.items.length ? '看結果' : '下一題 →') + '</button><button class="kh-btn alt" id="khRe">🔊 再聽一次</button></div></div>';
+    document.getElementById('khNext').onclick = function () { state.i++; if (state.i >= state.items.length) endScreen(); else showQ(); };
+    document.getElementById('khRe').onclick = function () { sayJa(it.sa || it.say); };
+    if (ok) setTimeout(function () { sayJa(it.sa || it.say); }, 250);
+  }
+  function tokyoWhen() { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) + '（東京時間）'; }
+  function endScreen() {
+    var rec = { score: state.score, correct: state.correct, total: state.items.length, maxStreak: state.maxStreak, when: tokyoWhen(), t: Date.now() };
+    var board = loadBoard(); board.push(rec); board.sort(function (a, b) { return b.score - a.score; }); saveBoard(board);
+    var wrong = state.log.filter(function (x) { return !x.ok; });
+    app.innerHTML = '<div class="kh-end"><div class="rank">' + rankOf(state.score, state.items.length) + '</div><div class="score">' + state.score + '</div><p>分</p>' +
+      '<div class="kh-podium"><div class="p p2"><b>' + (board[1] ? board[1].score : '—') + '</b><span>第 2</span></div><div class="p p1"><b>' + board[0].score + '</b><span>第 1</span></div><div class="p p3"><b>' + (board[2] ? board[2].score : '—') + '</b><span>第 3</span></div></div>' +
+      '<p>答對 <b>' + state.correct + ' / ' + state.items.length + '</b>　·　最高連對 <b>' + state.maxStreak + '</b></p></div>' + renderBoard(rec) +
+      (wrong.length ? '<h3>錯題回顧</h3>' + wrong.map(function (w, i) { return '<div class="box"><b>' + (i + 1) + '. ' + w.it.q + '</b><p>你的答案：<span style="color:var(--bad)">' + esc(w.mine || '（沒作答）') + '</span><br>正確：<b style="color:var(--ok)">' + esc(w.it.a) + '</b></p><div class="kh-ex">' + w.it.ex + '</div></div>'; }).join('') : '<p class="tip">全部答對，太厲害了！</p>') +
+      '<div class="kh-actions" style="justify-content:center"><button class="kh-btn hot" id="khAgain">再玩一次</button><a class="kh-btn alt" href="2026-11-16-hotseat.html">去玩 Hot Seat</a><a class="kh-btn alt" href="#compress">回去看「壓縮」</a></div>';
+    document.getElementById('khAgain').onclick = begin;
+    top();
+  }
+  startScreen();
+})();
+</script>
+</body>
+</html>
