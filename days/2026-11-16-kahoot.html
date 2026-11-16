@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11/16 Kahoot｜時・もうすぐ・くれます</title>
+<meta name="description" content="2026/11/16 課堂 Kahoot 自我測驗：漢字「時」、もうすぐ、くれます／あげます／もらいます，加一點て形。20 題、倒數計時、依速度計分、聽力題。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%87%AF%F0%9F%87%B5%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.kh-wrap{max-width:720px;margin:0 auto}
+.kh-hero{background:linear-gradient(135deg,#fff6e5,#eef6ff);border:2px solid #e0a100;border-radius:16px;padding:18px 16px;margin:12px 0}
+.kh-hero h1{margin:0 0 8px;font-size:1.55rem}
+.kh-stats{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin:8px 0 12px}
+.kh-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.92rem;font-weight:700}
+.kh-chip .n{color:var(--acc)}
+.kh-timer{height:10px;background:#ece8dc;border-radius:999px;overflow:hidden;margin:0 0 14px}
+.kh-timer i{display:block;height:100%;width:100%;background:#1a7f37;transform-origin:left center;transition:width .1s linear,background .2s}
+.kh-timer.warn i{background:#e0a100}
+.kh-timer.hot i{background:#c0392b}
+.kh-q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 14px;margin:0 0 14px;min-height:88px}
+.kh-q .tag{font-size:.78rem;color:var(--mute);margin:0 0 6px}
+.kh-q .qt{font-size:1.28rem;line-height:1.45;font-weight:700}
+.kh-play{display:inline-flex;align-items:center;gap:6px;margin-top:10px;border:none;background:#1f6feb;color:#fff;border-radius:999px;padding:8px 14px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.kh-play:active{transform:scale(.97)}
+.kh-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kh-opt{position:relative;border:none;color:#fff;border-radius:14px;padding:18px 12px 18px 48px;min-height:88px;font-size:1.12rem;font-weight:700;line-height:1.35;text-align:left;cursor:pointer;font-family:"Noto Sans JP","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+.kh-opt .shape{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1.35rem;line-height:1}
+.kh-opt.red{background:#e21b3c}
+.kh-opt.blue{background:#1368ce}
+.kh-opt.yellow{background:#c88800;color:#fff}
+.kh-opt.green{background:#26890c}
+.kh-opt:disabled{cursor:default}
+.kh-opt.pick-bad{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #7a1010;filter:brightness(.85)}
+.kh-opt.pick-ok{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #0b4a04}
+.kh-opt.dim{opacity:.45}
+.kh-fb{margin:14px 0 0;padding:12px 14px;border-radius:14px;background:#fff;border:2px solid var(--line)}
+.kh-fb.ok{border-color:var(--ok);background:#e6f6ea}
+.kh-fb.bad{border-color:var(--bad);background:#fdecea}
+.kh-fb .result{font-size:1.15rem;font-weight:800;margin:0 0 6px}
+.kh-fb .pts{font-weight:700;color:#8a5a00;margin:0 0 8px}
+.kh-ex{font-size:.98rem}
+.kh-ex ruby{ruby-position:over}
+.kh-ex .en{color:#334155;font-size:.92rem;margin:.4em 0 0}
+.kh-ex .ro{color:var(--ro)}
+.kh-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.kh-btn{border:none;background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.kh-btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.kh-btn.hot{background:var(--acc)}
+.kh-end{text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 16px;margin:12px 0}
+.kh-end .score{font-size:3rem;font-weight:800;line-height:1.1;color:var(--acc)}
+.kh-end .rank{display:inline-block;margin:8px 0 12px;background:#fff6e5;border-radius:999px;padding:4px 14px;font-weight:800}
+.kh-podium{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:16px auto;max-width:420px}
+.kh-podium .p{flex:1;border-radius:12px 12px 0 0;padding:10px 6px;color:#fff;font-weight:800}
+.kh-podium .p b{display:block;font-size:1.4rem}
+.kh-podium .p span{display:block;font-size:.78rem;font-weight:600;opacity:.9}
+.kh-podium .p1{background:#c88800;min-height:110px;order:2}
+.kh-podium .p2{background:#5b6370;min-height:86px;order:1}
+.kh-podium .p3{background:#8a5a2b;min-height:70px;order:3}
+.kh-board{width:100%;border-collapse:collapse;margin:12px 0;text-align:left}
+.kh-board th,.kh-board td{border-bottom:1px solid var(--line);padding:8px 6px;font-size:.95rem}
+.kh-board th{color:var(--mute);font-weight:600}
+.kh-board tr.me{background:#fff6e5;font-weight:700}
+@media (max-width:420px){
+  .kh-q .qt{font-size:1.12rem}
+  .kh-opt{min-height:76px;padding:14px 10px 14px 40px;font-size:1.02rem}
+  .kh-end .score{font-size:2.4rem}
+}
+</style>
+</head>
+<body>
+<main>
+<div class="kh-wrap">
+  <p class="lead" style="margin-top:16px"><a href="2026-11-16.html">← 11/16 課堂頁</a>　·　<a href="2026-11-16-hotseat.html">Hot Seat 熱座 →</a></p>
+  <div id="app"></div>
+</div>
+</main>
+<script src="../assets/common.js"></script>
+<script>
+(function () {
+  'use strict';
+  var TIME = 20;
+  var SHAPES = [
+    { cls: 'red', shape: '▲' },
+    { cls: 'blue', shape: '◆' },
+    { cls: 'yellow', shape: '●' },
+    { cls: 'green', shape: '■' }
+  ];
+  var LS = 'nr_kahoot_20261116';
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function sayJa(t) { if (window.say) window.say(t, 0.9); }
+  function loadBoard() {
+    try { return JSON.parse(localStorage.getItem(LS) || '[]'); } catch (e) { return []; }
+  }
+  function saveBoard(rows) {
+    try { localStorage.setItem(LS, JSON.stringify(rows.slice(0, 8))); } catch (e) {}
+  }
+
+  var Q = [
+    {
+      tag: '漢字・時',
+      q: '「<ruby>時間<rt>じかん</rt></ruby>」的「時」怎麼唸？',
+      o: ['じ (ji)', 'とき (toki)', 'じつ (jitsu)', 'どき (doki)'],
+      a: 'じ (ji)',
+      sa: 'じかん',
+      ex: '<p><ruby>時間<rt>じかん</rt></ruby>（jikan）：時間 / time。</p><p>這裡的「時」用<b>音讀 じ</b>。</p><p class="en">EN: In 時間, 時 uses the on-yomi <i>ji</i>.</p>'
+    },
+    {
+      tag: '漢字・時々',
+      q: '「時々」怎麼唸？',
+      o: ['ときどき (tokidoki)', 'ときとき (tokitoki)', 'じじ (jiji)', 'じかんかん (jikankan)'],
+      a: 'ときどき (tokidoki)',
+      sa: 'ときどき',
+      ex: '<p><ruby>時々<rt>ときどき</rt></ruby>（tokidoki）：有時候 / sometimes / บางครั้ง。</p><p>這裡用<b>訓讀 とき</b>。第二個 と 變成 ど，是<b>連濁</b>。</p><p class="en">EN: 々 repeats the previous kanji (時時). Rendaku changes the second と to ど.</p>'
+    },
+    {
+      tag: '漢字・々',
+      q: '「々」這個記號代表什麼？',
+      o: ['重複上一個字', '句號', '表示長音', '表示問句'],
+      a: '重複上一個字',
+      ex: '<p>「々」是<b>重複上一個字</b>的符號，所以 <ruby>時々<rt>ときどき</rt></ruby> = 時時。</p><p class="en">EN: 々 is a repetition mark. 時々 is just 時 written twice.</p>'
+    },
+    {
+      tag: '漢字・意思',
+      q: '「<ruby>時々<rt>ときどき</rt></ruby>」是什麼意思？',
+      o: ['有時候', '常常', '從不', '立刻'],
+      a: '有時候',
+      sa: 'ときどき',
+      ex: '<p><ruby>時々<rt>ときどき</rt></ruby>（tokidoki）：有時候。</p><p>例句：<ruby>時々<rt>ときどき</rt></ruby>コーヒーを<ruby>飲<rt>の</rt></ruby>みます。（tokidoki ko-hi- o nomimasu）我有時候會喝咖啡。</p><p class="en">EN: 時々 means “sometimes,” not “always” or “immediately.”</p>'
+    },
+    {
+      tag: '漢字・筆順',
+      q: '寫「時」的時候，左邊的「日」應該怎麼寫？',
+      o: ['寫窄一點、偏上', '寫得很寬', '寫在右邊', '可以省略'],
+      a: '寫窄一點、偏上',
+      ex: '<p>左邊的「日」要<b>窄一點、偏上一點</b>，大約佔格子的三分之一，右邊的「寺」才放得下。</p><p>「寺」上面的「土」是<b>上短下長</b>。最後別漏「寸」的那一點。</p><p class="en">EN: Keep 日 narrow on the left; in 寺, the upper stroke of 土 is shorter than the lower one.</p>'
+    },
+    {
+      tag: 'もうすぐ',
+      q: '「もうすぐ」是什麼意思？',
+      o: ['快要／馬上就要', '已經', '還沒', '昨天'],
+      a: '快要／馬上就要',
+      sa: 'もうすぐ',
+      ex: '<p><ruby>もうすぐ</ruby>（mousugu）：快要、馬上就要 / soon / almost / อีกไม่นาน。</p><p>記憶：もう＝已經，すぐ＝馬上，合起來就是「已經快到了」。</p><p class="en">EN: もうすぐ means something is about to happen or a time is near.</p>'
+    },
+    {
+      tag: 'すぐ vs もうすぐ',
+      q: '「すぐ行きます」的「すぐ」是什麼意思？',
+      o: ['立刻（做這個動作）', '時間快到了', '有時候', '慢慢地'],
+      a: '立刻（做這個動作）',
+      sa: 'すぐいきます',
+      ex: '<p><ruby>すぐ</ruby>（sugu）：立刻 / immediately。</p><p><ruby>すぐ行<rt>い</rt></ruby>きます。（sugu ikimasu）我立刻去。</p><p>不要和 <b>もうすぐ</b> 搞混：すぐ講的是動作立刻做；もうすぐ講的是時間或事情快到了。</p><p class="en">EN: すぐ = do it right now. もうすぐ = it will happen soon.</p>'
+    },
+    {
+      tag: '聽力',
+      listen: true,
+      say: 'もうすぐ12時です。',
+      q: '聽一聽，這句是什麼意思？',
+      o: ['快要 12 點了', '已經 12 點了', '才剛 12 點', '每天 12 點'],
+      a: '快要 12 點了',
+      sa: 'もうすぐ12時です。',
+      ex: '<p><ruby>もうすぐ12時<rt>じ</rt></ruby>です。（mousugu juuniji desu）快要 12 點了。</p><p class="en">EN: もうすぐ + time = that time is almost here.</p>'
+    },
+    {
+      tag: '聽力',
+      listen: true,
+      say: 'もうすぐ冬休みです。',
+      q: '聽一聽，這句是什麼意思？',
+      o: ['寒假快到了', '寒假已經開始了', '寒假結束了', '我不喜歡寒假'],
+      a: '寒假快到了',
+      sa: 'もうすぐふゆやすみです。',
+      ex: '<p>もうすぐ<ruby>冬休<rt>ふゆやす</rt></ruby>みです。（mousugu fuyuyasumi desu）寒假快到了。</p><p class="en">EN: もうすぐ can also mark a coming event or vacation, not only clock time.</p>'
+    },
+    {
+      tag: '聽力',
+      listen: true,
+      say: 'もうすぐ着きます。',
+      q: '聽一聽，這句是什麼意思？',
+      o: ['我馬上就到', '我已經到了', '我還沒出發', '請立刻過來'],
+      a: '我馬上就到',
+      sa: 'もうすぐつきます。',
+      ex: '<p>もうすぐ<ruby>着<rt>つ</rt></ruby>きます。（mousugu tsukimasu）我馬上就到。</p><p class="en">EN: もうすぐ着きます = I will arrive soon. (Not “I have already arrived.”)</p>'
+    },
+    {
+      tag: 'くれます・句型',
+      q: '哪一句「くれます」的句型是對的？',
+      o: ['〔給的人〕が わたしに 〔東西〕を くれます', 'わたしが 〔給的人〕に 〔東西〕を くれます', '〔給的人〕が わたしに 〔東西〕を あげます', 'わたしが 〔給的人〕から 〔東西〕を くれます'],
+      a: '〔給的人〕が わたしに 〔東西〕を くれます',
+      ex: '<p>句型：〔給的人〕<b>が</b> 〔我／自己人〕<b>に</b> 〔東西〕<b>を</b> <ruby>くれます</ruby>（kuremasu）。</p><p>例句：<ruby>つま</ruby>が わたしに <ruby>とけい</ruby>を くれました。（tsuma ga watashi ni tokei o kuremashita）妻子給了我手錶。</p><p class="en">EN: With くれます, the giver is the subject (が). The receiver is me or my in-group (に).</p>'
+    },
+    {
+      tag: '聽力',
+      listen: true,
+      say: '妻がわたしに時計をくれました。',
+      q: '聽一聽：誰給了誰什麼？',
+      o: ['妻子給我手錶', '我給妻子手錶', '朋友給我手錶', '妻子向我要手錶'],
+      a: '妻子給我手錶',
+      sa: 'つまがわたしにとけいをくれました。',
+      ex: '<p><ruby>妻<rt>つま</rt></ruby>が わたしに <ruby>時計<rt>とけい</rt></ruby>を くれました。（tsuma ga watashi ni tokei o kuremashita）妻子給了我手錶。</p><p>妻（つま／tsuma）：妻子。時計（とけい／tokei）：鐘錶。</p><p class="en">EN: Giver が + receiver に + thing を + くれました.</p>'
+    },
+    {
+      tag: 'くれます・用法',
+      q: '什麼時候用「くれます」？',
+      o: ['別人給我／自己人東西時', '我給別人東西時', '我跟別人借東西時', '任何「給」都可以用'],
+      a: '別人給我／自己人東西時',
+      sa: 'くれます',
+      ex: '<p><ruby>くれます</ruby>（kuremasu）<b>只在收的人是我或自己人</b>的時候用。</p><p>我給別人要用 <ruby>あげます</ruby>（agemasu），不能說「わたしが友達に本をくれます」。</p><p class="en">EN: Use くれます only when the receiver is me or my in-group. If I give something to others, use あげます.</p>'
+    },
+    {
+      tag: 'くれます・省略',
+      q: '「つまがとけいをくれました」可以省略「わたしに」嗎？',
+      o: ['可以，對方多半知道是給我', '不行，一定要寫出來', '只能改成「わたしが」', '要改成「あげました」'],
+      a: '可以，對方多半知道是給我',
+      ex: '<p><b>わたしに 常常可以省略</b>，因為 くれます 已經表示「給我／自己人」。</p><p>つまが（わたしに）とけいをくれました。（tsuma ga (watashi ni) tokei o kuremashita）</p><p class="en">EN: わたしに is often dropped; くれます already shows the receiver is me / my side.</p>'
+    },
+    {
+      tag: 'くれます vs あげます',
+      q: '友達がわたしに本を____。',
+      o: ['くれました', 'あげました', 'もらいました', 'いきました'],
+      a: 'くれました',
+      sa: 'ともだちがわたしにほんをくれました。',
+      ex: '<p><ruby>友達<rt>ともだち</rt></ruby>が わたしに <ruby>本<rt>ほん</rt></ruby>を くれました。（tomodachi ga watashi ni hon o kuremashita）朋友給了我書。</p><p>從我的角度看，別人給我要用 くれます，不要用 あげます。</p><p class="en">EN: From the speaker’s view, “a friend gave me a book” is くれました, not あげました. もらいます would need わたしが as the subject.</p>'
+    },
+    {
+      tag: 'あげます',
+      q: 'わたしが友達に本を____。',
+      o: ['あげました', 'くれました', 'もらいました', 'きました'],
+      a: 'あげました',
+      sa: 'わたしがともだちにほんをあげました。',
+      ex: '<p>わたしが <ruby>友達<rt>ともだち</rt></ruby>に <ruby>本<rt>ほん</rt></ruby>を あげました。（watashi ga tomodachi ni hon o agemashita）我給了朋友書。</p><p><ruby>あげます</ruby>（agemasu）：我／別人把東西給「不是我」的人。</p><p class="en">EN: あげます is used when I (or someone) give something to others, not to me.</p>'
+    },
+    {
+      tag: 'もらいます',
+      q: 'わたしは友達に本を____。',
+      o: ['もらいました', 'くれました', 'あげました', 'しました'],
+      a: 'もらいました',
+      sa: 'わたしはともだちにほんをもらいました。',
+      ex: '<p>わたしは <ruby>友達<rt>ともだち</rt></ruby>に <ruby>本<rt>ほん</rt></ruby>を もらいました。（watashi wa tomodachi ni hon o moraimashita）我從朋友那裡拿到了書。</p><p>也可以說 友達<b>から</b>。句型：〔收的人〕が 〔給的人〕に／から 〔東西〕を <ruby>もらいます</ruby>（moraimasu）。</p><p class="en">EN: With もらいます, the receiver is the subject (が／は). The giver takes に or から.</p>'
+    },
+    {
+      tag: 'もらいます・主語',
+      q: '「もらいます」的主語（が）是誰？',
+      o: ['收到東西的人', '給東西的人', '東西本身', '一定是老師'],
+      a: '收到東西的人',
+      ex: '<p><ruby>もらいます</ruby>（moraimasu）的主語是<b>收到東西的人</b>。</p><p>比較：くれます／あげます 的主語是<b>給的人</b>。</p><p>同一件事可以說：つまがとけいをくれました。／ わたしはつまにとけいをもらいました。</p><p class="en">EN: もらいます: receiver が. くれます／あげます: giver が.</p>'
+    },
+    {
+      tag: 'て形復習',
+      q: '「行きます」的て形是？',
+      o: ['行って (itte)', 'いきて (ikite)', 'いいて (iite)', 'いんで (inde)'],
+      a: '行って (itte)',
+      sa: 'いって',
+      ex: '<p><ruby>行<rt>い</rt></ruby>きます → <ruby>行<rt>い</rt></ruby>って（itte）。這是<b>特例</b>，不是「いいて」。</p><p>規則口訣：いちり→って，にびみ→んで，き→いて，ぎ→いで，し→して。行きます 要另外記。</p><p class="en">EN: 行きます is the special case: 行って, not 書いて-style いて.</p>'
+    },
+    {
+      tag: 'て形復習',
+      q: '「読みます」的て形是？（にびみ→んで）',
+      o: ['読んで (yonde)', 'よいて (yoite)', 'よって (yotte)', 'よして (yoshite)'],
+      a: '読んで (yonde)',
+      sa: 'よんで',
+      ex: '<p><ruby>読<rt>よ</rt></ruby>みます → <ruby>読<rt>よ</rt></ruby>んで（yonde）。み 屬於「にびみ」，て形是 んで。</p><p class="en">EN: Verbs ending in に・び・み in the ます-stem take んで (読みます→読んで, 飲みます→飲んで, 呼びます→呼んで).</p>'
+    }
+  ];
+
+  var app = document.getElementById('app');
+  var state;
+
+  function pointsFor(left, limit) {
+    var elapsed = Math.max(0, limit - left);
+    return Math.round((1 - (elapsed / limit) / 2) * 1000);
+  }
+  function streakBonus(streak) {
+    if (streak < 2) return 0;
+    return Math.min(500, (streak - 1) * 100);
+  }
+  function rankOf(score, total) {
+    var max = total * 1000;
+    var r = score / max;
+    if (r >= 0.88) return '🏆 天才！';
+    if (r >= 0.72) return '🎉 很厲害';
+    if (r >= 0.55) return '👍 不錯喔';
+    return '💪 再練一次會更好';
+  }
+
+  function startScreen() {
+    app.innerHTML =
+      '<div class="kh-hero">' +
+      '<h1>🎯 11/16 Kahoot</h1>' +
+      '<p style="margin:0 0 8px">漢字「時」、もうすぐ、くれます／あげます／もらいます，再加兩題て形。共 <b>' + Q.length + ' 題</b>，每題 20 秒，答得越快分越高，連對有加分。</p>' +
+      '<p style="margin:0;color:#5b6370">有聽力題，請打開聲音。答完會看到假名、羅馬拼音、中文，文法再附英文。</p>' +
+      '</div>' +
+      '<div class="tip"><b>怎麼玩：</b>先按「開始」。四個大色塊選答案。時間到或按錯都會中斷連對。同一瀏覽器會記下最高分排行。</div>' +
+      '<div class="kh-actions"><button class="kh-btn hot" id="go">開始測驗</button>' +
+      '<a class="kh-btn alt" href="2026-11-16-hotseat.html" style="text-decoration:none;display:inline-block">改玩 Hot Seat</a></div>' +
+      renderBoard(null);
+    document.getElementById('go').onclick = function () { begin(); };
+  }
+
+  function renderBoard(mine) {
+    var rows = loadBoard().slice().sort(function (a, b) { return b.score - a.score; });
+    if (mine) {
+      var shown = false;
+      rows = rows.map(function (r) {
+        if (!shown && r.t === mine.t && r.score === mine.score) { shown = true; return Object.assign({ me: true }, r); }
+        return r;
+      });
+    }
+    if (!rows.length && !mine) return '<p class="lead">還沒有本地紀錄，來拿第一名吧！</p>';
+    var html = '<h2 id="board" data-short="排行">本機排行榜</h2><table class="kh-board"><thead><tr><th>#</th><th>分數</th><th>答對</th><th>連對</th><th>時間（東京）</th></tr></thead><tbody>';
+    rows.forEach(function (r, i) {
+      html += '<tr' + (r.me ? ' class="me"' : '') + '><td>' + (i + 1) + '</td><td>' + r.score + '</td><td>' + r.correct + '/' + r.total + '</td><td>' + r.maxStreak + '</td><td>' + esc(r.when) + (r.me ? '　← 本次' : '') + '</td></tr>';
+    });
+    html += '</tbody></table><p class="lead" style="font-size:.85rem">只存在這個瀏覽器，不會上傳，也不會出現名字。</p>';
+    return html;
+  }
+
+  function begin() {
+    state = {
+      items: shuffle(Q),
+      i: 0,
+      score: 0,
+      correct: 0,
+      streak: 0,
+      maxStreak: 0,
+      log: [],
+      left: TIME,
+      timer: null,
+      answered: false,
+      startLeft: TIME
+    };
+    showQ();
+  }
+
+  function showQ() {
+    var it = state.items[state.i];
+    var opts = shuffle(it.o).map(function (text, idx) {
+      return { text: text, color: SHAPES[idx] };
+    });
+    state.answered = false;
+    state.left = TIME;
+    state.startLeft = TIME;
+    app.innerHTML =
+      '<div class="kh-stats">' +
+      '<span class="kh-chip">第 <span class="n">' + (state.i + 1) + '</span> / ' + state.items.length + ' 題</span>' +
+      '<span class="kh-chip">🔥 連對 <span class="n">' + state.streak + '</span></span>' +
+      '<span class="kh-chip">分數 <span class="n">' + state.score + '</span></span>' +
+      '<span class="kh-chip" id="clock">⏱ ' + TIME + ' 秒</span>' +
+      '</div>' +
+      '<div class="kh-timer" id="bar"><i id="barI"></i></div>' +
+      '<div class="kh-q"><div class="tag">' + esc(it.tag) + (it.listen ? '　🎧 聽力題' : '') + '</div>' +
+      '<div class="qt">' + it.q + '</div>' +
+      (it.say ? '<button class="kh-play" type="button" id="listen">🔊 播放題目</button>' : '') +
+      '</div>' +
+      '<div class="kh-grid" id="opts"></div>' +
+      '<div id="fb"></div>';
+    var box = document.getElementById('opts');
+    opts.forEach(function (op) {
+      var b = document.createElement('button');
+      b.className = 'kh-opt ' + op.color.cls;
+      b.setAttribute('data-answer', op.text);
+      b.innerHTML = '<span class="shape">' + op.color.shape + '</span>' + esc(op.text);
+      b.onclick = function () { lock(op.text, box); };
+      box.appendChild(b);
+    });
+    var play = document.getElementById('listen');
+    if (play) {
+      play.onclick = function () { sayJa(it.say); };
+      setTimeout(function () { sayJa(it.say); }, 280);
+    }
+    tick();
+  }
+
+  function tick() {
+    clearInterval(state.timer);
+    var bar = document.getElementById('bar');
+    var barI = document.getElementById('barI');
+    var clock = document.getElementById('clock');
+    function paint() {
+      if (barI) barI.style.width = (state.left / TIME * 100) + '%';
+      if (bar) {
+        bar.className = 'kh-timer' + (state.left <= 5 ? ' hot' : state.left <= 10 ? ' warn' : '');
+      }
+      if (clock) clock.textContent = '⏱ ' + Math.ceil(state.left) + ' 秒';
+    }
+    paint();
+    var last = Date.now();
+    state.timer = setInterval(function () {
+      if (state.answered) { clearInterval(state.timer); return; }
+      var now = Date.now();
+      state.left -= (now - last) / 1000;
+      last = now;
+      if (state.left <= 0) {
+        state.left = 0;
+        paint();
+        clearInterval(state.timer);
+        lock(null, document.getElementById('opts'));
+        return;
+      }
+      paint();
+    }, 80);
+  }
+
+  function lock(choice, box) {
+    if (state.answered) return;
+    state.answered = true;
+    clearInterval(state.timer);
+    var it = state.items[state.i];
+    var ok = choice === it.a;
+    var pts = 0, bonus = 0;
+    if (ok) {
+      pts = pointsFor(state.left, TIME);
+      state.streak += 1;
+      if (state.streak > state.maxStreak) state.maxStreak = state.streak;
+      bonus = streakBonus(state.streak);
+      state.score += pts + bonus;
+      state.correct += 1;
+    } else {
+      state.streak = 0;
+    }
+    state.log.push({ it: it, mine: choice, ok: ok, pts: pts + bonus });
+    Array.prototype.forEach.call(box.querySelectorAll('.kh-opt'), function (b) {
+      b.disabled = true;
+      var label = b.getAttribute('data-answer');
+      if (label === it.a) b.classList.add('pick-ok');
+      else if (choice && label === choice) b.classList.add('pick-bad');
+      else b.classList.add('dim');
+    });
+    var fb = document.getElementById('fb');
+    var timeout = choice == null;
+    fb.innerHTML =
+      '<div class="kh-fb ' + (ok ? 'ok' : 'bad') + '">' +
+      '<div class="result">' + (ok ? '✅ 答對了！' : timeout ? '⏰ 時間到了' : '❌ 再記一下') + '</div>' +
+      (ok
+        ? '<div class="pts">＋' + pts + ' 分' + (bonus ? '　連對加分 ＋' + bonus : '') + '　目前 ' + state.score + ' 分</div>'
+        : '<div class="pts">正確答案：<b>' + esc(it.a) + '</b>　連對中斷，分數 ' + state.score + '</div>') +
+      '<div class="kh-ex">' + it.ex + '</div>' +
+      '<div class="kh-actions">' +
+      '<button class="kh-btn hot" id="next">' + (state.i + 1 >= state.items.length ? '看結果' : '下一題 →') + '</button>' +
+      (it.sa || it.say ? '<button class="kh-btn alt" id="replay">🔊 再聽一次</button>' : '') +
+      '</div></div>';
+    document.getElementById('next').onclick = function () {
+      state.i += 1;
+      if (state.i >= state.items.length) endScreen();
+      else showQ();
+    };
+    var rp = document.getElementById('replay');
+    if (rp) rp.onclick = function () { sayJa(it.sa || it.say); };
+    if (ok && (it.sa || it.say)) setTimeout(function () { sayJa(it.sa || it.say); }, 250);
+  }
+
+  function tokyoWhen() {
+    var d = new Date();
+    var s = new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(d);
+    return s + '（東京時間）';
+  }
+
+  function endScreen() {
+    var rec = {
+      score: state.score,
+      correct: state.correct,
+      total: state.items.length,
+      maxStreak: state.maxStreak,
+      when: tokyoWhen(),
+      t: Date.now()
+    };
+    var board = loadBoard();
+    board.push(rec);
+    board.sort(function (a, b) { return b.score - a.score; });
+    saveBoard(board);
+    var wrong = state.log.filter(function (x) { return !x.ok; });
+    app.innerHTML =
+      '<div class="kh-end">' +
+      '<div class="rank">' + rankOf(state.score, state.items.length) + '</div>' +
+      '<div class="score">' + state.score + '</div>' +
+      '<p>分</p>' +
+      '<div class="kh-podium">' +
+      '<div class="p p2"><b>' + (board[1] ? board[1].score : '—') + '</b><span>第 2</span></div>' +
+      '<div class="p p1"><b>' + (board[0] ? board[0].score : rec.score) + '</b><span>第 1</span></div>' +
+      '<div class="p p3"><b>' + (board[2] ? board[2].score : '—') + '</b><span>第 3</span></div>' +
+      '</div>' +
+      '<p>答對 <b>' + state.correct + ' / ' + state.items.length + '</b>　·　最高連對 <b>' + state.maxStreak + '</b></p>' +
+      '</div>' +
+      renderBoard(rec) +
+      (wrong.length
+        ? '<h2>錯題回顧</h2>' + wrong.map(function (w, i) {
+            return '<div class="box"><b>' + (i + 1) + '. ' + w.it.q + '</b><p>你的答案：<span class="red">' + esc(w.mine || '（沒作答）') + '</span><br>正確：<b style="color:var(--ok)">' + esc(w.it.a) + '</b></p><div class="kh-ex">' + w.it.ex + '</div></div>';
+          }).join('')
+        : '<p class="tip">全部答對，太厲害了！</p>') +
+      '<div class="kh-actions" style="justify-content:center">' +
+      '<button class="kh-btn hot" id="again">再玩一次</button>' +
+      '<a class="kh-btn alt" href="2026-11-16-hotseat.html" style="text-decoration:none">去玩 Hot Seat</a>' +
+      '<a class="kh-btn alt" href="2026-11-16.html" style="text-decoration:none">回課堂頁</a>' +
+      '</div>';
+    document.getElementById('again').onclick = function () { begin(); };
+  }
+
+  startScreen();
+})();
+</script>
+</body>
+</html>

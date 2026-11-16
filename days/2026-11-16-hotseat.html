@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11/16 Hot Seat｜時・もうすぐ・くれます</title>
+<meta name="description" content="2026/11/16 課堂 Hot Seat 熱座遊戲：一人背對螢幕猜詞，其他人用日語提示。漢字「時」、もうすぐ、くれます／あげます／もらいます。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%87%AF%F0%9F%87%B5%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Sans+TC:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.hs-wrap{max-width:760px;margin:0 auto}
+.hs-hero{background:linear-gradient(135deg,#eef6ff,#fff6e5);border:2px solid #1f6feb;border-radius:16px;padding:18px 16px;margin:12px 0}
+.hs-hero h1{margin:0 0 8px;font-size:1.55rem}
+.hs-barline{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin:8px 0}
+.hs-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-weight:700;font-size:.95rem}
+.hs-timer{height:12px;background:#ece8dc;border-radius:999px;overflow:hidden;margin:0 0 14px}
+.hs-timer i{display:block;height:100%;background:#1f6feb;width:100%}
+.hs-timer.warn i{background:#e0a100}
+.hs-timer.hot i{background:#c0392b}
+.hs-card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:22px 16px;text-align:center;margin:0 0 14px}
+.hs-card .ja{font-size:clamp(2.2rem,10vw,3.6rem);font-weight:900;line-height:1.2;margin:0 0 6px;font-family:"Noto Sans JP",sans-serif}
+.hs-card .kana{font-size:1.35rem;color:#1f2328;margin:0 0 4px}
+.hs-card .ro{font-size:1.15rem;color:var(--ro);margin:0 0 6px}
+.hs-card .zh{font-size:1.35rem;font-weight:700;margin:0}
+.hs-card .cat{display:inline-block;background:var(--chip);border-radius:999px;padding:2px 10px;font-size:.8rem;color:var(--mute);margin-bottom:8px}
+.hs-hints{margin:0 0 14px}
+.hs-hints h3{margin:0 0 8px;font-size:1.05rem}
+.hs-h{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 12px 12px 12px;margin:8px 0;display:flex;gap:10px;align-items:flex-start}
+.hs-h .play{flex:none;width:44px;height:44px;border:none;border-radius:12px;background:var(--acc);color:#fff;font-size:1.1rem;cursor:pointer}
+.hs-h .tx{flex:1;min-width:0}
+.hs-h .ja{font-size:1.15rem;font-weight:700;font-family:"Noto Sans JP",sans-serif}
+.hs-h .ro{color:var(--ro);font-size:.95rem}
+.hs-h .zh{color:var(--mute);font-size:.95rem}
+.hs-acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 16px}
+.hs-btn{border:none;border-radius:14px;padding:16px 12px;font-size:1.15rem;font-weight:800;cursor:pointer;font-family:inherit;color:#fff}
+.hs-btn.ok{background:#1a7f37}
+.hs-btn.skip{background:#5b6370}
+.hs-btn.go{background:var(--acc);width:100%}
+.hs-btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.hs-times{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.hs-times button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;font-family:inherit}
+.hs-times button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.hs-end{text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 16px}
+.hs-end .big{font-size:3rem;font-weight:800;color:var(--acc);line-height:1.1}
+.hs-review{margin-top:8px}
+.hs-review .item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0}
+.hs-review .item.got{border-color:var(--ok)}
+.hs-review .item.miss{border-color:var(--line)}
+.clock-num{font-size:1.6rem;font-weight:800;color:var(--acc)}
+@media (max-width:420px){
+  .hs-card .ja{font-size:2.2rem}
+  .hs-btn{font-size:1.05rem;padding:14px 10px}
+}
+</style>
+</head>
+<body>
+<main>
+<div class="hs-wrap">
+  <p class="lead" style="margin-top:16px"><a href="2026-11-16.html">← 11/16 課堂頁</a>　·　<a href="2026-11-16-kahoot.html">Kahoot 測驗 →</a></p>
+  <div id="app"></div>
+</div>
+</main>
+<script src="../assets/common.js"></script>
+<script>
+(function () {
+  'use strict';
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function sayJa(t) { if (window.say) window.say(t, 0.9); }
+
+  var CARDS = [
+    {
+      ja: '時間', kana: 'じかん', ro: 'jikan', zh: '時間 / time', cat: '漢字「時」', say: 'じかん',
+      hints: [
+        { ja: '時計を見ます。今、何時ですか。', ro: 'tokei o mimasu. ima, nanji desu ka.', zh: '看著鐘錶。現在幾點？', say: 'とけいをみます。いま、なんじですか。' },
+        { ja: '時間がありません。', ro: 'jikan ga arimasen.', zh: '我沒有時間。', say: 'じかんがありません。' },
+        { ja: 'この「時」は じ と読みます。', ro: 'kono toki wa ji to yomimasu.', zh: '這裡的「時」讀作 じ。', say: 'このときはじとよみます。' }
+      ]
+    },
+    {
+      ja: '時々', kana: 'ときどき', ro: 'tokidoki', zh: '有時候 / sometimes', cat: '漢字「時」', say: 'ときどき',
+      hints: [
+        { ja: 'いつもじゃありません。たまに、です。', ro: 'itsumo ja arimasen. tama ni, desu.', zh: '不是「總是」，是偶爾。', say: 'いつもじゃありません。たまに、です。' },
+        { ja: '時々コーヒーを飲みます。', ro: 'tokidoki ko-hi- o nomimasu.', zh: '我有時候會喝咖啡。', say: 'ときどきコーヒーをのみます。' },
+        { ja: 'と が ど になります。連濁です。', ro: 'to ga do ni narimasu. rendaku desu.', zh: 'と 變成 ど，這是連濁。', say: 'とがどになります。れんだくです。' }
+      ]
+    },
+    {
+      ja: '々', kana: 'くりかえしの きごう', ro: 'kurikaeshi no kigou', zh: '重複上一個字的符號', cat: '漢字「時」', say: 'くりかえし',
+      hints: [
+        { ja: 'この記号は、前の字をもう一度書きます。', ro: 'kono kigou wa, mae no ji o mou ichido kakimasu.', zh: '這個記號表示再寫一次前面那個字。', say: 'このきごうは、まえのじをもういちどかきます。' },
+        { ja: '時々の 二つ目の「時」です。', ro: 'tokidoki no futatsume no toki desu.', zh: '就是「時々」裡的第二個「時」。', say: 'ときどきのふたつめのときです。' },
+        { ja: '人々も、この記号を使います。', ro: 'hitobito mo, kono kigou o tsukaimasu.', zh: '「人々」也用這個記號。', say: 'ひとびとも、このきごうをつかいます。' }
+      ]
+    },
+    {
+      ja: 'もうすぐ', kana: 'もうすぐ', ro: 'mousugu', zh: '快要、馬上就要 / soon', cat: '副詞', say: 'もうすぐ',
+      hints: [
+        { ja: 'もうすぐ12時です。', ro: 'mousugu juuniji desu.', zh: '快要 12 點了。', say: 'もうすぐじゅうにじです。' },
+        { ja: 'もうすぐ冬休みです。', ro: 'mousugu fuyuyasumi desu.', zh: '寒假快到了。', say: 'もうすぐふゆやすみです。' },
+        { ja: 'すぐとは違います。時間が近いです。', ro: 'sugu to wa chigaimasu. jikan ga chikai desu.', zh: '跟「すぐ」不一樣，是時間快到了。', say: 'すぐとはちがいます。じかんがちかいです。' }
+      ]
+    },
+    {
+      ja: 'すぐ', kana: 'すぐ', ro: 'sugu', zh: '立刻 / immediately', cat: '副詞', say: 'すぐ',
+      hints: [
+        { ja: 'すぐ行きます。今します。', ro: 'sugu ikimasu. ima shimasu.', zh: '我立刻去。現在就做。', say: 'すぐいきます。いまします。' },
+        { ja: '待たないで、動作が早いです。', ro: 'matanaide, dousa ga hayai desu.', zh: '不等，動作很快。', say: 'またないで、どうさがはやいです。' },
+        { ja: 'もうすぐと違います。', ro: 'mousugu to wa chigaimasu.', zh: '跟「もうすぐ」不一樣。', say: 'もうすぐとはちがいます。' }
+      ]
+    },
+    {
+      ja: 'くれます', kana: 'くれます', ro: 'kuremasu', zh: '（別人）給我／自己人', cat: '給予動詞', say: 'くれます',
+      hints: [
+        { ja: '妻がわたしに時計をくれました。', ro: 'tsuma ga watashi ni tokei o kuremashita.', zh: '妻子給了我手錶。', say: 'つまがわたしにとけいをくれました。' },
+        { ja: 'あげる人はほかの人、もらう人はわたしです。', ro: 'ageru hito wa hoka no hito, morau hito wa watashi desu.', zh: '給的人是別人，收的人是我。', say: 'あげるひとはほかのひと、もらうひとはわたしです。' },
+        { ja: 'わたしに を省略できます。', ro: 'watashi ni o shouryaku dekimasu.', zh: '「わたしに」可以省略。', say: 'わたしにをしょうりゃくできます。' }
+      ]
+    },
+    {
+      ja: 'あげます', kana: 'あげます', ro: 'agemasu', zh: '（我／別人）給別人', cat: '給予動詞', say: 'あげます',
+      hints: [
+        { ja: 'わたしが友達に本をあげます。', ro: 'watashi ga tomodachi ni hon o agemasu.', zh: '我給朋友書。', say: 'わたしがともだちにほんをあげます。' },
+        { ja: 'もらう人はわたしではありません。', ro: 'morau hito wa watashi de wa arimasen.', zh: '收的人不是我。', say: 'もらうひとはわたしではありません。' },
+        { ja: 'くれますと反対の方向です。', ro: 'kuremasu to hantai no houkou desu.', zh: '跟「くれます」的方向相反。', say: 'くれますとはんたいのほうこうです。' }
+      ]
+    },
+    {
+      ja: 'もらいます', kana: 'もらいます', ro: 'moraimasu', zh: '收到、得到', cat: '給予動詞', say: 'もらいます',
+      hints: [
+        { ja: 'わたしは友達に本をもらいました。', ro: 'watashi wa tomodachi ni hon o moraimashita.', zh: '我從朋友那裡拿到了書。', say: 'わたしはともだちにほんをもらいました。' },
+        { ja: 'もらう人が主語です。に または から。', ro: 'morau hito ga shugo desu. ni mata wa kara.', zh: '收的人是主語。給的人用 に 或 から。', say: 'もらうひとがしゅごです。にまたはから。' },
+        { ja: '妻から時計をもらいました。', ro: 'tsuma kara tokei o moraimashita.', zh: '我從妻子那裡拿到了手錶。', say: 'つまからとけいをもらいました。' }
+      ]
+    },
+    {
+      ja: '時計', kana: 'とけい', ro: 'tokei', zh: '鐘錶', cat: '單字', say: 'とけい',
+      hints: [
+        { ja: '時間を見ます。腕にします。', ro: 'jikan o mimasu. ude ni shimasu.', zh: '用來看時間，戴在手腕上。', say: 'じかんをみます。うでにします。' },
+        { ja: '妻がわたしにこれをくれました。', ro: 'tsuma ga watashi ni kore o kuremashita.', zh: '妻子把這個給了我。', say: 'つまがわたしにこれをくれました。' },
+        { ja: '壁にもあります。今、何時ですか。', ro: 'kabe ni mo arimasu. ima, nanji desu ka.', zh: '牆上也有。現在幾點？', say: 'かべにもあります。いま、なんじですか。' }
+      ]
+    },
+    {
+      ja: '妻', kana: 'つま', ro: 'tsuma', zh: '妻子', cat: '單字', say: 'つま',
+      hints: [
+        { ja: 'わたしの奥さんです。', ro: 'watashi no okusan desu.', zh: '是我的太太。', say: 'わたしのおくさんです。' },
+        { ja: '妻がわたしに時計をくれました。', ro: 'tsuma ga watashi ni tokei o kuremashita.', zh: '妻子給了我手錶。', say: 'つまがわたしにとけいをくれました。' },
+        { ja: 'ご主人の反対です。', ro: 'goshujin no hantai desu.', zh: '是「先生／丈夫」的相對詞。', say: 'ごしゅじんのはんたいです。' }
+      ]
+    },
+    {
+      ja: '冬休み', kana: 'ふゆやすみ', ro: 'fuyuyasumi', zh: '寒假', cat: '單字', say: 'ふゆやすみ',
+      hints: [
+        { ja: '冬の休みです。寒いです。', ro: 'fuyu no yasumi desu. samui desu.', zh: '冬天的假期。很冷。', say: 'ふゆのやすみです。さむいです。' },
+        { ja: 'もうすぐ冬休みです。', ro: 'mousugu fuyuyasumi desu.', zh: '寒假快到了。', say: 'もうすぐふゆやすみです。' },
+        { ja: '学校がありません。', ro: 'gakkou ga arimasen.', zh: '不用上學。', say: 'がっこうがありません。' }
+      ]
+    },
+    {
+      ja: '着きます', kana: 'つきます', ro: 'tsukimasu', zh: '到達', cat: '動詞', say: 'つきます',
+      hints: [
+        { ja: '駅に着きます。', ro: 'eki ni tsukimasu.', zh: '到達車站。', say: 'えきにつきます。' },
+        { ja: 'もうすぐ着きます。', ro: 'mousugu tsukimasu.', zh: '我馬上就到。', say: 'もうすぐつきます。' },
+        { ja: '出発の反対です。', ro: 'shuppatsu no hantai desu.', zh: '是「出發」的相反。', say: 'しゅっぱつのはんたいです。' }
+      ]
+    },
+    {
+      ja: 'わたしに', kana: 'わたしに', ro: 'watashi ni', zh: '給我（對象）', cat: '文法', say: 'わたしに',
+      hints: [
+        { ja: 'くれますの文で、もらう人です。', ro: 'kuremasu no bun de, morau hito desu.', zh: '在「くれます」的句子裡，這是收的人。', say: 'くれますのぶんで、もらうひとです。' },
+        { ja: 'よく省略できます。', ro: 'yoku shouryaku dekimasu.', zh: '常常可以省略。', say: 'よくしょうりゃくできます。' },
+        { ja: '妻が（わたしに）時計をくれました。', ro: 'tsuma ga (watashi ni) tokei o kuremashita.', zh: '妻子給了（我）手錶。', say: 'つまがわたしにとけいをくれました。' }
+      ]
+    },
+    {
+      ja: '連濁', kana: 'れんだく', ro: 'rendaku', zh: '連濁（清音變濁音）', cat: '發音', say: 'れんだく',
+      hints: [
+        { ja: '時々は「ときとき」じゃありません。', ro: 'tokidoki wa tokitoki ja arimasen.', zh: '「時々」不是讀成 ときとき。', say: 'ときどきはときときじゃありません。' },
+        { ja: 'と が ど になります。', ro: 'to ga do ni narimasu.', zh: 'と 變成了 ど。', say: 'とがどになります。' },
+        { ja: '二つ目の音が濁ります。', ro: 'futatsume no oto ga nigorimasu.', zh: '第二個音變濁了。', say: 'ふたつめのおとがにごります。' }
+      ]
+    },
+    {
+      ja: '時', kana: 'じ／とき', ro: 'ji / toki', zh: '漢字「時」（音讀じ、訓讀とき）', cat: '漢字', say: 'とき',
+      hints: [
+        { ja: '「日」と「寺」でできます。', ro: 'hi to tera de dekimasu.', zh: '由「日」和「寺」組成。', say: 'ひとてらでできます。' },
+        { ja: '時間の「じ」、時々の「とき」。', ro: 'jikan no ji, tokidoki no toki.', zh: '「時間」裡讀 じ，「時々」裡讀 とき。', say: 'じかんのじ、ときどきのとき。' },
+        { ja: '左の「日」は細く、上のほうに書きます。', ro: 'hidari no hi wa hosoku, ue no hou ni kakimasu.', zh: '左邊的「日」要寫窄、偏上。', say: 'ひだりのひはほそく、うえのほうにかきます。' }
+      ]
+    },
+    {
+      ja: '行って', kana: 'いって', ro: 'itte', zh: '「行きます」的て形（特例）', cat: 'て形', say: 'いって',
+      hints: [
+        { ja: '行きますのて形は特別です。', ro: 'ikimasu no tekei wa tokubetsu desu.', zh: '「行きます」的て形是特例。', say: 'いきますのてけいはとくべつです。' },
+        { ja: 'いいて じゃありません。行って です。', ro: 'iite ja arimasen. itte desu.', zh: '不是 いいて，是 行って。', say: 'いいてじゃありません。いってです。' },
+        { ja: '駅へ行って、本を買います。', ro: 'eki e itte, hon o kaimasu.', zh: '去車站，然後買書。', say: 'えきへいって、ほんをかいます。' }
+      ]
+    },
+    {
+      ja: '読んで', kana: 'よんで', ro: 'yonde', zh: '「読みます」的て形（にびみ→んで）', cat: 'て形', say: 'よんで',
+      hints: [
+        { ja: 'にびみ は んで です。', ro: 'ni bi mi wa nde desu.', zh: 'に・び・み 的て形是 んで。', say: 'にびみはんでです。' },
+        { ja: '読みますから、読んで になります。', ro: 'yomimasu kara, yonde ni narimasu.', zh: '從「読みます」變成「読んで」。', say: 'よみますから、よんでになります。' },
+        { ja: '本を読んでください。', ro: 'hon o yonde kudasai.', zh: '請讀書。', say: 'ほんをよんでください。' }
+      ]
+    },
+    {
+      ja: '書いて', kana: 'かいて', ro: 'kaite', zh: '「書きます」的て形（き→いて）', cat: 'て形', say: 'かいて',
+      hints: [
+        { ja: 'き は いて です。', ro: 'ki wa ite desu.', zh: 'き 的て形是 いて。', say: 'きはいてです。' },
+        { ja: '書きますから、書いて になります。', ro: 'kakimasu kara, kaite ni narimasu.', zh: '從「書きます」變成「書いて」。', say: 'かきますから、かいてになります。' },
+        { ja: '名前を書いてください。', ro: 'namae o kaite kudasai.', zh: '請寫名字。', say: 'なまえをかいてください。' }
+      ]
+    },
+    {
+      ja: '12時', kana: 'じゅうにじ', ro: 'juuniji', zh: '12 點', cat: '時間', say: 'じゅうにじ',
+      hints: [
+        { ja: 'もうすぐ12時です。お昼です。', ro: 'mousugu juuniji desu. ohiru desu.', zh: '快要 12 點了。是中午。', say: 'もうすぐじゅうにじです。おひるです。' },
+        { ja: 'この「時」は じ と読みます。', ro: 'kono toki wa ji to yomimasu.', zh: '這裡的「時」讀 じ。', say: 'このときはじとよみます。' },
+        { ja: '午前と午後のあいだです。', ro: 'gozen to gogo no aida desu.', zh: '在上午和下午之間。', say: 'ごぜんとごごのあいだです。' }
+      ]
+    },
+    {
+      ja: '友達', kana: 'ともだち', ro: 'tomodachi', zh: '朋友', cat: '單字', say: 'ともだち',
+      hints: [
+        { ja: '友達がわたしに本をくれました。', ro: 'tomodachi ga watashi ni hon o kuremashita.', zh: '朋友給了我書。', say: 'ともだちがわたしにほんをくれました。' },
+        { ja: 'わたしが友達に花をあげます。', ro: 'watashi ga tomodachi ni hana o agemasu.', zh: '我給朋友花。', say: 'わたしがともだちにはなをあげます。' },
+        { ja: 'いっしょに勉強します。', ro: 'issho ni benkyou shimasu.', zh: '一起讀書。', say: 'いっしょにべんきょうします。' }
+      ]
+    }
+  ];
+
+  var app = document.getElementById('app');
+  var sec = 60;
+  var state = null;
+  var timer = null;
+
+  function startScreen() {
+    app.innerHTML =
+      '<div class="hs-hero">' +
+      '<h1>🪑 11/16 Hot Seat 熱座</h1>' +
+      '<p style="margin:0 0 8px">一人坐在「熱座」<b>背對螢幕</b>。其他人看大字，用日語提示，但不能直接說出目標詞。猜對就按「猜對了」，想不到就「跳過」。</p>' +
+      '<p style="margin:0;color:#5b6370">今天共 <b>' + CARDS.length + ' 張卡片</b>：時、もうすぐ、くれます／あげます／もらいます，再加一點て形。每張下面有 2–3 句可用的日語提示。</p>' +
+      '</div>' +
+      '<div class="box"><h3 style="margin-top:0">每張限制時間</h3>' +
+      '<div class="hs-times" id="times"></div></div>' +
+      '<button class="hs-btn go" id="go">開始遊戲</button>';
+    var times = document.getElementById('times');
+    [30, 45, 60, 90, 120].forEach(function (n) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = n + ' 秒';
+      if (n === sec) b.className = 'on';
+      b.onclick = function () {
+        sec = n;
+        Array.prototype.forEach.call(times.querySelectorAll('button'), function (x) { x.className = ''; });
+        b.className = 'on';
+      };
+      times.appendChild(b);
+    });
+    document.getElementById('go').onclick = function () { begin(); };
+  }
+
+  function begin() {
+    state = { items: shuffle(CARDS), i: 0, ok: 0, skip: 0, log: [], left: sec, frozen: false };
+    showCard();
+  }
+
+  function showCard() {
+    clearInterval(timer);
+    if (state.i >= state.items.length) return endScreen();
+    var c = state.items[state.i];
+    state.left = sec;
+    state.frozen = false;
+    state._lock = false;
+    app.innerHTML =
+      '<div class="hs-barline">' +
+      '<span class="hs-chip">第 ' + (state.i + 1) + ' / ' + state.items.length + ' 張</span>' +
+      '<span class="hs-chip">✅ ' + state.ok + '　⏭ ' + state.skip + '</span>' +
+      '<span class="hs-chip clock-num" id="clock">' + sec + '</span>' +
+      '</div>' +
+      '<div class="hs-timer" id="bar"><i id="barI"></i></div>' +
+      '<div class="hs-card">' +
+      '<div class="cat">' + esc(c.cat) + '</div>' +
+      '<div class="ja" lang="ja">' + esc(c.ja) + '</div>' +
+      '<div class="kana" lang="ja">' + esc(c.kana) + '</div>' +
+      '<div class="ro">' + esc(c.ro) + '</div>' +
+      '<div class="zh">' + esc(c.zh) + '</div>' +
+      '</div>' +
+      '<div class="hs-hints"><h3>其他人可以這樣提示（請大聲唸）</h3>' +
+      c.hints.map(function (h, i) {
+        return '<div class="hs-h"><button class="play" type="button" data-i="' + i + '" aria-label="播放">▶</button>' +
+          '<div class="tx"><div class="ja" lang="ja">' + esc(h.ja) + '</div><div class="ro">' + esc(h.ro) + '</div><div class="zh">' + esc(h.zh) + '</div></div></div>';
+      }).join('') +
+      '</div>' +
+      '<div class="hs-acts">' +
+      '<button class="hs-btn ok" id="yes">✅ 猜對了</button>' +
+      '<button class="hs-btn skip" id="no">⏭ 跳過</button>' +
+      '</div>' +
+      '<p class="lead" style="text-align:center">提示的人不要直接把大字唸出來。熱座上的人背對螢幕。</p>';
+    Array.prototype.forEach.call(app.querySelectorAll('.play'), function (b) {
+      b.onclick = function () { sayJa(c.hints[+b.getAttribute('data-i')].say); };
+    });
+    document.getElementById('yes').onclick = function () { settle(true); };
+    document.getElementById('no').onclick = function () { settle(false); };
+    tick();
+  }
+
+  function tick() {
+    var bar = document.getElementById('bar');
+    var barI = document.getElementById('barI');
+    var clock = document.getElementById('clock');
+    var last = Date.now();
+    function paint() {
+      if (barI) barI.style.width = (state.left / sec * 100) + '%';
+      if (bar) bar.className = 'hs-timer' + (state.left <= 8 ? ' hot' : state.left <= 20 ? ' warn' : '');
+      if (clock) clock.textContent = Math.ceil(Math.max(0, state.left));
+    }
+    paint();
+    timer = setInterval(function () {
+      if (state.frozen) { clearInterval(timer); return; }
+      var now = Date.now();
+      state.left -= (now - last) / 1000;
+      last = now;
+      if (state.left <= 0) {
+        state.left = 0;
+        paint();
+        clearInterval(timer);
+        state.frozen = true;
+        var acts = app.querySelector('.hs-acts');
+        var note = document.createElement('div');
+        note.className = 'warn';
+        note.innerHTML = '<b>時間到！</b> 如果剛好猜出來，還可以按「猜對了」；否則按「跳過」。';
+        acts.parentNode.insertBefore(note, acts);
+        return;
+      }
+      paint();
+    }, 80);
+  }
+
+  function settle(ok) {
+    if (state._lock) return;
+    state._lock = true;
+    state.frozen = true;
+    clearInterval(timer);
+    var c = state.items[state.i];
+    if (ok) state.ok += 1; else state.skip += 1;
+    state.log.push({ c: c, ok: ok });
+    sayJa(c.say);
+    state.i += 1;
+    showCard();
+  }
+
+  function endScreen() {
+    clearInterval(timer);
+    app.innerHTML =
+      '<div class="hs-end">' +
+      '<p>本輪結束</p>' +
+      '<div class="big">' + state.ok + ' / ' + state.items.length + '</div>' +
+      '<p>猜對 ' + state.ok + '　·　跳過 ' + state.skip + '</p>' +
+      '</div>' +
+      '<h2>卡片回顧</h2><div class="hs-review">' +
+      state.log.map(function (x, i) {
+        return '<div class="item ' + (x.ok ? 'got' : 'miss') + '"><b>' + (i + 1) + '. <span lang="ja">' + esc(x.c.ja) + '</span></b>　' +
+          (x.ok ? '✅ 猜對' : '⏭ 跳過') +
+          '<div class="kana" lang="ja">' + esc(x.c.kana) + '　<span class="ro">' + esc(x.c.ro) + '</span></div>' +
+          '<div>' + esc(x.c.zh) + '</div></div>';
+      }).join('') +
+      '</div>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0">' +
+      '<button class="hs-btn go" id="again" style="width:auto;padding:12px 18px">再玩一次</button>' +
+      '<a class="hs-btn alt" href="2026-11-16-kahoot.html" style="text-decoration:none;display:inline-block;padding:12px 18px">去玩 Kahoot</a>' +
+      '<a class="hs-btn alt" href="2026-11-16.html" style="text-decoration:none;display:inline-block;padding:12px 18px">回課堂頁</a>' +
+      '</div>';
+    document.getElementById('again').onclick = function () { startScreen(); };
+  }
+
+  startScreen();
+})();
+</script>
+</body>
+</html>
