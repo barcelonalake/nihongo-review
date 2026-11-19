@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11/19 概念解剖：て と 方（テ形、テ形、〜ます・〜方・どうやって）｜ljg-learn 複習頁＋Kahoot</title>
+<meta name="description" content="用 ljg-learn 概念解剖法（定錨→八刀→內觀→壓縮）整理 2026/11/19 課堂：第9課 テ形、テ形、〜ます（動作串連）、ます形＋方（〜の〜方がわかりません）、どうやって〜ますか、で（方法）、に／へ、2グループ動詞の木、漢字 半・分、課本會話、單字假名格子、跟讀、排句子遊戲、作文「私の趣味」準備。頁內直接玩 Kahoot 20 題。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%94%AA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700;800&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ljg-learn：紙本筆記風（淺色背景） */
+.fm{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f6f4ee;border:1px dashed #cfc8b6;border-radius:10px;padding:10px 14px;font-size:.88rem;color:#5b6370;margin:14px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.hero{border-left:6px solid #1f2328;padding:6px 0 6px 14px;margin:14px 0}
+.hero h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.75rem;line-height:1.3;margin:0 0 6px}
+.hero p{margin:0;color:#5b6370}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.steps a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none;color:var(--ink);font-weight:700;font-size:.92rem}
+.steps a.kh{background:#46178f;color:#fff;border-color:#46178f}
+h2.part{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.5rem;border-bottom:3px solid #1f2328;padding-bottom:4px;margin-top:34px}
+h2.part small{font-family:"Noto Sans TC",sans-serif;font-weight:400;font-size:.85rem;color:var(--mute);margin-left:8px}
+.knife{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px 8px;margin:14px 0;position:relative}
+.knife h3{margin:0 0 6px;font-size:1.12rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.knife h3 .no{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#1f2328;color:#fff;font-size:.9rem;font-weight:800;flex:none}
+.knife h3 .en{font-weight:400;color:var(--mute);font-size:.85rem}
+.knife p{margin:.35em 0}
+.arrow{color:#c0392b;font-weight:800}
+.mis{background:#fdecea;border-left:4px solid #c0392b;border-radius:8px;padding:8px 12px;margin:8px 0}
+.good{background:#e6f6ea;border-left:4px solid #1a7f37;border-radius:8px;padding:8px 12px;margin:8px 0}
+.gl{background:#eef6ff;border-radius:8px;padding:6px 10px;margin:6px 0;font-size:.92rem;color:#334155}
+.morph{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0}
+.morph div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.morph b.k{font-size:1.4rem;font-family:"Noto Sans JP",sans-serif}
+.morph .ro{color:var(--ro)}
+.inner{background:#fffaf0;border:2px solid #e0a100;border-radius:14px;padding:12px 16px;margin:12px 0}
+.inner p{margin:.4em 0}
+.formula{font-family:ui-monospace,Menlo,Consolas,monospace;background:#1f2328;color:#fff;border-radius:12px;padding:14px 16px;font-size:1rem;line-height:1.6;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.one{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.35rem;line-height:1.5;text-align:center;background:#fff;border:2px solid #1f2328;border-radius:14px;padding:16px 14px;margin:12px 0}
+.ascii{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f6f4ee;border:1px solid #cfc8b6;border-radius:12px;padding:12px;font-size:.82rem;line-height:1.35;overflow-x:auto;white-space:pre;margin:10px 0}
+.compare{width:100%;border-collapse:collapse;margin:8px 0;font-size:.93rem}
+.compare th,.compare td{border:1px solid #d8dee8;padding:6px 8px;text-align:left;vertical-align:top}
+.compare th{background:#f4f7fb}
+.tblwrap{overflow-x:auto}
+.notice{background:#fff4f4;border:2px solid #e74c3c;border-radius:14px;padding:12px 16px;margin:10px 0}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0}
+.links a{display:block;background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.links a b{display:block;font-size:1.08rem}
+.links a span{display:block;color:var(--mute);font-size:.9rem}
+.links a.m{border-color:#c0392b}.links a.h{border-color:#1368ce}.links a.d{border-color:#5b6370}
+/* Kahoot（頁內） */
+#kahoot-sec{background:#f3effa;border-radius:18px;padding:6px 12px 14px;margin-top:30px}
+.kh-hero{background:linear-gradient(135deg,#46178f,#7b3fe4);color:#fff;border-radius:16px;padding:16px;margin:12px 0}
+.kh-hero h3{margin:0 0 6px;font-size:1.4rem}
+.kh-hero p{margin:0 0 4px}
+.kh-stats{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin:8px 0 12px}
+.kh-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.92rem;font-weight:700}
+.kh-chip .n{color:#46178f}
+.kh-timer{height:10px;background:#e2dcef;border-radius:999px;overflow:hidden;margin:0 0 14px}
+.kh-timer i{display:block;height:100%;width:100%;background:#1a7f37;transition:width .1s linear,background .2s}
+.kh-timer.warn i{background:#e0a100}.kh-timer.hot i{background:#c0392b}
+.kh-q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 14px;margin:0 0 14px;min-height:88px}
+.kh-q .tag{font-size:.78rem;color:var(--mute);margin:0 0 6px}
+.kh-q .qt{font-size:1.25rem;line-height:1.45;font-weight:700}
+.kh-play{display:inline-flex;align-items:center;gap:6px;margin-top:10px;border:none;background:#1f6feb;color:#fff;border-radius:999px;padding:8px 14px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.kh-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kh-opt{position:relative;border:none;color:#fff;border-radius:14px;padding:18px 12px 18px 46px;min-height:84px;font-size:1.08rem;font-weight:700;line-height:1.35;text-align:left;cursor:pointer;font-family:"Noto Sans JP","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+.kh-opt .shape{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1.35rem;line-height:1}
+.kh-opt.red{background:#e21b3c}.kh-opt.blue{background:#1368ce}.kh-opt.yellow{background:#c88800}.kh-opt.green{background:#26890c}
+.kh-opt:disabled{cursor:default}
+.kh-opt.pick-bad{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #7a1010;filter:brightness(.85)}
+.kh-opt.pick-ok{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #0b4a04}
+.kh-opt.dim{opacity:.45}
+.kh-fb{margin:14px 0 0;padding:12px 14px;border-radius:14px;background:#fff;border:2px solid var(--line)}
+.kh-fb.ok{border-color:var(--ok);background:#e6f6ea}.kh-fb.bad{border-color:var(--bad);background:#fdecea}
+.kh-fb .result{font-size:1.15rem;font-weight:800;margin:0 0 6px}
+.kh-fb .pts{font-weight:700;color:#8a5a00;margin:0 0 8px}
+.kh-ex{font-size:.97rem}.kh-ex p{margin:.3em 0}.kh-ex .en{color:#334155;font-size:.92rem}.kh-ex .ro{color:var(--ro)}
+.kh-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.kh-btn{border:none;background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block}
+.kh-btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.kh-btn.hot{background:#46178f}
+.kh-end{text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 14px;margin:12px 0}
+.kh-end .score{font-size:3rem;font-weight:800;line-height:1.1;color:#46178f}
+.kh-end .rank{display:inline-block;margin:8px 0 12px;background:#fff6e5;border-radius:999px;padding:4px 14px;font-weight:800}
+.kh-podium{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:16px auto;max-width:420px}
+.kh-podium .p{flex:1;border-radius:12px 12px 0 0;padding:10px 6px;color:#fff;font-weight:800}
+.kh-podium .p b{display:block;font-size:1.4rem}.kh-podium .p span{display:block;font-size:.78rem;opacity:.9}
+.kh-podium .p1{background:#c88800;min-height:110px;order:2}.kh-podium .p2{background:#5b6370;min-height:86px;order:1}.kh-podium .p3{background:#8a5a2b;min-height:70px;order:3}
+.kh-board{width:100%;border-collapse:collapse;margin:12px 0;text-align:left}
+.kh-board th,.kh-board td{border-bottom:1px solid var(--line);padding:8px 6px;font-size:.92rem}
+.kh-board tr.me{background:#fff6e5;font-weight:700}
+.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;text-align:left}
+@media (max-width:420px){.hero h1{font-size:1.45rem}.kh-q .qt{font-size:1.08rem}.kh-opt{min-height:74px;padding:14px 10px 14px 40px;font-size:1rem}.kh-end .score{font-size:2.4rem}.one{font-size:1.15rem}}
+.gcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0}
+.gcard h3{margin:0 0 6px;font-size:1.12rem}
+.gcard .pt{font-family:"Noto Sans JP",sans-serif;background:#1f2328;color:#fff;border-radius:8px;padding:2px 10px;margin-right:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chips span{background:#f6f4ee;border:1px solid #cfc8b6;border-radius:10px;padding:4px 10px;font-size:.9rem}
+.chips span b{font-family:"Noto Sans JP",sans-serif;display:block;font-size:1.05rem}
+</style>
+</head>
+<body>
+<main>
+<p class="lead" style="margin-top:14px"><a href="../index.html">← 首頁</a>　·　<a href="2026-11-19-manga.html">📖 11/19 漫畫</a>　·　<a href="#kahoot">🎯 Kahoot</a></p>
+
+<div class="fm">---
+title: 概念解剖：て（把動作串起來）＋ 〜方（把動作變成「方法」）
+tags: concept
+date: 2026-11-19
+method: ljg-learn（定錨 → 八刀 → 內觀 → 壓縮）＋ ljg-word／ljg-is／ljg-teach
+lesson: 第9課 テ形、テ形、〜ます・ます形＋方・どうやって・2グループ動詞の木・漢字 半／分
+---</div>
+
+<div class="hero">
+<h1>🔪 概念解剖：て と 方<br><span lang="ja">テ形、テ形、〜ます・〜の〜方・どうやって</span></h1>
+<p>今天前半是漢字<b>半・分</b>和時間說法，接著第 9 課：把幾個動作<b>用て形串成一句</b>（最後才用 ます），再學把動作變成「做法」的 <b>ます形去ます＋方</b>，配上問方法的 <b>どうやって</b>。最後老師布置了作文「私の趣味」。這頁用 ljg-learn 切八刀，再整理句型、會話、單字、跟讀和小遊戲，最下面直接玩 Kahoot。</p>
+</div>
+
+<div class="notice">
+<b>📢 作業和通知</b>
+<ul style="margin:6px 0 8px;padding-left:20px">
+<li>🩺 <b>明天（11/20・五）健康診斷</b>：穿 <b>T 恤</b>來，方便穿脫。</li>
+<li>📝 <b>作文「私の趣味」下週交</b>：寫在作文紙（原稿用紙）上，約 <b>200 字</b>；題目和名字寫在最上面，正文從下一行<b>空一格</b>開始。準備方法看下面的 <a href="#essay">⑨ 作文準備</a>（只有結構和句型，<b>內容要自己寫</b>，老師禁止 AI 代寫）。</li>
+<li>🎵 <b>て形變化要背熟</b>：可以用老師給的歌（聖誕歌、トトロ 的旋律）來記。</li>
+</ul>
+<div class="rows">
+明日は健康診断です。Tシャツで来てください。 | ashita wa kenkou shindan desu. tiishatsu de kite kudasai. | 明天是健康檢查。請穿 T 恤來。 | say=あしたはけんこうしんだんです。ティーシャツできてください。
+作文を書いて、来週出します。 | sakubun o kaite, raishuu dashimasu. | 寫好作文，下週交。 | say=さくぶんをかいて、らいしゅうだします。
+</div>
+</div>
+
+<div class="steps">
+<a href="#anchor">① 定錨</a><a href="#knives">② 八刀</a><a href="#inner">③ 內觀</a><a href="#compress">④ 壓縮</a><a href="#grammar">⑤ 句型</a><a href="#dialogue">⑥ 會話</a><a href="#vocab">⑦ 單字</a><a href="#shadow">⑧ 跟讀</a><a href="#games">🎮 遊戲</a><a href="#essay">⑨ 作文準備</a><a class="kh" href="#kahoot">🎯 Kahoot</a>
+</div>
+<div class="toc"></div>
+
+<!-- ===================== 1. 定錨 ===================== -->
+<section>
+<h2 class="part" id="anchor" data-short="① 定錨">一、定錨<small>最通行的定義・常見誤解・核心詞素</small></h2>
+<p><b>最通行的定義：</b>「て形」＝動詞的<b>連接形</b>。幾個動作照<b>發生的順序</b>排好，前面的動詞都用て形，<b>只有最後一個</b>用 ます／ました。時態（現在、過去）和禮貌程度都只看最後那個動詞。</p>
+<div class="tblwrap"><table class="compare">
+<thead><tr><th>組別</th><th>規則（ます形 → て形）</th><th>例</th></tr></thead>
+<tbody>
+<tr><td><b>2 組</b>（最簡單）</td><td>去掉 ます，加 て</td><td lang="ja">食べます→食べて　見ます→見て　起きます→起きて　寝ます→寝て　見せます→見せて</td></tr>
+<tr><td><b>3 組</b>（直接背）</td><td>します→して；来ます→来て（きて）</td><td lang="ja">買い物をします→買い物をして　予約します→予約して　来ます→来て</td></tr>
+<tr><td><b>1 組</b>（會變音）</td><td>い・ち・り → <b>って</b>；み・び・に → <b>んで</b>；き → <b>いて</b>；ぎ → <b>いで</b>；し → <b>して</b><br>例外：行きます → <b>行って</b></td><td lang="ja">買います→買って　入ります→入って　払います→払って　言います→言って<br>飲みます→飲んで　書きます→書いて　話します→話して</td></tr>
+<tr><td colspan="3"><small>⚠️ 長得像、組別不同：<b lang="ja">入ります</b>（看起來像 2 組，其實是 1 組 → 入って）；<b lang="ja">降ります</b>（降りる，2 組 → 降りて）。</small></td></tr>
+</tbody></table></div>
+<div class="gl">EN: te-form = the "linking form" of a verb: V1-te, V2-te, V3-masu = "do V1, (and then) V2, and then V3".　TH: รูป て ＝ รูปเชื่อมกริยา：ทำ A แล้วก็ B แล้วก็ C（กริยาสุดท้ายบอกเวลา）</div>
+<div class="rows">
+朝起きて、朝ご飯を食べて、図書館へ行きます。 | asa okite, asagohan o tabete, toshokan e ikimasu. | 早上起床、吃早餐，然後去圖書館。EN: I get up, eat breakfast, and then go to the library. | say=あさおきて、あさごはんをたべて、としょかんへいきます。
+週末映画を見て、食事をして、買い物をしました。 | shuumatsu eiga o mite, shokuji o shite, kaimono o shimashita. | 週末看了電影、吃了飯、買了東西。 | say=しゅうまつえいがをみて、しょくじをして、かいものをしました。
+</div>
+
+<p><b>常見誤解（今天課堂上真的出現過）：</b></p>
+<div class="mis">✗ 週末映画を見<b>ます</b>、食事を<b>します</b>、買い物をしました　→　✓ 映画を見<b>て</b>、食事をし<b>て</b>、買い物をしました<br><small>中間保留 ます，聽起來像三件分開宣布的事，還混了現在和過去。</small></div>
+<div class="mis">✗ 食べ<b>し</b>ました　→　✓ 食べました<br><small>食べる 是 2 組，ます形 食べます，過去 食べました，中間不加 し。</small></div>
+<div class="mis">✗ 本<b>の</b>読みます　→　✓ 本<b>を</b>読みます<br><small>動詞前面的對象用 を。要變成名詞「読み方」時才用 の：本<b>の</b>読み方。</small></div>
+<div class="mis">✗ カードの作り<b>ます</b>がわかりません　→　✓ カードの作り<b>方</b>がわかりません<br><small>ます形不能直接當名詞；去掉 ます、加 方 才變成「做法」。</small></div>
+<div class="mis">✗ 半年 はん<b>ねん</b>　→　✓ はん<b>とし</b>；✗ 新大久保 し<b>の</b>おくぼ　→　✓ し<b>ん</b>お<b>お</b>くぼ</div>
+<div class="tip"><b>順便複習 4～8 課アチーブテスト的陷阱：</b>題目問「みなさんは<b>これから</b>何をしますか」（接下來要做什麼），要找老師說的「〜<b>てください</b>」（指示＝接下來要做的事），不要選「〜<b>ています</b>」（現在正在做的事）。這兩個也都是て形家族！</div>
+
+<p><b>核心詞素：</b></p>
+<div class="morph">
+<div><b class="k" lang="ja">て</b><br><span class="ro">te</span><br>動作的「逗號」：還沒講完，後面還有。也是 〜てください、〜ています 的「て」。</div>
+<div><b class="k" lang="ja">方</b><br><span class="ro">kata</span><br>漢字就是中文的「方法」的方：ます形去ます＋方＝做法（買い方、使い方）。</div>
+<div><b class="k" lang="ja">どうやって</b><br><span class="ro">dou yatte</span><br>どう（怎樣）＋ やって（やる「做」的て形）＝ 怎麼做、用什麼方法。</div>
+<div><b class="k" lang="ja">で</b><br><span class="ro">de</span><br>方法、工具、交通：インターネットで、電車で、手で。回答 どうやって 時最常用。</div>
+</div>
+</section>
+
+<!-- ===================== 2. 八刀 ===================== -->
+<section>
+<h2 class="part" id="knives" data-short="② 八刀">二、八刀<small>八個方向各切一刀，每刀只留筋骨</small></h2>
+
+<div class="knife"><h3><span class="no">1</span>歷史 <span class="en">History</span></h3>
+<p>一般的說法是：連接用的「て」來自古語表示「完成」的助動詞「<b>つ</b>」<span class="arrow">→</span> 意思是「做完一個，再做下一個」。古時候寫成「買ひて」「飲みて」「書きて」，說快了就變成 <b>買って・飲んで・書いて</b>，這就是 1 組的「音便」（變音）。2 組沒有這個問題，所以直接加 て。這段來源是通說，當記憶法用就好。</p>
+<div class="rows">
+買います → 買って | kaimasu → katte | 買（い→っ） | say=かいます、かって
+飲みます → 飲んで | nomimasu → nonde | 喝（み→ん＋で） | say=のみます、のんで
+書きます → 書いて | kakimasu → kaite | 寫（き→い） | say=かきます、かいて
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">2</span>辯證 <span class="en">Dialectics</span></h3>
+<p><b>正：</b>ます＝句子的「句號」，一說就結束。<b>反：</b>て＝「逗號」，說了還沒完。<b>合：</b>一句話只能有一個句號，所以 <b>て、て、ます</b>。同樣的道理也在「〜方」：動詞 買います 是在「做」，買い方 是把「做」凍成一個<b>東西</b>，才能放進「〜が<b>わかりません</b>」。</p>
+<div class="rows">
+チケットを買います。 | chiketto o kaimasu. | 買票。（動作） | say=チケットをかいます。
+チケットの買い方がわかりません。 | chiketto no kaikata ga wakarimasen. | 不知道怎麼買票。（「買法」變成名詞） | say=チケットのかいかたがわかりません。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">3</span>現象 <span class="en">Phenomenology</span></h3>
+<p>回到教室：大家輪流用て形說一串動作——「朝起きて、朝ご飯を食べて、図書館へ行きます」「ピザを食べてお風呂に入って寝ました」。老師一直提醒兩件事：<b>時間詞（朝、昨日、週末）放最前面</b>，<b>最後一定用 ます 收尾</b>。後半換成「〜の〜方がわかりません。どうやって〜ますか」，練圖書館辦卡、訂票、開淋浴。</p>
+<div class="rows">
+ピザを食べて、お風呂に入って、寝ました。 | piza o tabete, ofuro ni haitte, nemashita. | 吃了披薩、泡了澡，然後睡了。 | say=ピザをたべて、おふろにはいって、ねました。
+シャワーの出し方がわかりません。 | shawaa no dashikata ga wakarimasen. | 我不知道淋浴怎麼開。 | say=シャワーのだしかたがわかりません。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">4</span>語言 <span class="en">Linguistics</span></h3>
+<p><b>四語對照：</b>English 用 <b>and then</b>；泰語用 <b>แล้ว(ก็)</b>（กินข้าวแล้วไปโรงเรียน）；粵語說「<b>…咗，跟住…</b>」（食咗早餐，跟住返學）；普通話說「<b>…了，然後…</b>」。日語不另外加連接詞，<b>動詞自己變形</b>就連起來了。</p>
+<div class="ascii">  起きます ─(2G: ます→て)─▶ 起きて ─┐
+  食べます ─(2G: ます→て)─▶ 食べて ─┼──▶ 行きます／行きました
+  買います ─(1G: い→って)─▶ 買って ─┤     （只有最後一個管時態）
+  します  ─(3G)──────────▶ して  ─┘
+
+  買います ─(去ます)─▶ 買い ＋ 方 ＝ 買い方（名詞：買法）
+  チケットを買います ─▶ チケットの買い方（を → の）</div>
+<p><b>隱喻：</b>て形像<b>串珠子的線</b>：每顆珠子是一個動作，最後打一個結（ます）才不會散。</p>
+</div>
+
+<div class="knife"><h3><span class="no">5</span>形式 <span class="en">Formalization</span></h3>
+<div class="formula">連續動作 = [時間詞] ＋ V1て、V2て、… ＋ V最後ます／ました
+做法     = N の ＋ V(ます形去ます) ＋ 方 ＋ が わかりません／を 教えてください
+問方法   = どうやって ＋ V ますか → 答：N で ＋ V ます ／ V1て、V2ます</div>
+<div class="gl">EN: sequence = V1-te, V2-te, V-masu (tense on the last verb only); "how to" = N no + V-stem + kata.　TH: ลำดับการกระทำ = กริยา て、กริยา て、กริยา ます／วิธี～ = N の + กริยา(ตัด ます) + 方</div>
+<div class="rows">
+インターネットでチケットを予約して、コンビニでお金を払います。 | intaanetto de chiketto o yoyaku shite, konbini de okane o haraimasu. | 在網上訂票，然後在便利店付錢。 | say=インターネットでチケットをよやくして、コンビニでおかねをはらいます。
+どうやって図書館のカードを作りますか。 | dou yatte toshokan no kaado o tsukurimasu ka. | 圖書館的卡要怎麼辦？ | say=どうやってとしょかんのカードをつくりますか。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">6</span>存在 <span class="en">Existential</span></h3>
+<p>剛搬到東京，每天都會遇到「不會用、不知道怎麼辦」：圖書館辦卡、買演唱會的票、宿舍的淋浴、電腦。這時候兩句話就能救你：「<b>〜の〜方がわかりません</b>」＋「<b>どうやって〜ますか</b>」。對方回答時一定用て形一步一步說，你就能聽懂步驟。</p>
+<div class="rows">
+パソコンの使い方がわかりません。どうやって使いますか。 | pasokon no tsukaikata ga wakarimasen. dou yatte tsukaimasu ka. | 我不知道電腦怎麼用。要怎麼用呢？ | say=パソコンのつかいかたがわかりません。どうやってつかいますか。
+受付で名前と住所を書いて、カードを見せます。 | uketsuke de namae to juusho o kaite, kaado o misemasu. | 在櫃台寫上名字和地址，然後出示卡片。 | say=うけつけでなまえとじゅうしょをかいて、カードをみせます。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">7</span>美感 <span class="en">Aesthetics</span></h3>
+<p>想像說明書上一格一格的插圖：①寫名字 → ②出示卡片 → ③拿到借書證。て形就是把這些插圖<b>用箭頭連起來</b>的那條線；「〜方」則是整本說明書的<b>標題</b>（カードの作り方）。一句好的日語，就像一張清楚的流程圖。</p>
+<div class="rows">
+カードの作り方を教えてください。 | kaado no tsukurikata o oshiete kudasai. | 請告訴我卡片怎麼辦。 | say=カードのつくりかたをおしえてください。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">8</span>元反思 <span class="en">Meta</span></h3>
+<p><b>我們用什麼隱喻理解它？</b>「串珠子」：て＝連接。</p>
+<p><b>這個隱喻擋住了什麼？</b>它讓人以為 て 只會「連接」。其實同一個 て 也住在 <b>〜てください</b>（請做）、<b>〜ています</b>（正在做）、<b>どうやって</b>（怎麼做）裡面——て 是動詞的「<b>半成品</b>」，後面接什麼，就變成什麼意思。</p>
+<p><b>換一個隱喻：「插頭」。</b>動詞變成て形，就多了一個插頭，可以插上 ください、います、或下一個動作。</p>
+<p class="tip"><b>文化追問（只是推測，證據弱～中）：</b>課上反覆出現「チケットの買い方」「シャワーの出し方」這種<b>把動作包成名詞</b>的問法。一種看法是：說「〜方がわかりません」比直接問「怎麼買？」更間接、更客氣；但也可能只是因為「わかります」前面需要一個名詞（課上也有直接問「どうやって〜ますか」的說法）。目前只有課堂材料，不能下定論。</p>
+</div>
+</section>
+
+<!-- ===================== 3. 內觀 ===================== -->
+<section>
+<h2 class="part" id="inner" data-short="③ 內觀">三、內觀<small>變成這個概念本身</small></h2>
+<div class="inner">
+<p>我是「て」。我站在動作和動作之間，像一個逗號。</p>
+<p>2 組的動詞最喜歡我：脫掉 ます，就能牽我的手——食べて、見て、起きて。</p>
+<p>1 組的動詞跟我握手時會變音：買って、飲んで、書いて；只有「行きます」說要特別，變成「行って」。</p>
+<p>我自己不決定時間。昨天還是明天，要等句子最後那個 ます／ました 來決定。</p>
+<p>我的鄰居「方」剛好相反：它不連接，而是把一個動作停下來，變成一個東西——買い方、使い方——讓你可以說「我不知道這個」。</p>
+</div>
+<p><b>哪幾刀指向同一個深層結構？</b>辯證、語言、形式三刀都指向：<b>日語的動詞要先「變形」才能接別的東西</b>——接下一個動作用て形，接 方 用ます形去ます，接 こと 用辭書形（11/17）。<b>先看後面要接什麼，再決定動詞變成哪個形</b>，這就是今天的核心。</p>
+</section>
+
+<!-- ===================== 4. 壓縮 ===================== -->
+<section>
+<h2 class="part" id="compress" data-short="④ 壓縮">四、壓縮<small>公式・一句話・結構圖</small></h2>
+<div class="formula">一串動作 = [時間詞] V1て、V2て、Vます（時態只看最後）
+做法     = Nの ＋ V(去ます)方 が わかりません
+問／答   = どうやって Vますか → Nで Vます ／ Vて、Vます</div>
+<div class="one">前面的動作用「て」串起來，<br>最後一個才用「ます」；<br>不會做，就說「〜の〜方がわかりません」。</div>
+<div class="gl">EN: Chain actions with te-form and end with masu; ask "how" with dou yatte, or say "N no V-kata ga wakarimasen".　TH: เชื่อมด้วย て แล้วจบด้วย ます／ถามวิธีด้วย どうやって／～の～方がわかりません＝ไม่รู้วิธี～</div>
+<div class="ascii">       動詞（ます形）
+      /      |       \
+   去ます+て  去ます+方   辭書形+こと
+   (連接)    (做法)      (把動作變名詞，11/17)
+     |         |
+ V1て、V2て、Vます   Nの V方 が わかりません
+     |                     |
+     +------ どうやって Vますか ------+</div>
+<p><b>記憶法：</b>粵語：て ≈「<b>…咗，跟住</b>」；普通話：方＝「<b>方法</b>」的方（買い方＝買法）；English：te = <b>"and then"</b>，kata = <b>"how to"</b>；ไทย：て ≈ <b>แล้วก็</b>，方 ≈ <b>วิธี</b>（แต่ลำดับกลับกัน：วิธีซื้อ＝買い方）。口訣：<b>「て、て、ます，方前の」</b>。</p>
+</section>
+
+<!-- ===================== 5. 句型 ===================== -->
+<section>
+<h2 class="part" id="grammar" data-short="⑤ 句型">五、今天的句型<small>ljg-is：是什麼・怎麼運作・怎麼拆・要改什麼想法</small></h2>
+<div class="gcard"><h3><span class="pt">〜て、〜て、〜ます</span>て形把幾個動作照順序串起來</h3>
+<p><b>是什麼：</b>把兩個以上的動作照發生順序連成一句，最後用 ます／ました 結尾。跟「〜てから」（做完 A 才做 B，強調「才」）不同，今天的て形只表示先後順序。</p>
+<p><b>怎麼運作：</b>2 組去ます＋て（食べて）；1 組變音（買って、行って、飲んで、入って）；3 組 します→して、来ます→来て。て形放句中，最後一個動詞決定時態。</p>
+<div class="chips"><span><b>朝起きて</b>第一個動作（て形）</span><span><b>朝ご飯を食べて</b>第二個動作（て形）</span><span><b>図書館へ行きます</b>最後的動作，用ます結尾</span></div>
+<p><b>要改的想法：</b>不要每個動作都說一句「〜ました」；用て形串起來，順序自然就清楚了。</p>
+<p><b>下次怎麼判斷：</b>先放時間詞（朝、昨日、週末），再把動作按順序變成て形，最後一定用 ます 收尾。</p>
+<div class="gl">EN: V1-te, V2-te, V3-masu = &quot;do V1, V2, and then V3&quot; (tense only on the last verb).　TH: ทำ A แล้วก็ B แล้วก็ C（บอกเวลาที่กริยาตัวสุดท้าย）</div>
+<div class="rows">
+朝起きて、朝ご飯を食べて、図書館へ行きます。 | asa okite, asagohan o tabete, toshokan e ikimasu. | 早上起床、吃早餐，然後去圖書館。 | say=あさおきて、あさごはんをたべて、としょかんへいきます。
+ピザを食べて、お風呂に入って、寝ました。 | piza o tabete, ofuro ni haitte, nemashita. | 吃了披薩、泡了澡，然後睡了。 | say=ピザをたべて、おふろにはいって、ねました。
+</div></div>
+<div class="gcard"><h3><span class="pt">Nの ＋ V(ます形去ます)方</span>把動詞變成「做法」的名詞</h3>
+<p><b>是什麼：</b>「ます形去ます＋方」＝「……的方法」。它是<b>名詞</b>，所以可以接「がわかりません」「を教えてください」；どうやって 則是問句用的疑問詞。</p>
+<p><b>怎麼運作：</b>買います→買い方、使います→使い方、食べます→食べ方、払います→払い方、出します→出し方、申し込みます→申し込み方。前面的「を」要變成「の」：チケット<b>を</b>買います → チケット<b>の</b>買い方。</p>
+<div class="chips"><span><b>チケットの</b>修飾「買い方」的名詞（を→の）</span><span><b>買い方</b>ます形去ます＋方＝做法</span><span><b>がわかりません</b>不知道（什麼）</span></div>
+<p><b>要改的想法：</b>「〜方」前面不是直接放名詞，要加の；動詞句裡才用を（本を読みます／本の読み方）。</p>
+<p><b>下次怎麼判斷：</b>想說「不知道怎麼做」：先找動作的ます形，去掉ます加方，前面的名詞加の。</p>
+<div class="gl">EN: N no + V-stem + kata = &quot;how to V (the N)&quot;; kaikata = how to buy.　TH: วิธี～：チケットの買い方＝วิธีซื้อตั๋ว（ลำดับกลับกัน）</div>
+<div class="rows">
+チケットの買い方がわかりません。 | chiketto no kaikata ga wakarimasen. | 我不知道怎麼買票。 | say=チケットのかいかたがわかりません。
+シャワーの出し方がわかりません。 | shawaa no dashikata ga wakarimasen. | 我不知道淋浴怎麼開。 | say=シャワーのだしかたがわかりません。
+カニの食べ方がわかりません。 | kani no tabekata ga wakarimasen. | 我不知道螃蟹怎麼吃。 | say=カニのたべかたがわかりません。
+</div></div>
+<div class="gcard"><h3><span class="pt">どうやって〜ますか</span>問「怎麼做、用什麼方法」</h3>
+<p><b>是什麼：</b>どうやって＝怎麼、用什麼方法（how）。跟「何で」（用什麼工具：ペンで）相近，但 どうやって 更重在方法和步驟；跟「どうして」（為什麼）完全不同。</p>
+<p><b>怎麼運作：</b>位置：どうやって＋動詞ますか。回答用「N＋で＋動詞ます」，或用て形一步一步說（〜て、〜ます）。</p>
+<div class="chips"><span><b>どうやって</b>問方法的疑問詞</span><span><b>チケットを</b>對象</span><span><b>予約しますか</b>動詞＋疑問助詞か</span></div>
+<p><b>要改的想法：</b>どうやって 是用來「問」的；回答時不要重複 どうやって，要說出方法（〜で）或步驟（〜て、〜ます）。</p>
+<p><b>下次怎麼判斷：</b>聽到 どうやって，先聽後面的動詞，再用「〜で」或て形回答。</p>
+<div class="gl">EN: dou yatte ~masu ka = &quot;How do you ~?&quot;　TH: ทำอย่างไร／ไปยังไง</div>
+<div class="rows">
+どうやってチケットを予約しますか。 | dou yatte chiketto o yoyaku shimasu ka. | 票要怎麼訂？ | say=どうやってチケットをよやくしますか。
+どうやって図書館のカードを作りますか。 | dou yatte toshokan no kaado o tsukurimasu ka. | 圖書館的卡要怎麼辦？ | say=どうやってとしょかんのカードをつくりますか。
+</div></div>
+<div class="gcard"><h3><span class="pt">で（方法・工具・交通）</span>で 表示方法、工具、手段</h3>
+<p><b>是什麼：</b>で 除了表示「在哪裡做」（受付で），還可以表示<b>方法</b>（インターネットで）、<b>工具</b>（ペンで、手で）、<b>交通</b>（バスで、電車で）。に 是目的地或時間點，不能表示手段。</p>
+<p><b>怎麼運作：</b>名詞＋で＋動詞。回答 どうやって 時最常用：インターネットで予約して、コンビニで払います（兩個で各管一個動作）。</p>
+<div class="chips"><span><b>インターネットで</b>方法、手段</span><span><b>チケットを予約して</b>動作（て形）</span><span><b>コンビニでお金を払います</b>地點＋動作</span></div>
+<p><b>要改的想法：</b>で 不只是「地點」，也是「用什麼」；「インターネットに予約」✗。</p>
+<p><b>下次怎麼判斷：</b>聽到「何で」「どうやって」，回答用 名詞＋で。</p>
+<div class="gl">EN: de = by / with / via (method, tool, transport).　TH: ด้วย／โดย（ไปด้วยรถไฟ＝電車で行きます）</div>
+<div class="rows">
+インターネットでチケットを予約して、コンビニでお金を払います。 | intaanetto de chiketto o yoyaku shite, konbini de okane o haraimasu. | 在網上訂票，然後在便利店付錢。 | say=インターネットでチケットをよやくして、コンビニでおかねをはらいます。
+バスで行きます。 | basu de ikimasu. | 坐巴士去。 | say=バスでいきます。
+手で食べます。 | te de tabemasu. | 用手吃。 | say=てでたべます。
+</div></div>
+<div class="gcard"><h3><span class="pt">に／へ</span>に 是「點」，へ 是「方向」</h3>
+<p><b>是什麼：</b>移動的時候，に 指向具體的目的地（pinpoint），へ 指移動的方向，範圍比較寬。去某地時兩個常常都可以用，老師的說法是 に 比較「點」、へ 比較「方向」。</p>
+<p><b>怎麼運作：</b>に：具體地點、時間點（コンサートに、五時半に）。へ：方向性的地方（アメリカへ、町へ）。</p>
+<div class="chips"><span><b>コンサートに</b>具體的目的地（點）</span><span><b>行きました</b>移動動詞</span></div>
+<p><b>要改的想法：</b>に 和 へ 不是完全一樣；但在「〜に／へ行きます」裡兩個都對，不用太緊張。</p>
+<p><b>下次怎麼判斷：</b>看到移動動詞（行く・来る・帰る），具體的點用 に，方向感用 へ。</p>
+<div class="gl">EN: ni = to (a point); e = toward (a direction).　TH: に＝ที่（จุดหมาย）、へ＝ไปทาง（ทิศทาง）</div>
+<div class="rows">
+一年に二、三回コンサートに行きます。 | ichinen ni ni, sankai konsaato ni ikimasu. | 一年去兩三次演唱會。 | say=いちねんに、に、さんかい、コンサートにいきます。
+アメリカへ行きます。 | amerika e ikimasu. | 去美國。 | say=アメリカへいきます。
+</div></div>
+
+<h3>🌳 動詞の木（2 組：食べる）</h3>
+<p>2 組的「樹幹」<b lang="ja">食べ</b>（tabe）不會變，只要接上樹枝。標 ※ 的還沒學，先認得就好。</p>
+<div class="tblwrap"><table class="compare">
+<thead><tr><th>樹枝</th><th>形</th><th>羅馬拼音</th><th>意思</th></tr></thead>
+<tbody>
+<tr><td>ます</td><td lang="ja" data-say="たべます">食べます</td><td>tabemasu</td><td>吃（禮貌）</td></tr>
+<tr><td>ない</td><td lang="ja" data-say="たべない">食べない</td><td>tabenai</td><td>不吃（ない形）</td></tr>
+<tr><td>る</td><td lang="ja" data-say="たべる">食べる</td><td>taberu</td><td>吃（辭書形；〜ること）</td></tr>
+<tr><td>て</td><td lang="ja" data-say="たべて">食べて</td><td>tabete</td><td>吃了然後…（て形）</td></tr>
+<tr><td>た</td><td lang="ja" data-say="たべた">食べた</td><td>tabeta</td><td>吃了（た形）</td></tr>
+<tr><td>られ ※</td><td lang="ja" data-say="たべられる">食べられる</td><td>taberareru</td><td>能吃（可能形）</td></tr>
+<tr><td>ろ ※</td><td lang="ja" data-say="たべろ">食べろ</td><td>tabero</td><td>吃！（命令形，很兇，不要對人用）</td></tr>
+</tbody></table></div>
+
+<h3>🕐 漢字：半・分</h3>
+<div class="vocab">
+はんぶん | 半分 | hanbun | 一半 | 半分に分けます（分成兩半）
+はんとし | 半年 | hantoshi | 半年 | ✗ はんねん
+ごじはん | 五時半 | gojihan | 五點半 | 図書館は五時半までです
+わける | 分ける | wakeru | 分開 | 分＝分開
+わかる | 分かる | wakaru | 明白 | 分得清＝明白
+いっぷん | 一分 | ippun | 一分鐘 | ん・っ 後念 ぷん
+にふん | 二分 | nifun | 兩分鐘 | ふん
+じゅっぷん | 十分 | juppun | 十分鐘 | じゅうぶん＝足夠（別混）
+</div>
+<div class="tip"><b>「分」的兩個意思：</b>①分開（separate）：半分に分けます ②明白（understand）：分かります——把東西「分」清楚了，就「懂」了。「半」寫 5 畫。</div>
+</section>
+
+<!-- ===================== 6. 會話 ===================== -->
+<section>
+<h2 class="part" id="dialogue" data-short="⑥ 會話">六、課本會話「週末何をしましたか」<small>分角色播放</small></h2>
+<div class="rows dlg">
+パクさん、週末何をしましたか。 | paku san, shuumatsu nani o shimashita ka. | 朴先生，週末做了什麼？ | sp=A;say=パクさん、しゅうまつなにをしましたか。
+買い物をして、食事をして、スマイルのコンサートに行きました。 | kaimono o shite, shokuji o shite, sumairu no konsaato ni ikimashita. | 買了東西、吃了飯，然後去聽了「スマイル」的演唱會。 | sp=B;say=かいものをして、しょくじをして、スマイルのコンサートにいきました。
+へえ、パクさんはスマイルが好きですか。 | hee, paku san wa sumairu ga suki desu ka. | 哦～朴先生喜歡「スマイル」嗎？ | sp=A;say=へえ、パクさんはスマイルがすきですか。
+はい。一年に二、三回コンサートに行きます。 | hai. ichinen ni ni, sankai konsaato ni ikimasu. | 對。一年去兩三次演唱會。 | sp=B;say=はい。いちねんに、に、さんかい、コンサートにいきます。
+そうですか。いいですね。 | sou desu ka. ii desu ne. | 是嗎，真好呢。 | sp=A;say=そうですか。いいですね。
+</div>
+<div class="gl">頻率說法：<b lang="ja">一年に二、三回</b>（一年兩三次）・<b lang="ja">1週間に2回</b>（一週兩次）・<b lang="ja">1か月に1回</b>（一個月一次）。期間＋<b>に</b>＋次數。</div>
+</section>
+
+<!-- ===================== 7. 單字 ===================== -->
+<section>
+<h2 class="part" id="vocab" data-short="⑦ 單字">七、今天的單字<small>假名格子一格一拍・點一下聽</small></h2>
+<div class="vocab">
+はんぶん | 半分 | hanbun | 一半 | 普：半＋分開＝半分
+わける | 分ける | wakeru | 分開、分配 | 2 組；分かる（明白）同一個「分」
+うけつけ | 受付 | uketsuke | 櫃台、接待處 | 受＝接住，付＝交付
+ばんごう | 番号 | bangou | 號碼 | 粵：番 faan1＝輪番叫號
+はらいます | 払います | haraimasu | 付（錢） | 1 組 → 払って；只用在錢
+よやく | 予約 | yoyaku | 預約、預訂 | 予約します（3 組）；予＝預先
+みせます | 見せます | misemasu | 出示、給人看 | 2 組 → 見せて；EN: show
+おります | 降ります | orimasu | 下（車） | 2 組 → 降りて；↔ 乗ります
+いいます | 言います | iimasu | 說（某句話） | 1 組 → 言って；「〜」と言います
+はなします | 話します | hanashimasu | 說話、交談 | 1 組 → 話して；友達と話します
+どうやって | どうやって | dou yatte | 怎麼、用什麼方法 | どう＋やって（做）；小っ停一拍
+かいかた | 買い方 | kaikata | 買法 | ます形去ます＋方
+もうしこみます | 申し込みます | moushikomimasu | 報名、申請 | 1 組；申し込み方＝報名方法
+けしき | 景色 | keshiki | 風景、景色 | 普：有色彩的景
+おふろにはいります | お風呂に入ります | ofuro ni hairimasu | 洗澡（泡澡） | 入る 是 1 組 → 入って
+しんおおくぼ | 新大久保 | shin-ookubo | 新大久保（地名） | ✗ しのおくぼ；大＝おお（長音）
+</div>
+<h3>ljg-word：每個詞的「原始畫面」</h3>
+<div class="tblwrap"><table class="compare">
+<thead><tr><th>詞</th><th>原始畫面</th><th>核心意象</th></tr></thead>
+<tbody>
+<tr><td lang="ja"><b>半分</b></td><td>一顆蘋果從正中間切開，兩半並排</td><td>切開後的那一份＝一半</td></tr>
+<tr><td lang="ja"><b>分ける</b></td><td>兩隻手把一堆東西往左右撥開</td><td>一個整體 → 分成幾份</td></tr>
+<tr><td lang="ja"><b>受付</b></td><td>入口的一張桌子，後面的人幫你辦手續</td><td>接住你的事＋告訴你怎麼辦</td></tr>
+<tr><td lang="ja"><b>番号</b></td><td>電話上按下一串數字</td><td>番（順序）＋号（叫號）</td></tr>
+<tr><td lang="ja"><b>払います</b></td><td>在收銀台把錢遞出去</td><td>錢從手裡出去</td></tr>
+<tr><td lang="ja"><b>予約</b></td><td>電話那頭說「幫您留一個位子」</td><td>事先＋約定＝先佔位</td></tr>
+<tr><td lang="ja"><b>見せます</b></td><td>把卡舉到對方眼前</td><td>見る（我看）↔ 見せる（讓你看）</td></tr>
+<tr><td lang="ja"><b>降ります</b></td><td>電車到站，人從車門走下來</td><td>從交通工具往下走</td></tr>
+<tr><td lang="ja"><b>言います</b></td><td>嘴裡吐出一句具體的話</td><td>說出「這句話」</td></tr>
+<tr><td lang="ja"><b>話します</b></td><td>兩個人面對面聊天</td><td>語言來回流動</td></tr>
+<tr><td lang="ja"><b>どうやって</b></td><td>面對不會用的機器，歪頭問「這怎麼弄？」</td><td>怎樣＋做＝問方法</td></tr>
+<tr><td lang="ja"><b>買い方</b></td><td>說明書上一步一步的圖</td><td>動作停下來變成「方法」</td></tr>
+<tr><td lang="ja"><b>申し込みます</b></td><td>在表格上寫名字，交到窗口</td><td>把申請「送進去」</td></tr>
+<tr><td lang="ja"><b>景色</b></td><td>從高樓窗戶望出去的一整片城市燈光</td><td>眼睛看到的一整片風景</td></tr>
+<tr><td lang="ja"><b>お風呂に入ります</b></td><td>人走進浴缸，水漫到肩膀</td><td>「進入」浴缸，不是「洗」浴缸</td></tr>
+<tr><td lang="ja"><b>新大久保</b></td><td>山手線的車站月台</td><td>新＋大久保</td></tr>
+</tbody></table></div>
+<h3>單字例句</h3>
+<div class="rows">
+パンを半分に分けます。 | pan o hanbun ni wakemasu. | 把麵包分成兩半。 | say=パンをはんぶんにわけます。
+半分に分けます。 | hanbun ni wakemasu. | 分成兩半。 | say=はんぶんにわけます。
+受付で名前を書きます。 | uketsuke de namae o kakimasu. | 在櫃台寫名字。 | say=うけつけでなまえをかきます。
+電話番号を書いてください。 | denwa bangou o kaite kudasai. | 請寫下電話號碼。 | say=でんわばんごうをかいてください。
+コンビニで払います。 | konbini de haraimasu. | 在便利店付錢。 | say=コンビニではらいます。
+レストランを予約します。 | resutoran o yoyaku shimasu. | 預約餐廳。 | say=レストランをよやくします。
+カードを見せます。 | kaado o misemasu. | 出示卡片。 | say=カードをみせます。
+新大久保で降ります。 | shin-ookubo de orimasu. | 在新大久保下車。 | say=しんおおくぼでおります。
+「わかりません」と言います。 | &quot;wakarimasen&quot; to iimasu. | 說「我不懂」。 | say=わかりません、といいます。
+友達と話します。 | tomodachi to hanashimasu. | 和朋友聊天。 | say=ともだちとはなします。
+どうやって行きますか。 | dou yatte ikimasu ka. | 怎麼去？ | say=どうやっていきますか。
+チケットの買い方 | chiketto no kaikata | 買票的方法 | say=チケットのかいかた
+電話で書道教室に申し込みます。 | denwa de shodou kyoushitsu ni moushikomimasu. | 打電話報名書法班。 | say=でんわでしょどうきょうしつにもうしこみます。
+景色がとてもきれいでした。 | keshiki ga totemo kirei deshita. | 景色非常漂亮。 | say=けしきがとてもきれいでした。
+お風呂に入って、寝ました。 | ofuro ni haitte, nemashita. | 泡了澡，然後睡了。 | say=おふろにはいって、ねました。
+新大久保へ行きます。 | shin-ookubo e ikimasu. | 去新大久保。 | say=しんおおくぼへいきます。
+</div>
+<div class="tip"><b>易混：</b>言います（說出某句具體的話：「わかりません」と言います）vs 話します（聊天、交談：友達と話します）；見ます（自己看）vs 見せます（給別人看）；払います 只用在錢；乗ります（上車）↔ 降ります（下車）；予約します（事先訂）vs 申し込みます（報名、申請）。</div>
+</section>
+
+<!-- ===================== 8. 跟讀 ===================== -->
+<section>
+<h2 class="part" id="shadow" data-short="⑧ 跟讀">八、今天最該會說的 11 句＋跟讀<small>▶ 播放・⧉ 複製・跟讀模式</small></h2>
+<p>按上方工具列的 <b>🎧 跟讀模式</b>（或下面的按鈕），選「八、今天最該會說的 11 句」：會依序念 <b>中文提示 → 日語 → 停 3 秒你跟著念 → 日語再一次</b>，最後有小測驗（中文出題 → 停 5 秒 → 念答案）。語速可以在工具列切 1.0／0.75。</p>
+<p><button class="kh-btn hot" type="button" id="openShadow">🎧 開始跟讀</button></p>
+<div class="rows">
+半分に分けます。 | hanbun ni wakemasu. | 分成兩半。 | say=はんぶんにわけます。
+図書館は五時半までです。 | toshokan wa gojihan made desu. | 圖書館開到五點半。 | say=としょかんはごじはんまでです。
+買い物をして、食事をして、スマイルのコンサートに行きました。 | kaimono o shite, shokuji o shite, sumairu no konsaato ni ikimashita. | 買了東西、吃了飯，然後去了「スマイル」的演唱會。 | say=かいものをして、しょくじをして、スマイルのコンサートにいきました。
+一年に二、三回コンサートに行きます。 | ichinen ni ni, sankai konsaato ni ikimasu. | 一年去兩三次演唱會。 | say=いちねんに、に、さんかい、コンサートにいきます。
+朝起きて、朝ご飯を食べて、図書館へ行きます。 | asa okite, asagohan o tabete, toshokan e ikimasu. | 早上起床、吃早餐，然後去圖書館。 | say=あさおきて、あさごはんをたべて、としょかんへいきます。
+ピザを食べて、お風呂に入って、寝ました。 | piza o tabete, ofuro ni haitte, nemashita. | 吃了披薩、泡了澡，然後睡了。 | say=ピザをたべて、おふろにはいって、ねました。
+週末映画を見て、食事をして、買い物をしました。 | shuumatsu eiga o mite, shokuji o shite, kaimono o shimashita. | 週末看了電影、吃了飯、買了東西。 | say=しゅうまつえいがをみて、しょくじをして、かいものをしました。
+チケットの買い方がわかりません。 | chiketto no kaikata ga wakarimasen. | 我不知道怎麼買票。 | say=チケットのかいかたがわかりません。
+どうやってチケットを予約しますか。 | dou yatte chiketto o yoyaku shimasu ka. | 票要怎麼訂？ | say=どうやってチケットをよやくしますか。
+パソコンの使い方がわかりません。どうやって使いますか。 | pasokon no tsukaikata ga wakarimasen. dou yatte tsukaimasu ka. | 我不知道電腦怎麼用。要怎麼用呢？ | say=パソコンのつかいかたがわかりません。どうやってつかいますか。
+受付で名前と住所を書いて、カードを見せます。 | uketsuke de namae to juusho o kaite, kaado o misemasu. | 在櫃台寫上名字和地址，然後出示卡片。 | say=うけつけでなまえとじゅうしょをかいて、カードをみせます。
+</div>
+</section>
+
+<!-- ===================== 遊戲 ===================== -->
+<section>
+<h2 class="part" id="games" data-short="🎮 遊戲">🎮 小遊戲<small>排句子・て形變身・〜方・助詞・數拍</small></h2>
+<div id="g1"></div>
+<div id="g2"></div>
+<div id="g3"></div>
+<div id="g4"></div>
+<div id="g5"></div>
+<div id="g6"></div>
+</section>
+
+<!-- ===================== 9. 作文準備 ===================== -->
+<section>
+<h2 class="part" id="essay" data-short="⑨ 作文準備">九、作文準備「私の趣味」<small>只給結構和句型，內容自己寫</small></h2>
+<div class="notice"><b>⚠️ 老師禁止用 AI 寫作文。</b>這裡沒有範文，只有<b>格式、結構、句型骨架和單字</b>。句子裡的「＿＿」請填你自己的興趣和經驗。</div>
+<h3>① 格式（原稿用紙）</h3>
+<ul>
+<li>第 1 行：<b>題目</b>「私の趣味」；接著寫<b>名字</b>（老師說題目和名字寫在最上面；空幾格照老師給的範例）。</li>
+<li>正文從<b>下一行</b>開始，<b>第一格空一格</b>。換段落時也空一格。</li>
+<li>一格一個字；小的「っ・ゃ・ゅ・ょ」、「。」「、」也各佔一格。「。」「、」不要放在一行的第一格。</li>
+<li>長度：約 <b>200 字</b>（作文紙 10 行 × 20 格左右）。</li>
+</ul>
+<h3>② 四段結構</h3>
+<div class="tblwrap"><table class="compare">
+<thead><tr><th>段</th><th>要寫什麼</th><th>可用的句型骨架</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>我的興趣是什麼</td><td lang="ja">私の趣味は＿＿ことです。（辭書形＋こと，11/17）</td></tr>
+<tr><td>2</td><td>多久做一次、在哪裡、跟誰</td><td lang="ja">1週間に＿回／1か月に＿回／一年に＿回＿＿ます。<br>＿＿で、＿＿と＿＿ます。<br>よく／ときどき／毎週＿＿ます。</td></tr>
+<tr><td>3</td><td>特別喜歡什麼、做的時候做些什麼</td><td lang="ja">特に＿＿が好きです。<br>＿＿て、＿＿て、＿＿ます。（今天的て形！）<br>＿＿ことができます。（11/18）</td></tr>
+<tr><td>4</td><td>感覺、以後想做什麼</td><td lang="ja">＿＿は楽しいです／おもしろいです／気持ちがいいです。<br>これからも＿＿たいです。</td></tr>
+</tbody></table></div>
+<h3>③ 可能用到的單字（點一下聽）</h3>
+<div class="vocab">
+しゅみ | 趣味 | shumi | 興趣 | 私の趣味は〜ことです
+いっしゅうかん | 1週間 | isshuukan | 一週 | 1週間に2回
+いっかげつ | 1か月 | ikkagetsu | 一個月 | 1か月に1回
+まいしゅう | 毎週 | maishuu | 每週 | 
+しゅうまつ | 週末 | shuumatsu | 週末 | 
+よく | よく | yoku | 常常 | 
+ときどき | ときどき | tokidoki | 有時候 | 
+とくに | 特に | toku ni | 特別是 | 特に〜が好きです
+いっしょに | 一緒に | issho ni | 一起 | 友達と一緒に
+たのしい | 楽しい | tanoshii | 開心、好玩 | い形容詞
+おもしろい | おもしろい | omoshiroi | 有趣 | い形容詞
+きもちがいい | 気持ちがいい | kimochi ga ii | 舒服 | 
+</div>
+<h3>④ 交之前自己檢查</h3>
+<ul>
+<li>□ 第一句有「私の趣味は〜<b>こと</b>です」嗎？こと 前面是辭書形嗎？</li>
+<li>□ 有寫「多久一次」嗎？（〜に〜回）</li>
+<li>□ 有用て形把動作串起來嗎？最後一個動詞才用 ます？</li>
+<li>□ 助詞：〜<b>を</b>します、〜<b>に</b>行きます、〜<b>で</b>（地方／方法）、〜<b>が</b>好きです。</li>
+<li>□ 題目、名字、空格、約 200 字。</li>
+</ul>
+<p class="lead" style="font-size:.9rem">寫好後如果想檢查，可以拍照給我：我只幫你<b>指出文法錯誤和格式問題</b>，不幫你改寫內容。</p>
+</section>
+
+<!-- ===================== Kahoot ===================== -->
+<section id="kahoot-sec">
+<h2 class="part" id="kahoot" data-short="🎯 Kahoot">🎯 Kahoot 20 題<small>四色選項・20 秒・速度計分・連對加分</small></h2>
+<div id="khApp"></div>
+</section>
+
+<section>
+<h2 class="part" id="more" data-short="更多">更多玩法</h2>
+<div class="links">
+<a class="m" href="2026-11-19-manga.html"><b>📖 12 頁漫畫</b><span>ハルト × ミキ先生：東京的一天、て形、〜の〜方、どうやって行きますか</span></a>
+<a class="d" href="2026-11-18.html"><b>🔪 上一篇概念解剖</b><span>11/18 できる（〜ができます・ことができます）</span></a>
+<a class="h" href="2026-11-09.html"><b>🔁 て形規則複習</b><span>11/09 動詞のグループ・て形・てください</span></a>
+</div>
+
+<h2 class="part" id="today" data-short="今天的重點">今天的重點・提醒・15 分鐘</h2>
+<div class="good"><b>今天的重點：</b>① <b>テ形、テ形、〜ます</b>：動作照順序串，時態只看最後 ② て形三組規則（2 組去ます＋て；します→して、来ます→来て；1 組變音，行きます→行って）③ <b>ます形去ます＋方</b>＝做法，前面 を→の（チケットの買い方）④ <b>どうやって〜ますか</b> 問方法，用「〜で」或て形回答 ⑤ に（點）／へ（方向）、で（方法・工具・交通）⑥ 漢字 半・分（半分、半年 はんとし、一分 いっぷん）⑦ 新大久保＝しんおおくぼ。</div>
+<div class="mis"><b>提醒：</b>明天（11/20）健康診斷，穿 T 恤；作文「私の趣味」下週交，約 200 字（自己寫）；て形變化要背熟；沒有聽到明天的小考。</div>
+<ol>
+<li><b>0–5 分：</b>拿 10 個ます形（食べます、見ます、起きます、します、来ます、買います、入ります、飲みます、書きます、行きます），大聲說出て形；錯的用上面的「て形變身」遊戲再玩一次。</li>
+<li><b>5–10 分：</b>按 🎧 跟讀「八、今天最該會說的 11 句」，然後用「〜て、〜て、〜ました」說出你今天做的三件事。</li>
+<li><b>10–15 分：</b>玩一輪 Kahoot，錯題抄一次；最後在紙上畫作文的四段結構，每段只寫關鍵詞（內容自己想）。</li>
+</ol>
+<p class="lead" style="font-size:.85rem">方法來源：李繼剛 ljg-learn「概念解剖」（定錨 → 八刀 → 內觀 → 壓縮），單字用 ljg-word、句型用 ljg-is、練習用 ljg-teach。內容整理自 11/19 課堂錄音，僅供個人複習。「て＝來自助動詞つ」的來源是通說，當記憶法用；文化追問只是推測。</p>
+</section>
+</main>
+
+<script>
+window.pageInit = function () {
+  G.order('#g1', '① 排句子（詞塊）', '點詞塊排成正確順序，有干擾詞塊。答完會念出整句。', [{"zh": "圖書館開到五點半。", "t": ["図書館は", "五時半", "までです。"], "x": [], "ro": "toshokan wa gojihan made desu.", "say": "としょかんはごじはんまでです。"}, {"zh": "買了東西、吃了飯，然後去了「スマイル」的演唱會。", "t": ["買い物をして、", "食事をして、", "スマイルの", "コンサートに", "行きました。"], "x": ["行きます。", "を"], "ro": "kaimono o shite, shokuji o shite, sumairu no konsaato ni ikimashita.", "say": "かいものをして、しょくじをして、スマイルのコンサートにいきました。"}, {"zh": "一年去兩三次演唱會。", "t": ["一年に", "二、三回", "コンサートに", "行きます。"], "x": [], "ro": "ichinen ni ni, sankai konsaato ni ikimasu.", "say": "いちねんに、に、さんかい、コンサートにいきます。"}, {"zh": "早上起床、吃早餐，然後去圖書館。", "t": ["朝起きて、", "朝ご飯を食べて、", "図書館へ", "行きます。"], "x": ["行きました。"], "ro": "asa okite, asagohan o tabete, toshokan e ikimasu.", "say": "あさおきて、あさごはんをたべて、としょかんへいきます。"}, {"zh": "吃了披薩、泡了澡，然後睡了。", "t": ["ピザを食べて、", "お風呂に入って、", "寝ました。"], "x": ["食べます、"], "ro": "piza o tabete, ofuro ni haitte, nemashita.", "say": "ピザをたべて、おふろにはいって、ねました。"}, {"zh": "週末看了電影、吃了飯、買了東西。", "t": ["週末", "映画を見て、", "食事をして、", "買い物を", "しました。"], "x": ["寝ます。"], "ro": "shuumatsu eiga o mite, shokuji o shite, kaimono o shimashita.", "say": "しゅうまつえいがをみて、しょくじをして、かいものをしました。"}, {"zh": "我不知道怎麼買票。", "t": ["チケットの", "買い方が", "わかりません。"], "x": ["見ます、"], "ro": "chiketto no kaikata ga wakarimasen.", "say": "チケットのかいかたがわかりません。"}, {"zh": "票要怎麼訂？", "t": ["どうやって", "チケットを", "予約しますか。"], "x": ["買う方が", "を"], "ro": "dou yatte chiketto o yoyaku shimasu ka.", "say": "どうやってチケットをよやくしますか。"}, {"zh": "我不知道電腦怎麼用。要怎麼用呢？", "t": ["パソコンの", "使い方が", "わかりません。", "どうやって", "使いますか。"], "x": ["に"], "ro": "pasokon no tsukaikata ga wakarimasen. dou yatte tsukaimasu ka.", "say": "パソコンのつかいかたがわかりません。どうやってつかいますか。"}, {"zh": "在櫃台寫上名字和地址，然後出示卡片。", "t": ["受付で", "名前と住所を", "書いて、", "カードを", "見せます。"], "x": ["使う方が"], "ro": "uketsuke de namae to juusho o kaite, kaado o misemasu.", "say": "うけつけでなまえとじゅうしょをかいて、カードをみせます。"}]);
+  G.mcq('#g2', '② て形變身', 'ます形 → て形。1 組會變音，小心 行きます 和 入ります！', [{"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">食べます</span> → て形？", "o": ["食べて", "食べって", "食べんで", "食べいて"], "a": "食べて", "ex": "2 組：去ます＋て", "sa": "たべて"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">見ます</span> → て形？", "o": ["見て", "見って", "見んで", "見いて"], "a": "見て", "ex": "2 組：去ます＋て", "sa": "みて"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">起きます</span> → て形？", "o": ["起きて", "起いて", "起きって", "起って"], "a": "起きて", "ex": "2 組（起きる）：去ます＋て", "sa": "おきて"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">します</span> → て形？", "o": ["して", "しって", "すて", "しまして"], "a": "して", "ex": "3 組：直接背", "sa": "して"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">来ます</span> → て形？", "o": ["来て（きて）", "来って", "来んで", "来いて"], "a": "来て（きて）", "ex": "3 組：来ます→来て（きて）", "sa": "きて"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">買います</span> → て形？", "o": ["買って", "買いて", "買んで", "買くて"], "a": "買って", "ex": "1 組：い→って", "sa": "かって"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">入ります</span> → て形？", "o": ["入って", "入りて", "入んで", "入いて"], "a": "入って", "ex": "看起來像 2 組，其實是 1 組：り→って", "sa": "はいって"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">飲みます</span> → て形？", "o": ["飲んで", "飲みて", "飲って", "飲いて"], "a": "飲んで", "ex": "1 組：み→んで", "sa": "のんで"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">書きます</span> → て形？", "o": ["書いて", "書きて", "書って", "書んで"], "a": "書いて", "ex": "1 組：き→いて", "sa": "かいて"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">行きます</span> → て形？", "o": ["行って", "行いて", "行きて", "行んで"], "a": "行って", "ex": "例外！き 但是 行って", "sa": "いって"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">話します</span> → て形？", "o": ["話して", "話って", "話いて", "話んで"], "a": "話して", "ex": "1 組：し→して", "sa": "はなして"}, {"q": "<span lang=\"ja\" style=\"font-size:1.4rem\">降ります</span> → て形？", "o": ["降りて", "降って", "降んで", "降いて"], "a": "降りて", "ex": "降りる 是 2 組：去ます＋て", "sa": "おりて"}]);
+  G.mcq('#g3', '③ 〜方 製造機', '把動詞句變成「做法」：去ます＋方，を → の。', [{"q": "<span lang=\"ja\">チケットを買います</span> → 「做法」？", "o": ["チケットの買い方", "チケットを買い方", "チケットの買う方", "チケットの買います方"], "a": "チケットの買い方", "ex": "ます形去ます＋方；前面的 を 變 の。", "sa": "ちけっとのかいかた"}, {"q": "<span lang=\"ja\">パソコンを使います</span> → 「做法」？", "o": ["パソコンの使い方", "パソコンを使い方", "パソコンの使う方", "パソコンの使って方"], "a": "パソコンの使い方", "ex": "ます形去ます＋方；前面的 を 變 の。", "sa": "パソコンのつかいかた"}, {"q": "<span lang=\"ja\">シャワーを出します</span> → 「做法」？", "o": ["シャワーの出し方", "シャワーの出す方", "シャワーを出し方", "シャワーの出して方"], "a": "シャワーの出し方", "ex": "ます形去ます＋方；前面的 を 變 の。", "sa": "シャワーのだしかた"}, {"q": "<span lang=\"ja\">カードを作ります</span> → 「做法」？", "o": ["カードの作り方", "カードの作る方", "カードを作り方", "カードの作ります方"], "a": "カードの作り方", "ex": "ます形去ます＋方；前面的 を 變 の。", "sa": "カードのつくりかた"}, {"q": "<span lang=\"ja\">漢字を読みます</span> → 「做法」？", "o": ["漢字の読み方", "漢字の読む方", "漢字を読み方", "漢字の読んで方"], "a": "漢字の読み方", "ex": "ます形去ます＋方；前面的 を 變 の。", "sa": "かんじのよみかた"}, {"q": "<span lang=\"ja\">お金を払います</span> → 「做法」？", "o": ["お金の払い方", "お金の払う方", "お金を払い方", "お金の払って方"], "a": "お金の払い方", "ex": "ます形去ます＋方；前面的 を 變 の。", "sa": "おかねのはらいかた"}, {"q": "<span lang=\"ja\">教室に申し込みます</span> → 「做法」？", "o": ["申し込み方", "申し込む方", "申し込んで方", "申し込みます方"], "a": "申し込み方", "ex": "ます形去ます＋方；前面的 を 變 の。", "sa": "もうしこみかた"}]);
+  G.mcq('#g4', '④ 句型操練（10 題）', '填て形、填助詞、選對的說法、聽句子選意思。', [{"q": "朝起きて、朝ご飯を＿＿、図書館へ行きます。（食べます→て形）", "o": ["食べて", "食べって", "食べして"], "a": "食べて", "ex": "食べる 是 2 組，去ます直接加て。"}, {"q": "ピザを食べてお風呂に＿＿、寝ました。（入ります→て形）", "o": ["入って", "入りて", "入んで"], "a": "入って", "ex": "入る 是 1 組：り→って。"}, {"q": "週末映画を＿＿、食事をして、買い物をしました。（見ます→て形）", "o": ["見て", "見って", "見して"], "a": "見て", "ex": "見る 是 2 組，去ます加て。"}, {"q": "インターネット＿＿チケットを予約します。", "o": ["で", "に", "を"], "a": "で", "ex": "で 表示方法、手段。"}, {"q": "受付＿＿名前と住所を書いて、カードを見せます。", "o": ["で", "へ", "が"], "a": "で", "ex": "で 表示動作的地點（在櫃台寫）。"}, {"q": "一年＿＿二、三回コンサートに行きます。", "o": ["に", "で", "を"], "a": "に", "ex": "頻率：期間＋に＋次數。"}, {"q": "「我不知道淋浴怎麼開」哪句對？", "o": ["シャワーの出し方がわかりません。", "シャワーを出す方がわかりません。", "シャワーの出しますがわかりません。"], "a": "シャワーの出し方がわかりません。", "ex": "名詞＋の＋ます形去ます＋方。"}, {"q": "聽句子，選意思（按 🔊）", "say": "どうやってとしょかんのカードをつくりますか。", "o": ["圖書館的卡要怎麼辦？", "我已經辦了圖書館的卡。", "圖書館的卡不能辦。"], "a": "圖書館的卡要怎麼辦？", "ex": "どうやって＋ますか＝問做法。"}, {"q": "聽句子，選意思（按 🔊）", "say": "インターネットでよやくして、コンビニではらいます。", "o": ["在網上訂，然後在便利店付錢。", "在便利店訂，然後在網上付錢。", "在網上訂，但是不付錢。"], "a": "在網上訂，然後在便利店付錢。", "ex": "兩個 で 各管一個動作：予約して → 払います。"}, {"q": "聽句子，選意思（按 🔊）", "say": "しゅうまつえいがをみて、しょくじをして、かいものをしました。", "o": ["看了電影、吃了飯、買了東西。", "買了東西、看了電影、吃了飯。", "看了電影，但沒有吃飯。"], "a": "看了電影、吃了飯、買了東西。", "ex": "て形照順序：見て → して → しました。"}]);
+  G.count('#g5', '⑤ 數拍子', '這個詞有幾拍？小っ、ん、長音都佔一拍。', [{"k": "はんぶん", "ro": "hanbun", "zh": "半分・一半"}, {"k": "うけつけ", "ro": "uketsuke", "zh": "受付・櫃台"}, {"k": "ばんごう", "ro": "bangou", "zh": "番号・號碼"}, {"k": "よやく", "ro": "yoyaku", "zh": "予約・預約"}, {"k": "けしき", "ro": "keshiki", "zh": "景色・景色"}, {"k": "しんおおくぼ", "ro": "shin-ookubo", "zh": "新大久保・新大久保"}, {"k": "どうやって", "ro": "dou yatte", "zh": "どうやって・怎麼"}, {"k": "もうしこみます", "ro": "moushikomimasu", "zh": "申し込みます・報名"}, {"k": "コンサート", "ro": "konsaato", "zh": "コンサート・演唱會"}, {"k": "チケット", "ro": "chiketto", "zh": "チケット・票"}, {"k": "しゅうまつ", "ro": "shuumatsu", "zh": "週末・週末"}]);
+  G.mcq('#g6', '⑥ 情境題（ljg-teach）', '先選，再看選了之後會發生什麼；最後揭曉規則的名字。', [{"q": "<b>情境：</b>你要跟老師說週末做了什麼：看電影 → 吃飯 → 買東西，想一句說完。你會怎麼說？", "o": ["週末映画を見て、食事をして、買い物をしました。", "週末映画を見ます、食事をします、買い物をしました。", "週末映画を見ました、食事をしました、買い物をしました。"], "a": "週末映画を見て、食事をして、買い物をしました。", "ex": "選第二句：聽起來像三件分開宣布的事，還混了現在和過去；選第三句：意思懂，但像在念清單。<br><b>結構：</b>一句話只有一個結尾——中間的動作讓給て形，只有最後一個動詞負責時態和禮貌。<b>這叫「て形串連」</b>：它表示先後順序，不是並列。"}, {"q": "<b>情境：</b>你在圖書館想辦卡，但不知道流程。你想說「我不知道卡怎麼辦」。你會怎麼說？", "o": ["カードの作り方がわかりません。", "カードを作ることがわかりません。", "カードの作りますがわかりません。"], "a": "カードの作り方がわかりません。", "ex": "選第二句：對方會愣一下，聽起來像「不知道自己會不會做卡」；選第三句：ます形不能直接當名詞。<br><b>結構：</b>要問方法，先要有一個表示「方法」的名詞——ます形去ます＋方，前面的名詞加 の。<b>這叫「〜方」</b>：只接ます形去ます，不接辭書形。"}, {"q": "<b>情境：</b>同學問你「票怎麼訂？」，你想回答：在網上訂，然後在便利店付錢。哪個回答對？", "o": ["インターネットで予約して、コンビニでお金を払います。", "インターネットに予約して、コンビニに払います。", "はい、そうです。"], "a": "インターネットで予約して、コンビニでお金を払います。", "ex": "選第二句：同學會反問「に？」——に 是地點或時間點，不能表示手段；選第三句：どうやって 問的是方法，不能用「是的」回答。<br><b>結構：</b>問方法用 どうやって，答方法用 名詞＋で＋て形步驟。<b>遷移題：</b>「學校怎麼來？」→ 電車で来ます／歩いて来ます。"}], { shuffle: false });
+  var b = document.getElementById('openShadow');
+  if (b) b.onclick = function () { var t = document.querySelector('.toolbar .tb.hot'); if (t) t.click(); setTimeout(function () { var s = document.querySelector('#shadowP select'); if (!s) return; for (var i = 0; i < s.options.length; i++) if (s.options[i].text.indexOf('八、') === 0) { s.selectedIndex = i; break; } }, 60); };
+};
+</script>
+<script src="../assets/common.js"></script>
+<script>
+(function () {
+  'use strict';
+  var TIME = 20;
+  var SHAPES = [{ cls: 'red', shape: '▲' }, { cls: 'blue', shape: '◆' }, { cls: 'yellow', shape: '●' }, { cls: 'green', shape: '■' }];
+  var LS = 'nr_kahoot_20261119_learn';
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function sayJa(t) { if (window.sayJa) window.sayJa(t); else if (window.say) window.say(t, 0.9); }
+  function loadBoard() { try { return JSON.parse(localStorage.getItem(LS) || '[]'); } catch (e) { return []; } }
+  function saveBoard(rows) { try { localStorage.setItem(LS, JSON.stringify(rows.slice(0, 8))); } catch (e) {} }
+  function ex(ja, ro, zh, en) { return '<p lang="ja"><b>' + ja + '</b></p><p class="ro">' + ro + '</p><p>' + zh + '</p>' + (en ? '<p class="en">' + en + '</p>' : ''); }
+
+  var Q = [
+ {
+  "tag": "讀音",
+  "q": "「半分」（一半）怎麼念？",
+  "o": [
+   "はんぶん",
+   "はんぷん",
+   "はんふん",
+   "はんぷ"
+  ],
+  "a": "はんぶん",
+  "sa": "はんぶん",
+  "ex": "<p lang=\"ja\"><b>半分</b></p><p class=\"ro\">hanbun</p><p>一半。注意：分鐘的「三分」念 さんぷん，但「半分（一半）」念 はんぶん。</p><p class=\"en\">EN: half／TH: ครึ่ง</p>"
+ },
+ {
+  "tag": "易錯",
+  "q": "「半年」（半年）怎麼念？",
+  "o": [
+   "はんとし",
+   "はんねん",
+   "はんどし",
+   "はんとうし"
+  ],
+  "a": "はんとし",
+  "sa": "はんとし",
+  "ex": "<p lang=\"ja\"><b>半年</b></p><p class=\"ro\">hantoshi</p><p>不念 はんねん（課上真的有人念錯）。年 在這裡念 とし。</p><p class=\"en\">EN: half a year</p>"
+ },
+ {
+  "tag": "易錯",
+  "q": "「新大久保」怎麼念？",
+  "o": [
+   "しんおおくぼ",
+   "しのおくぼ",
+   "しんおくぼ",
+   "しのおおくぼ"
+  ],
+  "a": "しんおおくぼ",
+  "sa": "しんおおくぼ",
+  "ex": "<p lang=\"ja\"><b>新大久保</b></p><p class=\"ro\">shin-ookubo</p><p>新＝しん，大久保＝おおくぼ（大 是長音 おお）。</p>"
+ },
+ {
+  "tag": "單字",
+  "q": "「払います」是什麼意思？",
+  "o": [
+   "付錢",
+   "報名",
+   "出示、給人看",
+   "下車"
+  ],
+  "a": "付錢",
+  "sa": "はらいます",
+  "ex": "<p lang=\"ja\"><b>コンビニで払います。</b></p><p class=\"ro\">konbini de haraimasu.</p><p>払う 只用在錢；報名是 申し込みます、出示是 見せます、下車是 降ります。</p><p class=\"en\">EN: pay／TH: จ่าย</p>"
+ },
+ {
+  "tag": "單字",
+  "q": "「受付」是什麼意思？",
+  "o": [
+   "櫃台、接待處",
+   "號碼",
+   "預約",
+   "景色"
+  ],
+  "a": "櫃台、接待處",
+  "sa": "うけつけ",
+  "ex": "<p lang=\"ja\"><b>受付で名前を書きます。</b></p><p class=\"ro\">uketsuke de namae o kakimasu.</p><p>受付 uketsuke＝櫃台。號碼是 番号、預約是 予約。</p><p class=\"en\">EN: reception</p>"
+ },
+ {
+  "tag": "讀音",
+  "q": "「景色」（風景）怎麼念？",
+  "o": [
+   "けしき",
+   "けいしき",
+   "けしぎ",
+   "げしき"
+  ],
+  "a": "けしき",
+  "sa": "けしき",
+  "ex": "<p lang=\"ja\"><b>景色がきれいです。</b></p><p class=\"ro\">keshiki ga kirei desu.</p><p>けしき，3 拍。けいしき（形式）是別的詞。</p><p class=\"en\">EN: scenery</p>"
+ },
+ {
+  "tag": "變形",
+  "q": "「食べる」的過去（ます形）是？",
+  "o": [
+   "食べました",
+   "食べしました",
+   "食べりました",
+   "食べでした"
+  ],
+  "a": "食べました",
+  "sa": "たべました",
+  "ex": "<p lang=\"ja\"><b>食べました</b></p><p class=\"ro\">tabemashita</p><p>2 組：食べ＋ました。課上聽到的錯誤：✗ 食べしました。</p>"
+ },
+ {
+  "tag": "變形",
+  "q": "「買います」的て形是？",
+  "o": [
+   "買って",
+   "買いて",
+   "買んで",
+   "買くて"
+  ],
+  "a": "買って",
+  "sa": "かって",
+  "ex": "<p lang=\"ja\"><b>買って</b></p><p class=\"ro\">katte</p><p>1 組：い・ち・り → って。</p><p class=\"en\">EN: buy → bought and…</p>"
+ },
+ {
+  "tag": "變形",
+  "q": "「入ります」的て形是？",
+  "o": [
+   "入って",
+   "入りて",
+   "入んで",
+   "入いて"
+  ],
+  "a": "入って",
+  "sa": "はいって",
+  "ex": "<p lang=\"ja\"><b>お風呂に入って、寝ました。</b></p><p class=\"ro\">ofuro ni haitte, nemashita.</p><p>入る 看起來像 2 組，其實是 1 組：り → って。</p>"
+ },
+ {
+  "tag": "變形",
+  "q": "「します」的て形是？",
+  "o": [
+   "して",
+   "しって",
+   "すて",
+   "しまして"
+  ],
+  "a": "して",
+  "sa": "して",
+  "ex": "<p lang=\"ja\"><b>買い物をして、食事をしました。</b></p><p class=\"ro\">kaimono o shite, shokuji o shimashita.</p><p>3 組：します → して（直接背）。</p>"
+ },
+ {
+  "tag": "助詞",
+  "q": "「我看書」哪一句對？",
+  "o": [
+   "本を読みます。",
+   "本の読みます。",
+   "本に読みます。",
+   "本で読みます。"
+  ],
+  "a": "本を読みます。",
+  "sa": "ほんをよみます。",
+  "ex": "<p lang=\"ja\"><b>本を読みます。／本の読み方</b></p><p class=\"ro\">hon o yomimasu. / hon no yomikata</p><p>動詞前面的對象用 を；變成名詞「読み方」時才用 の。</p>"
+ },
+ {
+  "tag": "助詞",
+  "q": "一年（　）二、三回コンサートに行きます。",
+  "o": [
+   "に",
+   "を",
+   "で",
+   "へ"
+  ],
+  "a": "に",
+  "sa": "いちねんに、に、さんかい、コンサートにいきます。",
+  "ex": "<p lang=\"ja\"><b>一年に二、三回</b></p><p class=\"ro\">ichinen ni ni, sankai</p><p>頻率：期間＋に＋次數。1週間に2回 也一樣。</p><p class=\"en\">EN: two or three times a year</p>"
+ },
+ {
+  "tag": "助詞",
+  "q": "インターネット（　）チケットを予約します。",
+  "o": [
+   "で",
+   "に",
+   "を",
+   "へ"
+  ],
+  "a": "で",
+  "sa": "インターネットでチケットをよやくします。",
+  "ex": "<p lang=\"ja\"><b>インターネットで予約します。</b></p><p class=\"ro\">intaanetto de yoyaku shimasu.</p><p>で＝方法、工具、交通手段（バスで、ペンで）。</p><p class=\"en\">EN: by / via</p>"
+ },
+ {
+  "tag": "句型",
+  "q": "「我不知道怎麼買票」：チケットの（　）がわかりません。",
+  "o": [
+   "買い方",
+   "買う方",
+   "買って方",
+   "買います方"
+  ],
+  "a": "買い方",
+  "sa": "チケットのかいかたがわかりません。",
+  "ex": "<p lang=\"ja\"><b>チケットの買い方がわかりません。</b></p><p class=\"ro\">chiketto no kaikata ga wakarimasen.</p><p>ます形去ます＋方：買います → 買い方。</p><p class=\"en\">EN: how to buy</p>"
+ },
+ {
+  "tag": "句型",
+  "q": "「パソコンの使い方」是什麼意思？",
+  "o": [
+   "電腦的用法",
+   "用電腦的人",
+   "電腦的使用者",
+   "用電腦的地方"
+  ],
+  "a": "電腦的用法",
+  "sa": "パソコンのつかいかた",
+  "ex": "<p lang=\"ja\"><b>パソコンの使い方</b></p><p class=\"ro\">pasokon no tsukaikata</p><p>〜方 是「方法」，不是「人」。</p><p class=\"en\">EN: how to use a PC</p>"
+ },
+ {
+  "tag": "句型",
+  "q": "「どうやって〜ますか」問的是什麼？",
+  "o": [
+   "方法（怎麼做）",
+   "時間（什麼時候）",
+   "地點（在哪裡）",
+   "理由（為什麼）"
+  ],
+  "a": "方法（怎麼做）",
+  "sa": "どうやっていきますか。",
+  "ex": "<p lang=\"ja\"><b>どうやって行きますか。—電車で行きます。</b></p><p class=\"ro\">dou yatte ikimasu ka. — densha de ikimasu.</p><p>問方法；回答用「〜で」或て形說步驟。為什麼是 どうして。</p><p class=\"en\">EN: how</p>"
+ },
+ {
+  "tag": "聽力",
+  "listen": 1,
+  "q": "聽一聽，選出你聽到的句子。",
+  "o": [
+   "朝起きて、朝ご飯を食べて、図書館へ行きます。",
+   "朝起きて、朝ご飯を食べて、図書館に行きました。",
+   "朝起きて、朝ご飯を食べて、図書館へ来ます。",
+   "朝起きて、朝ご飯を食べて、図書館へ帰ります。"
+  ],
+  "a": "朝起きて、朝ご飯を食べて、図書館へ行きます。",
+  "say": "あさおきて、あさごはんをたべて、としょかんへいきます。",
+  "ex": "<p lang=\"ja\"><b>朝起きて、朝ご飯を食べて、図書館へ行きます。</b></p><p class=\"ro\">asa okite, asagohan o tabete, toshokan e ikimasu.</p><p>注意聽最後一個動詞：行きます。</p>"
+ },
+ {
+  "tag": "聽力",
+  "listen": 1,
+  "q": "聽一聽，選出你聽到的句子。",
+  "o": [
+   "チケットの買い方がわかりません。",
+   "チケットの使い方がわかりません。",
+   "チケットの買い方がわかりました。",
+   "パソコンの買い方がわかりません。"
+  ],
+  "a": "チケットの買い方がわかりません。",
+  "say": "チケットのかいかたがわかりません。",
+  "ex": "<p lang=\"ja\"><b>チケットの買い方がわかりません。</b></p><p class=\"ro\">chiketto no kaikata ga wakarimasen.</p><p>買い方（kaikata）／使い方（tsukaikata）；わかりません是「不知道」。</p>"
+ },
+ {
+  "tag": "聽力",
+  "listen": 1,
+  "q": "聽一聽，選出你聽到的句子。",
+  "o": [
+   "受付で名前と住所を書いて、カードを見せます。",
+   "受付に名前と住所を書いて、カードを見せます。",
+   "受付で名前と住所を書いて、カードを見ます。",
+   "受付で名前を書いて、住所を見せます。"
+  ],
+  "a": "受付で名前と住所を書いて、カードを見せます。",
+  "say": "うけつけでなまえとじゅうしょをかいて、カードをみせます。",
+  "ex": "<p lang=\"ja\"><b>受付で名前と住所を書いて、カードを見せます。</b></p><p class=\"ro\">uketsuke de namae to juusho o kaite, kaado o misemasu.</p><p>見せます（給人看）≠ 見ます（自己看）。</p>"
+ },
+ {
+  "tag": "聽力",
+  "listen": 1,
+  "q": "聽一聽，選出你聽到的句子。",
+  "o": [
+   "一年に二、三回コンサートに行きます。",
+   "一年で二、三回コンサートに行きます。",
+   "一年に二、三回コンサートへ行きました。",
+   "一年に二、三回コンサートに行きません。"
+  ],
+  "a": "一年に二、三回コンサートに行きます。",
+  "say": "いちねんに、に、さんかい、コンサートにいきます。",
+  "ex": "<p lang=\"ja\"><b>一年に二、三回コンサートに行きます。</b></p><p class=\"ro\">ichinen ni ni, sankai konsaato ni ikimasu.</p><p>頻率用「一年に」；最後是 行きます（肯定、現在）。</p>"
+ }
+];
+
+  var app = document.getElementById('khApp');
+  var state;
+  function pointsFor(left, limit) { var e = Math.max(0, limit - left); return Math.round((1 - (e / limit) / 2) * 1000); }
+  function streakBonus(s) { return s < 2 ? 0 : Math.min(500, (s - 1) * 100); }
+  function rankOf(score, total) { var r = score / (total * 1000); return r >= 0.88 ? '🏆 天才！' : r >= 0.72 ? '🎉 很厲害' : r >= 0.55 ? '👍 不錯喔' : '💪 再練一次會更好'; }
+  function top() { var s = document.getElementById('kahoot'); if (s) s.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
+
+  function renderBoard(mine) {
+    var rows = loadBoard().slice().sort(function (a, b) { return b.score - a.score; });
+    if (mine) { var shown = false; rows = rows.map(function (r) { if (!shown && r.t === mine.t) { shown = true; return Object.assign({ me: true }, r); } return r; }); }
+    if (!rows.length) return '<p class="lead">還沒有本機紀錄，來拿第一名吧！</p>';
+    var h = '<h3>本機排行榜</h3><div class="tblwrap"><table class="kh-board"><thead><tr><th>#</th><th>分數</th><th>答對</th><th>連對</th><th>時間（東京）</th></tr></thead><tbody>';
+    rows.forEach(function (r, i) { h += '<tr' + (r.me ? ' class="me"' : '') + '><td>' + (i + 1) + '</td><td>' + r.score + '</td><td>' + r.correct + '/' + r.total + '</td><td>' + r.maxStreak + '</td><td>' + esc(r.when) + (r.me ? '　← 本次' : '') + '</td></tr>'; });
+    return h + '</tbody></table></div><p class="lead" style="font-size:.85rem">只存在這個瀏覽器，不會上傳，也不會出現名字。</p>';
+  }
+  function startScreen() {
+    app.innerHTML = '<div class="kh-hero"><h3>🎯 て・方 Kahoot</h3><p>照 11/19 課堂的總考試出題：讀音、單字、て形變形、助詞、〜方、どうやって和聽力。共 <b>' + Q.length + ' 題</b>，其中 5 題聽力。</p><p>每題 20 秒，答得越快分越高，連對有加分。請打開聲音 🔊</p></div>' +
+      '<div class="kh-actions"><button class="kh-btn hot" id="khGo">▶ 開始</button></div>' + renderBoard(null);
+    document.getElementById('khGo').onclick = begin;
+  }
+  function begin() { state = { items: shuffle(Q), i: 0, score: 0, correct: 0, streak: 0, maxStreak: 0, log: [], left: TIME, timer: null, answered: false }; showQ(); top(); }
+  function showQ() {
+    var it = state.items[state.i];
+    var opts = shuffle(it.o).map(function (t, i) { return { text: t, color: SHAPES[i] }; });
+    state.answered = false; state.left = TIME;
+    app.innerHTML = '<div class="kh-stats"><span class="kh-chip">第 <span class="n">' + (state.i + 1) + '</span> / ' + state.items.length + '</span><span class="kh-chip">🔥 連對 <span class="n">' + state.streak + '</span></span><span class="kh-chip">分數 <span class="n">' + state.score + '</span></span><span class="kh-chip" id="khClock">⏱ ' + TIME + ' 秒</span></div>' +
+      '<div class="kh-timer" id="khBar"><i id="khBarI"></i></div>' +
+      '<div class="kh-q"><div class="tag">' + esc(it.tag) + (it.listen ? '　🎧 聽力題' : '') + '</div><div class="qt" lang="ja">' + it.q + '</div>' +
+      (it.say ? '<button class="kh-play" type="button" id="khListen">🔊 播放題目</button>' : '') + '</div>' +
+      '<div class="kh-grid" id="khOpts"></div><div id="khFb"></div>';
+    var box = document.getElementById('khOpts');
+    opts.forEach(function (op) {
+      var b = document.createElement('button');
+      b.className = 'kh-opt ' + op.color.cls; b.setAttribute('data-answer', op.text); b.lang = 'ja';
+      b.innerHTML = '<span class="shape">' + op.color.shape + '</span>' + esc(op.text);
+      b.onclick = function () { lock(op.text, box); };
+      box.appendChild(b);
+    });
+    var pl = document.getElementById('khListen');
+    if (pl) { pl.onclick = function () { sayJa(it.say); }; setTimeout(function () { sayJa(it.say); }, 280); }
+    tick();
+  }
+  function tick() {
+    clearInterval(state.timer);
+    var bar = document.getElementById('khBar'), barI = document.getElementById('khBarI'), clock = document.getElementById('khClock');
+    function paint() { barI.style.width = (state.left / TIME * 100) + '%'; bar.className = 'kh-timer' + (state.left <= 5 ? ' hot' : state.left <= 10 ? ' warn' : ''); clock.textContent = '⏱ ' + Math.ceil(state.left) + ' 秒'; }
+    paint();
+    var last = Date.now();
+    state.timer = setInterval(function () {
+      if (state.answered) { clearInterval(state.timer); return; }
+      var now = Date.now(); state.left -= (now - last) / 1000; last = now;
+      if (state.left <= 0) { state.left = 0; paint(); clearInterval(state.timer); lock(null, document.getElementById('khOpts')); return; }
+      paint();
+    }, 80);
+  }
+  function lock(choice, box) {
+    if (state.answered) return;
+    state.answered = true; clearInterval(state.timer);
+    var it = state.items[state.i], ok = choice === it.a, pts = 0, bonus = 0;
+    if (ok) { pts = pointsFor(state.left, TIME); state.streak++; if (state.streak > state.maxStreak) state.maxStreak = state.streak; bonus = streakBonus(state.streak); state.score += pts + bonus; state.correct++; }
+    else state.streak = 0;
+    state.log.push({ it: it, mine: choice, ok: ok });
+    Array.prototype.forEach.call(box.querySelectorAll('.kh-opt'), function (b) {
+      b.disabled = true; var l = b.getAttribute('data-answer');
+      if (l === it.a) b.classList.add('pick-ok'); else if (choice && l === choice) b.classList.add('pick-bad'); else b.classList.add('dim');
+    });
+    document.getElementById('khFb').innerHTML = '<div class="kh-fb ' + (ok ? 'ok' : 'bad') + '"><div class="result">' + (ok ? '✅ 答對了！' : choice == null ? '⏰ 時間到了' : '❌ 再記一下') + '</div>' +
+      (ok ? '<div class="pts">＋' + pts + ' 分' + (bonus ? '　連對加分 ＋' + bonus : '') + '　目前 ' + state.score + ' 分</div>' : '<div class="pts">正確答案：<b>' + esc(it.a) + '</b>　連對中斷，分數 ' + state.score + '</div>') +
+      '<div class="kh-ex">' + it.ex + '</div><div class="kh-actions"><button class="kh-btn hot" id="khNext">' + (state.i + 1 >= state.items.length ? '看結果' : '下一題 →') + '</button><button class="kh-btn alt" id="khRe">🔊 再聽一次</button></div></div>';
+    document.getElementById('khNext').onclick = function () { state.i++; if (state.i >= state.items.length) endScreen(); else showQ(); };
+    document.getElementById('khRe').onclick = function () { sayJa(it.sa || it.say); };
+    if (ok) setTimeout(function () { sayJa(it.sa || it.say); }, 250);
+  }
+  function tokyoWhen() { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) + '（東京時間）'; }
+  function endScreen() {
+    var rec = { score: state.score, correct: state.correct, total: state.items.length, maxStreak: state.maxStreak, when: tokyoWhen(), t: Date.now() };
+    var board = loadBoard(); board.push(rec); board.sort(function (a, b) { return b.score - a.score; }); saveBoard(board);
+    var wrong = state.log.filter(function (x) { return !x.ok; });
+    app.innerHTML = '<div class="kh-end"><div class="rank">' + rankOf(state.score, state.items.length) + '</div><div class="score">' + state.score + '</div><p>分</p>' +
+      '<div class="kh-podium"><div class="p p2"><b>' + (board[1] ? board[1].score : '—') + '</b><span>第 2</span></div><div class="p p1"><b>' + board[0].score + '</b><span>第 1</span></div><div class="p p3"><b>' + (board[2] ? board[2].score : '—') + '</b><span>第 3</span></div></div>' +
+      '<p>答對 <b>' + state.correct + ' / ' + state.items.length + '</b>　·　最高連對 <b>' + state.maxStreak + '</b></p></div>' + renderBoard(rec) +
+      (wrong.length ? '<h3>錯題回顧</h3>' + wrong.map(function (w, i) { return '<div class="box"><b>' + (i + 1) + '. ' + w.it.q + '</b><p>你的答案：<span style="color:var(--bad)">' + esc(w.mine || '（沒作答）') + '</span><br>正確：<b style="color:var(--ok)">' + esc(w.it.a) + '</b></p><div class="kh-ex">' + w.it.ex + '</div></div>'; }).join('') : '<p class="tip">全部答對，太厲害了！</p>') +
+      '<div class="kh-actions" style="justify-content:center"><button class="kh-btn hot" id="khAgain">再玩一次</button><a class="kh-btn alt" href="2026-11-19-manga.html">去看漫畫</a><a class="kh-btn alt" href="#compress">回去看「壓縮」</a></div>';
+    document.getElementById('khAgain').onclick = begin;
+    top();
+  }
+  startScreen();
+})();
+</script>
+</body>
+</html>
