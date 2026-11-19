@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11/18 概念解剖：できる（〜ができます・ことができます）｜ljg-learn 複習頁＋Kahoot</title>
+<meta name="description" content="用 ljg-learn 概念解剖法（定錨→八刀→內觀→壓縮）整理 2026/11/18 課堂：4～8課綜合確認測驗的聽力題型、漢字 子・学・字・休・名・昼・間、第9課 N＋ができます、辞書形＋ことができます、あまり〜ません、入ります・申し込みます・参加します。頁內直接玩 Kahoot 20 題。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%94%AA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+TC:wght@400;700;800&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ljg-learn：紙本筆記風（淺色背景） */
+.fm{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f6f4ee;border:1px dashed #cfc8b6;border-radius:10px;padding:10px 14px;font-size:.88rem;color:#5b6370;margin:14px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.hero{border-left:6px solid #1f2328;padding:6px 0 6px 14px;margin:14px 0}
+.hero h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.75rem;line-height:1.3;margin:0 0 6px}
+.hero p{margin:0;color:#5b6370}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.steps a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none;color:var(--ink);font-weight:700;font-size:.92rem}
+.steps a.kh{background:#46178f;color:#fff;border-color:#46178f}
+h2.part{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.5rem;border-bottom:3px solid #1f2328;padding-bottom:4px;margin-top:34px}
+h2.part small{font-family:"Noto Sans TC",sans-serif;font-weight:400;font-size:.85rem;color:var(--mute);margin-left:8px}
+.knife{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px 8px;margin:14px 0;position:relative}
+.knife h3{margin:0 0 6px;font-size:1.12rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.knife h3 .no{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#1f2328;color:#fff;font-size:.9rem;font-weight:800;flex:none}
+.knife h3 .en{font-weight:400;color:var(--mute);font-size:.85rem}
+.knife p{margin:.35em 0}
+.arrow{color:#c0392b;font-weight:800}
+.mis{background:#fdecea;border-left:4px solid #c0392b;border-radius:8px;padding:8px 12px;margin:8px 0}
+.good{background:#e6f6ea;border-left:4px solid #1a7f37;border-radius:8px;padding:8px 12px;margin:8px 0}
+.gl{background:#eef6ff;border-radius:8px;padding:6px 10px;margin:6px 0;font-size:.92rem;color:#334155}
+.morph{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0}
+.morph div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.morph b.k{font-size:1.4rem;font-family:"Noto Sans JP",sans-serif}
+.morph .ro{color:var(--ro)}
+.inner{background:#fffaf0;border:2px solid #e0a100;border-radius:14px;padding:12px 16px;margin:12px 0}
+.inner p{margin:.4em 0}
+.formula{font-family:ui-monospace,Menlo,Consolas,monospace;background:#1f2328;color:#fff;border-radius:12px;padding:14px 16px;font-size:1rem;line-height:1.6;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.one{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.35rem;line-height:1.5;text-align:center;background:#fff;border:2px solid #1f2328;border-radius:14px;padding:16px 14px;margin:12px 0}
+.ascii{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f6f4ee;border:1px solid #cfc8b6;border-radius:12px;padding:12px;font-size:.82rem;line-height:1.35;overflow-x:auto;white-space:pre;margin:10px 0}
+.compare{width:100%;border-collapse:collapse;margin:8px 0;font-size:.93rem}
+.compare th,.compare td{border:1px solid #d8dee8;padding:6px 8px;text-align:left;vertical-align:top}
+.compare th{background:#f4f7fb}
+.tblwrap{overflow-x:auto}
+.notice{background:#fff4f4;border:2px solid #e74c3c;border-radius:14px;padding:12px 16px;margin:10px 0}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0}
+.links a{display:block;background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.links a b{display:block;font-size:1.08rem}
+.links a span{display:block;color:var(--mute);font-size:.9rem}
+.links a.m{border-color:#c0392b}.links a.h{border-color:#1368ce}.links a.d{border-color:#5b6370}
+/* Kahoot（頁內） */
+#kahoot-sec{background:#f3effa;border-radius:18px;padding:6px 12px 14px;margin-top:30px}
+.kh-hero{background:linear-gradient(135deg,#46178f,#7b3fe4);color:#fff;border-radius:16px;padding:16px;margin:12px 0}
+.kh-hero h3{margin:0 0 6px;font-size:1.4rem}
+.kh-hero p{margin:0 0 4px}
+.kh-stats{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin:8px 0 12px}
+.kh-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.92rem;font-weight:700}
+.kh-chip .n{color:#46178f}
+.kh-timer{height:10px;background:#e2dcef;border-radius:999px;overflow:hidden;margin:0 0 14px}
+.kh-timer i{display:block;height:100%;width:100%;background:#1a7f37;transition:width .1s linear,background .2s}
+.kh-timer.warn i{background:#e0a100}.kh-timer.hot i{background:#c0392b}
+.kh-q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 14px;margin:0 0 14px;min-height:88px}
+.kh-q .tag{font-size:.78rem;color:var(--mute);margin:0 0 6px}
+.kh-q .qt{font-size:1.25rem;line-height:1.45;font-weight:700}
+.kh-play{display:inline-flex;align-items:center;gap:6px;margin-top:10px;border:none;background:#1f6feb;color:#fff;border-radius:999px;padding:8px 14px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.kh-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kh-opt{position:relative;border:none;color:#fff;border-radius:14px;padding:18px 12px 18px 46px;min-height:84px;font-size:1.08rem;font-weight:700;line-height:1.35;text-align:left;cursor:pointer;font-family:"Noto Sans JP","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+.kh-opt .shape{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:1.35rem;line-height:1}
+.kh-opt.red{background:#e21b3c}.kh-opt.blue{background:#1368ce}.kh-opt.yellow{background:#c88800}.kh-opt.green{background:#26890c}
+.kh-opt:disabled{cursor:default}
+.kh-opt.pick-bad{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #7a1010;filter:brightness(.85)}
+.kh-opt.pick-ok{box-shadow:inset 0 0 0 4px #fff,0 0 0 3px #0b4a04}
+.kh-opt.dim{opacity:.45}
+.kh-fb{margin:14px 0 0;padding:12px 14px;border-radius:14px;background:#fff;border:2px solid var(--line)}
+.kh-fb.ok{border-color:var(--ok);background:#e6f6ea}.kh-fb.bad{border-color:var(--bad);background:#fdecea}
+.kh-fb .result{font-size:1.15rem;font-weight:800;margin:0 0 6px}
+.kh-fb .pts{font-weight:700;color:#8a5a00;margin:0 0 8px}
+.kh-ex{font-size:.97rem}.kh-ex p{margin:.3em 0}.kh-ex .en{color:#334155;font-size:.92rem}.kh-ex .ro{color:var(--ro)}
+.kh-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.kh-btn{border:none;background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block}
+.kh-btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.kh-btn.hot{background:#46178f}
+.kh-end{text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 14px;margin:12px 0}
+.kh-end .score{font-size:3rem;font-weight:800;line-height:1.1;color:#46178f}
+.kh-end .rank{display:inline-block;margin:8px 0 12px;background:#fff6e5;border-radius:999px;padding:4px 14px;font-weight:800}
+.kh-podium{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:16px auto;max-width:420px}
+.kh-podium .p{flex:1;border-radius:12px 12px 0 0;padding:10px 6px;color:#fff;font-weight:800}
+.kh-podium .p b{display:block;font-size:1.4rem}.kh-podium .p span{display:block;font-size:.78rem;opacity:.9}
+.kh-podium .p1{background:#c88800;min-height:110px;order:2}.kh-podium .p2{background:#5b6370;min-height:86px;order:1}.kh-podium .p3{background:#8a5a2b;min-height:70px;order:3}
+.kh-board{width:100%;border-collapse:collapse;margin:12px 0;text-align:left}
+.kh-board th,.kh-board td{border-bottom:1px solid var(--line);padding:8px 6px;font-size:.92rem}
+.kh-board tr.me{background:#fff6e5;font-weight:700}
+.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;text-align:left}
+@media (max-width:420px){.hero h1{font-size:1.45rem}.kh-q .qt{font-size:1.08rem}.kh-opt{min-height:74px;padding:14px 10px 14px 40px;font-size:1rem}.kh-end .score{font-size:2.4rem}.one{font-size:1.15rem}}
+</style>
+</head>
+<body>
+<main>
+<p class="lead" style="margin-top:14px"><a href="../index.html">← 首頁</a>　·　<a href="2026-11-18-manga.html">📖 11/18 漫畫</a>　·　<a href="#kahoot">🎯 Kahoot</a></p>
+
+<div class="fm">---
+title: 概念解剖：できる（能力・可能）
+tags: concept
+date: 2026-11-18
+method: ljg-learn（定錨 → 八刀 → 內觀 → 壓縮）
+lesson: 4～8課 総合確認テスト（聴解）＋漢字＋第9課 〜ができます・〜ことができます
+---</div>
+
+<div class="hero">
+<h1>🔪 概念解剖：できる<br><span lang="ja">〜ができます・辞書形＋ことができます</span></h1>
+<p>今天前半是 4～8 課的<b>綜合確認測驗（聽力）</b>和<b>漢字</b>，後半進入第 9 課的核心：<b>「我會～」</b>。名詞直接加 <b>ができます</b>；動詞先變<b>辭書形</b>，再裝進 <b>こと</b>，然後 <b>ができます</b>。這頁用 ljg-learn 切八刀，再整理聽力題型、漢字和單字，最下面直接玩 Kahoot。</p>
+</div>
+
+<div class="notice">
+<b>📝 明天（11/19・四）：課堂上寫作文「私の趣味」</b>
+<ul style="margin:6px 0 8px;padding-left:20px">
+<li>老師說今天大家聊了很多興趣，<b>明天在課堂上寫成作文</b>。今天先想好要寫什麼，明天就能寫很多。</li>
+<li>老師給的方向（內容請自己寫，老師禁止 AI 代寫）：① 我的興趣是什麼（〜ことです）② 多久做一次（どのくらい）③ 特別喜歡什麼、哪裡好玩。</li>
+<li>⚠️ <b>期末考試一定要寫名字</b>，忘了寫就沒有分數。</li>
+<li>漢字練習本《ホップ・ステップ・ジャンプ》p.40 課堂上有做（逐字稿聽不出是不是作業，不確定的話問老師）。</li>
+<li>學校的 モノグサ App：今天最後 10 分鐘做了片假名讀音（マ・ミ・ム・メ・モ）。</li>
+</ul>
+<div class="rows">
+明日、作文を書きます。 | ashita, sakubun o kakimasu. | 明天寫作文。 | say=あした、さくぶんをかきます。
+テーマは「私の趣味」です。 | te-ma wa "watashi no shumi" desu. | 題目是「我的興趣」。 | say=テーマは、わたしのしゅみです。
+名前を忘れないでください。 | namae o wasurenaide kudasai. | 請不要忘記寫名字。 | say=なまえをわすれないでください。
+</div>
+</div>
+
+<div class="steps">
+<a href="#anchor">① 定錨</a><a href="#knives">② 八刀</a><a href="#inner">③ 內觀</a><a href="#compress">④ 壓縮</a><a href="#listen">⑤ 聽力題型</a><a href="#kanji">⑥ 漢字</a><a href="#vocab">⑦ 單字</a><a class="kh" href="#kahoot">🎯 Kahoot</a>
+</div>
+<div class="toc"></div>
+
+<!-- ===================== 1. 定錨 ===================== -->
+<section>
+<h2 class="part" id="anchor" data-short="① 定錨">一、定錨<small>最通行的定義・常見誤解・核心詞素</small></h2>
+<p><b>最通行的定義：</b>「できる（できます）」＝<b>有能力做到、會</b>。要說「會什麼」，前面放一個<b>名詞</b>，助詞用 <b>が</b>。動作要先變成名詞，方法就是昨天學的 <b>辭書形＋こと</b>。</p>
+<div class="tblwrap"><table class="compare">
+<thead><tr><th>形</th><th>規則</th><th>例</th><th>English／ไทย</th></tr></thead>
+<tbody>
+<tr><td><b>名詞＋ができます</b></td><td>運動、語言、技能這類名詞直接放</td><td lang="ja">スキー<b>が</b>できます　日本語<b>が</b>ちょっとできます　車の運転<b>が</b>できます</td><td>I can ski. ／ เล่นสกีได้</td></tr>
+<tr><td><b>辭書形＋ことができます</b></td><td>ます形 → 辭書形 → ＋こと → ＋ができます</td><td lang="ja">書きます→書く→漢字を<b>書くこと</b>ができます　作ります→作る→ケーキを<b>作ること</b>ができません</td><td>can + verb ／ กริยา + ได้</td></tr>
+<tr><td><b>否定</b></td><td>できません；加 あまり 表示「不太」</td><td lang="ja">あまり辛い料理を食べることが<b>できません</b></td><td>not really able ／ ไม่ค่อย…ได้</td></tr>
+</tbody></table></div>
+<div class="rows">
+スキーができます。 | suki- ga dekimasu. | 我會滑雪。EN: I can ski. TH: ฉันเล่นสกีได้ | say=スキーができます。
+日本語を話すことができます。 | nihongo o hanasu koto ga dekimasu. | 我會說日語。EN: I can speak Japanese. TH: ฉันพูดภาษาญี่ปุ่นได้ | say=にほんごをはなすことができます。
+</div>
+
+<p><b>常見誤解（今天課堂上真的出現過）：</b></p>
+<div class="mis">✗ スキー<b>を</b>できます　→　✓ スキー<b>が</b>できます<br><small>できる 跟 好き・わかる 一樣，對象用 が。</small></div>
+<div class="mis">✗ 書き<b>ます</b>ことができます　→　✓ 書<b>く</b>ことができます<br><small>こと 前面一定是辭書形，ます形不能直接接。</small></div>
+<div class="mis">✗ あまり<b>できます</b>　→　✓ あまり<b>できません</b><br><small>あまり 後面一定接否定（老師：「あまりがつくと、できません」）。</small></div>
+<div class="mis">✗ 歌う → 歌い？／食べる → 食べ来る？　→　✓ 歌うこと、食べること<br><small>課堂上有人把 食べること 念成「食べ来る」，こと 要念清楚。</small></div>
+<div class="mis">✗ クラブ<b>を</b>入ります　→　✓ クラブ<b>に</b>入ります；ツアー<b>に</b>参加します；試験<b>に</b>申し込みます</div>
+
+<p><b>核心詞素：</b></p>
+<div class="morph">
+<div><b class="k" lang="ja">出来る</b><br><span class="ro">dekiru</span><br>漢字寫「出＋来」，一般說法是從「出て来る（出現、做出來）」來的：事情「做得出來」＝會。</div>
+<div><b class="k" lang="ja">こと</b><br><span class="ro">koto</span><br>把動作裝進盒子變名詞：書くこと＝寫（這件事）。</div>
+<div><b class="k" lang="ja">が</b><br><span class="ro">ga</span><br>能力的對象。〜が好き・〜がわかる・〜ができる 都用 が。</div>
+<div><b class="k" lang="ja">上手に</b><br><span class="ro">jouzu ni</span><br>熟練地。上手に漢字を書くことができません＝漢字寫不好。</div>
+</div>
+</section>
+
+<!-- ===================== 2. 八刀 ===================== -->
+<section>
+<h2 class="part" id="knives" data-short="② 八刀">二、八刀<small>八個方向各切一刀，每刀只留筋骨</small></h2>
+
+<div class="knife"><h3><span class="no">1</span>歷史 <span class="en">History</span></h3>
+<p>一般的說法是：「できる」來自古語「<b>出で来（いでく）</b>」＝「出現、產生」<span class="arrow">→</span> 慢慢變成「事情做出來了、完成了」（ご飯ができました＝飯做好了）<span class="arrow">→</span> 再變成「<b>有能力做到</b>」。所以 できる 同時有「做好了」和「會」兩個意思。這段字源是通說，當記憶法用就好。</p>
+<div class="rows">
+ご飯ができました。 | gohan ga dekimashita. | 飯做好了。（「完成」的 できる） | say=ごはんができました。
+スキーができます。 | suki- ga dekimasu. | 我會滑雪。（「能力」的 できる） | say=スキーができます。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">2</span>辯證 <span class="en">Dialectics</span></h3>
+<p><b>正：</b>わかります＝「懂」（腦袋裡）。<b>反：</b>上手です＝「很厲害」（別人給的評價，不太說自己）。<b>合：</b>できます＝「<b>做得到</b>」，客觀地說自己的能力。所以說自己用「日本語が<b>ちょっとできます</b>」，稱讚別人才用「日本語が<b>上手</b>ですね」。</p>
+<div class="rows">
+日本語がちょっとできます。 | nihongo ga chotto dekimasu. | 日語會一點。 | say=にほんごがちょっとできます。
+日本語が上手ですね。 | nihongo ga jouzu desu ne. | 你日語真好。（稱讚別人） | say=にほんごがじょうずですね。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">3</span>現象 <span class="en">Phenomenology</span></h3>
+<p>回到教室：老師拿著學校活動的海報（滑雪旅行、舞蹈社、潛水團、爵士鋼琴社、比賽）一個一個問「〜ができますか」。有人說「國際駕照所以會開車」，老師追問「日本では？」——<b>能力也會因為規則（駕照）改變</b>，這就是 できる 和 わかる 不一樣的地方。</p>
+<div class="rows dlg">
+今月もいろいろなイベントがありますね。 | kongetsu mo iroiro na ibento ga arimasu ne. | 這個月也有各種活動呢。 | sp=A;say=こんげつもいろいろなイベントがありますね。
+本当ですね。スキー旅行があります。私はこれに参加したいです。 | hontou desu ne. suki- ryokou ga arimasu. watashi wa kore ni sanka shitai desu. | 真的耶。有滑雪旅行，我想參加這個。 | sp=B;say=ほんとうですね。スキーりょこうがあります。わたしはこれにさんかしたいです。
+Bさんはスキーができますか。 | B-san wa suki- ga dekimasu ka. | 你會滑雪嗎？ | sp=A;say=ビーさんはスキーができますか。
+ええ。 | ee. | 會啊。 | sp=B;say=ええ。
+すごいですね。 | sugoi desu ne. | 好厲害啊。 | sp=A;say=すごいですね。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">4</span>語言 <span class="en">Linguistics</span></h3>
+<p><b>四語對照：</b>English 用 <b>can</b>（I can ski）；泰語把 <b>ได้</b> 放在動詞後面（เล่นสกีได้）；粵語說「<b>識</b>」（我識滑雪）；普通話說「<b>會</b>」（我會滑雪）。日語則是<b>把動作變名詞，再說「這件事做得到」</b>。</p>
+<div class="ascii">        [ わかる : 懂 ]      [ 上手 : 厲害（評價） ]
+                \                  /
+  [ 好き : 喜歡 ] -- ( が ＋ できる ) -- [ 〜たい : 想做 ]
+                 /                \
+        N ができます         V辭書形 ことができます
+     (スキー・料理・運転)     (漢字を書く・歌を歌う)</div>
+<p><b>隱喻：</b>できる 像一把<b>鑰匙</b>：門後面（が 的前面）放什麼，就打開什麼能力。</p>
+</div>
+
+<div class="knife"><h3><span class="no">5</span>形式 <span class="en">Formalization</span></h3>
+<div class="formula">能力 = 對象 ＋ が ＋ できる
+對象 = 名詞（スキー、料理、車の運転）
+     | 辭書形 ＋ こと（書くこと、話すこと、乗ること）
+程度 = とても上手に／ちょっと／あまり〜ません</div>
+<div class="gl">EN: ability = [noun / V-dict + koto] + ga + dekiru.　TH: ความสามารถ = [คำนาม / กริยา + こと] + が + できる</div>
+<div class="rows">
+ケーキを作ることができません。 | ke-ki o tsukuru koto ga dekimasen. | 我不會做蛋糕。 | say=ケーキをつくることができません。
+車を運転することができます。 | kuruma o unten suru koto ga dekimasu. | 我會開車。 | say=くるまをうんてんすることができます。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">6</span>存在 <span class="en">Existential</span></h3>
+<p>在日本，報名活動、打工面試、交朋友，都會被問「何ができますか」。會說「〜ができます／できません、〜から」，你就能<b>說明自己、也能說明為什麼要去學</b>。課本會話的邏輯就是：漢字寫不好 → 所以想去書法班學。</p>
+<div class="rows">
+私は上手に漢字を書くことができませんから、書道教室へ習いに行きたいです。 | watashi wa jouzu ni kanji o kaku koto ga dekimasen kara, shodou kyoushitsu e narai ni ikitai desu. | 我漢字寫不好，所以想去書法班學。EN: I can't write kanji well, so I want to take a calligraphy class. | say=わたしはじょうずにかんじをかくことができませんから、しょどうきょうしつへならいにいきたいです。
+自転車に乗ることができませんから、歩いて学校へ行きます。 | jitensha ni noru koto ga dekimasen kara, aruite gakkou e ikimasu. | 我不會騎自行車，所以走路上學。 | say=じてんしゃにのることができませんから、あるいてがっこうへいきます。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">7</span>美感 <span class="en">Aesthetics</span></h3>
+<p>想像學校一樓的公布欄：滑雪、潛水、舞蹈、鋼琴、比賽的海報貼滿整面牆。每張海報都在問你同一句話：「<b>你會嗎？</b>」——會的人說「ええ」，不會的人說「習いに行きたいです」。できる 不是考試，是一張<b>邀請函</b>。</p>
+<div class="rows">
+ダイビングができますか。 | daibingu ga dekimasu ka. | 你會潛水嗎？ | say=ダイビングができますか。
+ここの先生は英語で教えることもできますよ。 | koko no sensei wa eigo de oshieru koto mo dekimasu yo. | 這裡的老師也能用英語教喔。 | say=ここのせんせいはえいごでおしえることもできますよ。
+</div>
+</div>
+
+<div class="knife"><h3><span class="no">8</span>元反思 <span class="en">Meta</span></h3>
+<p><b>我們用什麼隱喻理解它？</b>「會／不會」，像考試的對錯。</p>
+<p><b>這個隱喻擋住了什麼？</b>它讓人以為 できません 很丟臉，所以不敢說。其實日本人常用「ちょっと…」「あまり…」把能力說得很<b>有程度感</b>，而且 できません 後面接「から、習いに行きたいです」就變成<b>積極</b>的話。</p>
+<p><b>換一個隱喻：「鑰匙圈」。</b>每學會一件事，就多掛一把鑰匙；還沒有的鑰匙，就是下一個想去的教室。</p>
+</div>
+</section>
+
+<!-- ===================== 3. 內觀 ===================== -->
+<section>
+<h2 class="part" id="inner" data-short="③ 內觀">三、內觀<small>變成這個概念本身</small></h2>
+<div class="inner">
+<p>我是「できる」。我站在句子的最後，前面一定要有一個 が。</p>
+<p>名詞可以直接走到我面前：スキー、料理、日本語。</p>
+<p>動作不行，它要先脫掉 ます，變回辭書形，再坐進「こと」這個盒子，才能來找我。</p>
+<p>有人在我前面放了「あまり」，我就一定要變成「できません」。</p>
+<p>我不是在打分數，我只是誠實地說：這件事，你現在做得到，還是想去學。</p>
+</div>
+<p><b>哪幾刀指向同一個深層結構？</b>語言、形式、存在三刀都指向同一件事：<b>日語的能力是「名詞＋が＋狀態」</b>，跟 好き・わかる・欲しい 是同一家人。所以只要記住「這一家都用 が」，助詞就不會錯。</p>
+</section>
+
+<!-- ===================== 4. 壓縮 ===================== -->
+<section>
+<h2 class="part" id="compress" data-short="④ 壓縮">四、壓縮<small>公式・一句話・結構圖</small></h2>
+<div class="formula">できる = [ 名詞 | 辭書形＋こと ] が できます
+         ＋ 程度（とても上手に／ちょっと／あまり〜ません）
+         ＋ 理由（〜から、習いに行きたいです）</div>
+<div class="one">名詞直接上，動詞先變辭書形裝進「こと」，<br>後面用「が」，<br>就能說「我會～」。</div>
+<div class="gl">EN: Noun + ga dekimasu; verb → dictionary form + koto + ga dekimasu.　TH: คำนาม + が できます／กริยารูปพจนานุกรม + こと + が できます = …ได้</div>
+<div class="ascii">  スキー ------------------------------+
+  書きます --(1G: き->く)--> 書く + こと --+--> が できます / できません
+  食べます --(2G: ます->る)--> 食べる + こと-+        |
+  運転します --(3G)--> 運転する + こと ----+   あまり ... できません
+                                               ... から、習いに行きたいです</div>
+<p><b>記憶法：</b>粵語：できる ≈「<b>識</b>」，「我識滑雪」＝スキーができます；普通話：できる 的漢字「出来」＝「做得出來」；English: <b>can</b>，但日語要先把動作變名詞（can <i>the skiing</i>）；ไทย：<b>ได้</b> 放最後，日語的 できます 也放最後。助詞口訣：<b>好き・わかる・できる，三兄弟都用 が</b>。</p>
+</section>
+
+<!-- ===================== 5. 聽力題型 ===================== -->
+<section>
+<h2 class="part" id="listen" data-short="⑤ 聽力題型">五、聽力題型<small>照今天測驗的題型自己改寫的練習</small></h2>
+<p>今天的 4～8 課綜合確認測驗有三種聽力題。下面的句子是<b>照題型自己改寫的練習</b>，不是考卷原文，也不含答案。先按 ▶ 聽，再看中文。</p>
+<div class="tip"><b>做題順序（老師的說明）：</b>① 先聽「問題」→ ② 看題目紙上的圖 → ③ 聽對話 → ④ 從 1～4（或 1～3）選<b>一個最好的</b>。</div>
+
+<h3>問題1：看圖選答案（聽關鍵詞）</h3>
+<p><b>A. 位置：</b>聽「前・後ろ・隣」。</p>
+<div class="rows dlg">
+今、どこにいますか。 | ima, doko ni imasu ka. | 你現在在哪裡？ | sp=男;say=いま、どこにいますか。
+駅の前にいます。前にコンビニがあります。 | eki no mae ni imasu. mae ni konbini ga arimasu. | 我在車站前面。前面有便利商店。 | sp=女;say=えきのまえにいます。まえにコンビニがあります。
+その隣に花屋があります。 | sono tonari ni hanaya ga arimasu. | 它旁邊有花店。 | sp=女;say=そのとなりにはなやがあります。
+</div>
+<p><b>B. 比較：</b>聽「〜より〜のほうが」。</p>
+<div class="rows dlg">
+何人家族ですか。 | nannin kazoku desu ka. | 你家有幾個人？ | sp=男;say=なんにんかぞくですか。
+4人です。私より姉のほうが背が高いです。 | yonin desu. watashi yori ane no hou ga se ga takai desu. | 4 個人。姊姊比我高。 | sp=女;say=よにんです。わたしよりあねのほうがせがたかいです。
+</div>
+<p><b>C. 形容詞：</b>聽肯定還是否定（にぎやかです／にぎやかじゃありません）。</p>
+<div class="rows dlg">
+〜さんの町はどんなところですか。 | 〜san no machi wa donna tokoro desu ka. | 你住的城市是什麼樣的地方？ | sp=男;say=さんのまちはどんなところですか。
+小さいですが、静かでいい町です。にぎやかじゃありません。 | chiisai desu ga, shizuka de ii machi desu. nigiyaka ja arimasen. | 雖然小，但很安靜，是個好地方。不熱鬧。 | sp=女;say=ちいさいですが、しずかでいいまちです。にぎやかじゃありません。
+</div>
+<p><b>D. 理由：</b>問「どうして」，答案在「〜から」前面。</p>
+<div class="rows dlg">
+どうして靴を買いませんでしたか。 | doushite kutsu o kaimasen deshita ka. | 為什麼沒買鞋子？ | sp=女;say=どうしてくつをかいませんでしたか。
+高かったですから。 | takakatta desu kara. | 因為太貴了。 | sp=男;say=たかかったですから。
+</div>
+
+<h3>問題3：看圖，這時候說什麼？</h3>
+<div class="rows">
+一緒に映画を見に行きませんか。 | issho ni eiga o mi ni ikimasen ka. | 想邀朋友看電影 → 要不要一起去看電影？ | say=いっしょにえいがをみにいきませんか。
+あ、乗ります！ | a, norimasu! | 電梯門要關了 → 啊，我要上！ | say=あ、のります
+すみません、手伝ってください。 | sumimasen, tetsudatte kudasai. | 東西太多拿不動 → 請幫我一下。 | say=すみません、てつだってください。
+</div>
+
+<h3>問題4：沒有圖，聽一句選回答</h3>
+<div class="rows dlg">
+学校から駅までどのくらいですか。 | gakkou kara eki made dono kurai desu ka. | 從學校到車站要多久？ | sp=問;say=がっこうからえきまでどのくらいですか。
+歩いて15分くらいです。 | aruite juugofun kurai desu. | 走路大約 15 分鐘。（どのくらい → 回答時間） | sp=答;say=あるいてじゅうごふんくらいです。
+週末、一緒に買い物に行きませんか。 | shuumatsu, issho ni kaimono ni ikimasen ka. | 週末要不要一起去買東西？ | sp=問;say=しゅうまつ、いっしょにかいものにいきませんか。
+すみません、週末はちょっと…。 | sumimasen, shuumatsu wa chotto…. | 不好意思，週末有點……（委婉拒絕） | sp=答;say=すみません、しゅうまつはちょっと。
+そのかばん、いいですね。 | sono kaban, ii desu ne. | 那個包包很好看呢。 | sp=問;say=そのかばん、いいですね。
+ありがとうございます。姉にもらいました。 | arigatou gozaimasu. ane ni moraimashita. | 謝謝，是姊姊給我的。（もらいました 前面用 に） | sp=答;say=ありがとうございます。あねにもらいました。
+</div>
+<div class="mis"><b>陷阱：</b>「母<b>が</b>もらいました」＝媽媽收到了（不是「媽媽給我的」）。「從誰那裡收到」一定是 <b>〔人〕に もらいました</b>。老師最後也說：あげる・もらう・私に，要好好複習。</div>
+</section>
+
+<!-- ===================== 6. 漢字 ===================== -->
+<section>
+<h2 class="part" id="kanji" data-short="⑥ 漢字">六、今天的漢字<small>《ホップ・ステップ・ジャンプ》</small></h2>
+<div class="tblwrap"><table class="compare">
+<thead><tr><th>漢字</th><th>讀音</th><th>詞</th><th>記法（粵／普／英／泰）</th></tr></thead>
+<tbody>
+<tr><td lang="ja"><b>子</b></td><td>こ／し</td><td lang="ja">子ども（kodomo 小孩）</td><td>一個小孩張開雙手。粵「仔」、EN kid、TH เด็ก</td></tr>
+<tr><td lang="ja"><b>学</b></td><td>がく</td><td lang="ja">学校（gakkou）、大学（daigaku）、学生（gakusei）</td><td>屋頂下的孩子在學習。學生 ≠ 生徒（中小學生）</td></tr>
+<tr><td lang="ja"><b>字</b></td><td>じ</td><td lang="ja">漢字（kanji）</td><td>宀（屋頂）＋子：孩子在家裡寫字</td></tr>
+<tr><td lang="ja"><b>休</b></td><td>やす（む）</td><td lang="ja">休み（yasumi）、休みます（yasumimasu）</td><td>人＋木：人靠在樹下休息。EN rest、TH พัก</td></tr>
+<tr><td lang="ja"><b>名</b></td><td>な／めい</td><td lang="ja">名前（namae）、有名（yuumei）</td><td>夕（月亮露一半＝傍晚）＋口：天黑看不清，只好用嘴說名字</td></tr>
+<tr><td lang="ja"><b>昼</b></td><td>ひる</td><td lang="ja">昼ご飯（hirugohan）、昼休み（hiruyasumi）</td><td>太陽在正中間的時候＝中午。普通話「晝」</td></tr>
+<tr><td lang="ja"><b>間</b></td><td>かん／あいだ</td><td lang="ja">時間（jikan）、人間（ningen）、間（aida）</td><td>門＋日：門縫中間看到太陽＝「中間」。EN between</td></tr>
+</tbody></table></div>
+<div class="rows">
+すみません、今日、会社を休みます。 | sumimasen, kyou, kaisha o yasumimasu. | 不好意思，今天向公司請假。 | say=すみません、きょう、かいしゃをやすみます。
+エベレストは有名な山です。 | eberesuto wa yuumei na yama desu. | 聖母峰是有名的山。（有名＝大家都知道） | say=エベレストはゆうめいなやまです。
+昼休みは1時間です。 | hiruyasumi wa ichijikan desu. | 午休一個小時。 | say=ひるやすみはいちじかんです。
+24時間のスーパーがあります。 | nijuuyojikan no su-pa- ga arimasu. | 有 24 小時的超市。 | say=にじゅうよじかんのスーパーがあります。
+机の間に10円があります。 | tsukue no aida ni juuen ga arimasu. | 桌子中間有 10 日圓。 | say=つくえのあいだにじゅうえんがあります。
+今朝、朝ご飯を食べませんでした。 | kesa, asagohan o tabemasen deshita. | 今天早上沒吃早飯。（今朝 けさ） | say=けさ、あさごはんをたべませんでした。
+友達に1万円を借りました。 | tomodachi ni ichiman'en o karimashita. | 向朋友借了一萬日圓。（借ります＝借進；貸します＝借出） | say=ともだちにいちまんえんをかりました。
+今晩、何時に寝ますか。 | konban, nanji ni nemasu ka. | 今晚幾點睡？ | say=こんばん、なんじにねますか。
+</div>
+<div class="tip"><b>寫字提醒：</b>「間」的「門」不要寫太長，「日」要放在門裡面；字要寫在格子裡，不要出格。老師：「書けるようにしてください。ほんとによ！」</div>
+</section>
+
+<!-- ===================== 7. 單字 ===================== -->
+<section>
+<h2 class="part" id="vocab" data-short="⑦ 單字">七、第9課新單字<small>點一下聽</small></h2>
+<div class="vocab">
+イベント | イベント | ibento | 活動 | event
+コンテスト | コンテスト | kontesuto | 比賽 | contest；コンテストに出ます／参加します
+しょどう | 書道 | shodou | 書法 | 書寫之道
+ダイビング | ダイビング | daibingu | 潛水 | diving
+ダンス | ダンス | dansu | 跳舞 | dance
+クラブ | クラブ | kurabu | 社團、俱樂部 | 大家一起做（足球、籃球）
+きょうしつ | 教室 | kyoushitsu | 課程班 | 跟老師學：料理教室、書道教室
+ならいます | 習います | naraimasu | （跟老師）學 | 1 組；習いに行きます
+のります | 乗ります | norimasu | 騎、搭 | 自転車に／馬に乗ります（に）
+はいります | 入ります | hairimasu | 加入 | クラブに入ります
+もうしこみます | 申し込みます | moushikomimasu | 報名 | 要填表：試験・セミナーに
+さんかします | 参加します | sanka shimasu | 參加 | 直接去：会議・飲み会・ツアーに
+のみかい | 飲み会 | nomikai | 喝酒聚餐 | 飲む＋会
+かいぎ | 会議 | kaigi | 會議 | meeting
+すごい | すごい | sugoi | 厲害 | 粵「好犀利」
+いろいろな | いろいろな | iroiro na | 各種各樣的 | 1 個、2 個、3 個都不是＝很多種
+じょうずに | 上手に | jouzu ni | 熟練地 | 上手になります＝變厲害
+うんてん | 運転 | unten | 駕駛 | 車の運転ができます
+</div>
+<div class="tip"><b>易混：</b>クラブ（大家一起玩）vs 教室（有老師教）；申し込みます（先填表報名）vs 参加します（當天去參加）。日語「習います」是跟老師學技能，「勉強します」是自己讀書。</div>
+<p><b>片假名小練習（モノグサ）：</b>マ行最容易搞混 → マイクの<b>マ</b>、ミルクの<b>ミ</b>、ジャムの<b>ム</b>、メロンの<b>メ</b>、レモンの<b>モ</b>。</p>
+<div class="rows">
+マイク・ミルク・ジャム・メロン・レモン | maiku, miruku, jamu, meron, remon | 麥克風、牛奶、果醬、哈密瓜、檸檬 | say=マイク、ミルク、ジャム、メロン、レモン
+</div>
+<div class="gl">記法：<b>ム</b> 像一個鼻子加嘴（粵「冇」的嘴型 mu）；<b>メ</b> 是打叉 ✕（中文「乂」）；<b>モ</b> 像「毛」少一筆；<b>マ</b> 像倒過來的「ㄗ」；<b>ミ</b> 三條斜線＝「三」mi。</div>
+</section>
+
+<!-- ===================== Kahoot ===================== -->
+<section id="kahoot-sec">
+<h2 class="part" id="kahoot" data-short="🎯 Kahoot">🎯 Kahoot 20 題<small>四色選項・20 秒・速度計分・連對加分</small></h2>
+<div id="khApp"></div>
+</section>
+
+<section>
+<h2 class="part" id="more" data-short="更多">更多玩法</h2>
+<div class="links">
+<a class="m" href="2026-11-18-manga.html"><b>📖 12 頁漫畫</b><span>ハルト × ミキ先生：聽力題型、漢字 休・名・昼・間、〜ことができます</span></a>
+<a class="d" href="2026-11-17.html"><b>🔪 上一篇概念解剖</b><span>11/17 辭書形＋こと（趣味は〜ことです）</span></a>
+</div>
+
+<h2 class="part" id="today" data-short="今天的重點">今天的重點・提醒・15 分鐘</h2>
+<div class="good"><b>今天的重點：</b>① 名詞＋<b>が</b>できます（スキーができます）② 辭書形＋ことができます（漢字を書くことができます）③ あまり＋できません ④ 〜から、〜に行きたいです ⑤ 漢字 子・学・字・休・名・昼・間 ⑥ 聽力：位置詞、より〜のほうが、どうして→から、〔人〕にもらいました。</div>
+<div class="mis"><b>提醒：</b>明天（11/19）課堂上寫作文「私の趣味」，今天先想好內容（老師禁止 AI 代寫）；期末考試一定要寫名字；漢字練習本 p.40 不確定是不是作業，問老師；明天沒有聽到小考。</div>
+<ol>
+<li><b>0–5 分：</b>拿 8 個 ます形（書きます、話します、作ります、乗ります、歌います、食べます、運転します、来ます），每個說成「〜ことができます」。</li>
+<li><b>5–10 分：</b>按 ▶ 聽「五、聽力題型」，先遮住中文猜意思；再把 7 個漢字各寫 3 次。</li>
+<li><b>10–15 分：</b>玩一輪上面的 Kahoot，錯題抄一次；最後用日語想一想明天作文要寫的 3 個重點（自己想，不用寫出來給我）。</li>
+</ol>
+<p class="lead" style="font-size:.85rem">方法來源：李繼剛 ljg-learn「概念解剖」（定錨 → 八刀 → 內觀 → 壓縮）。內容整理自 11/18 課堂，僅供個人複習；聽力練習是照題型自己改寫的句子，不是考卷原文。「できる＝出で来」的字源是通說，當記憶法用。</p>
+</section>
+</main>
+<script src="../assets/common.js"></script>
+<script>
+(function () {
+  'use strict';
+  var TIME = 20;
+  var SHAPES = [{ cls: 'red', shape: '▲' }, { cls: 'blue', shape: '◆' }, { cls: 'yellow', shape: '●' }, { cls: 'green', shape: '■' }];
+  var LS = 'nr_kahoot_20261118_learn';
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function sayJa(t) { if (window.sayJa) window.sayJa(t); else if (window.say) window.say(t, 0.9); }
+  function loadBoard() { try { return JSON.parse(localStorage.getItem(LS) || '[]'); } catch (e) { return []; } }
+  function saveBoard(rows) { try { localStorage.setItem(LS, JSON.stringify(rows.slice(0, 8))); } catch (e) {} }
+  function ex(ja, ro, zh, en) { return '<p lang="ja"><b>' + ja + '</b></p><p class="ro">' + ro + '</p><p>' + zh + '</p>' + (en ? '<p class="en">' + en + '</p>' : ''); }
+
+  var Q = [
+    { tag: 'N＋ができます', q: '「我會滑雪」：スキー（　）できます。', o: ['が', 'を', 'に', 'で'], a: 'が', sa: 'スキーができます。',
+      ex: ex('スキーができます。', 'suki- ga dekimasu.', 'できる 的對象用 が（跟 好き・わかる 一樣）。', 'EN: I can ski. TH: เล่นสกีได้') },
+    { tag: 'ことができます', q: '「書きます」→「漢字を（　）ことができます」', o: ['書く', '書き', '書きます', '書いて'], a: '書く', sa: 'かんじをかくことができます。',
+      ex: ex('漢字を書くことができます。', 'kanji o kaku koto ga dekimasu.', 'こと 前面要用辭書形。', 'EN: dictionary form + koto') },
+    { tag: 'ことができます', q: '「話します」→「日本語を（　）ことができます」', o: ['話す', '話し', '話した', '話つ'], a: '話す', sa: 'にほんごをはなすことができます。',
+      ex: ex('日本語を話すことができます。', 'nihongo o hanasu koto ga dekimasu.', '1 組：し → す。', '') },
+    { tag: 'ことができます', q: '「運転します」→「車を（　）ことができます」', o: ['運転する', '運転す', '運転しる', '運転くる'], a: '運転する', sa: 'くるまをうんてんすることができます。',
+      ex: ex('車を運転することができます。', 'kuruma o unten suru koto ga dekimasu.', '3 組：〜します → 〜する。', '') },
+    { tag: 'ことができます', q: '「我不會做蛋糕」最自然的是？', o: ['ケーキを作ることができません', 'ケーキを作りますことができません', 'ケーキが作ることできません', 'ケーキを作るができません'], a: 'ケーキを作ることができません', sa: 'ケーキをつくることができません。',
+      ex: ex('ケーキを作ることができません。', 'ke-ki o tsukuru koto ga dekimasen.', '辭書形＋こと＋が＋できません。', 'TH: ทำเค้กไม่ได้') },
+    { tag: 'あまり', q: '私はあまり辛い料理を食べることが（　）。', o: ['できません', 'できます', 'できました', 'できる'], a: 'できません', sa: 'わたしはあまりからいりょうりをたべることができません。',
+      ex: ex('私はあまり辛い料理を食べることができません。', 'watashi wa amari karai ryouri o taberu koto ga dekimasen.', 'あまり 後面一定接否定：不太能吃辣。', 'EN: not really able to') },
+    { tag: '助詞', q: 'ダンスクラブ（　）入ります。', o: ['に', 'を', 'で', 'が'], a: 'に', sa: 'ダンスクラブにはいります。',
+      ex: ex('ダンスクラブに入ります。', 'dansu kurabu ni hairimasu.', '加入社團：〜に入ります。', '') },
+    { tag: '單字', q: '要先填表報名考試或講座，用哪個？', o: ['申し込みます', '参加します', '入ります', '習います'], a: '申し込みます', sa: 'しけんにもうしこみます。',
+      ex: ex('試験に申し込みます。', 'shiken ni moushikomimasu.', '申し込みます＝報名（填表）；参加します＝直接去參加。', '') },
+    { tag: '單字', q: '「飲み会」「会議」後面接哪個動詞？', o: ['参加します', '申し込みます', '入ります', '乗ります'], a: '参加します', sa: 'のみかいにさんかします。',
+      ex: ex('飲み会に参加します。', 'nomikai ni sanka shimasu.', '當天直接去 → 参加します。', '') },
+    { tag: '單字', q: '跟老師學料理、書法的「班」叫什麼？', o: ['教室', 'クラブ', 'イベント', 'コンテスト'], a: '教室', sa: 'りょうりきょうしつ、しょどうきょうしつ',
+      ex: ex('料理教室・書道教室', 'ryouri kyoushitsu, shodou kyoushitsu', '教室＝有老師教；クラブ＝大家一起玩。', '') },
+    { tag: '理由', q: '漢字を上手に書くことができません（　）、書道教室へ習いに行きたいです。', o: ['から', 'が', 'まで', 'と'], a: 'から', sa: 'かんじをじょうずにかくことができませんから、しょどうきょうしつへならいにいきたいです。',
+      ex: ex('〜できませんから、習いに行きたいです。', '...dekimasen kara, narai ni ikitai desu.', '〜から＝因為。', 'EN: because') },
+    { tag: '漢字', q: '「人」＋「木」＝？', o: ['休', '体', '本', '林'], a: '休', sa: 'やすみます',
+      ex: ex('休みます', 'yasumimasu', '人靠在樹下休息。', 'TH: พัก') },
+    { tag: '漢字', q: '「名前」怎麼念？', o: ['なまえ', 'めいぜん', 'なぜん', 'みょうまえ'], a: 'なまえ', sa: 'なまえ',
+      ex: ex('名前', 'namae', '名＝夕＋口：天黑了，用嘴說名字。期末考一定要寫！', '') },
+    { tag: '漢字', q: '「昼休み」怎麼念？', o: ['ひるやすみ', 'ちゅうやすみ', 'ひるきゅう', 'あさやすみ'], a: 'ひるやすみ', sa: 'ひるやすみ',
+      ex: ex('昼休み', 'hiruyasumi', '午休。昼休みは12時から1時までです。', '') },
+    { tag: '漢字', q: '「門」裡面放「日」是哪個字？', o: ['間', '問', '聞', '開'], a: '間', sa: 'じかん、あいだ',
+      ex: ex('時間・間', 'jikan, aida', '門縫中間看到太陽＝中間。問＝門＋口、聞＝門＋耳。', '') },
+    { tag: '聽力', listen: 1, q: '聽：她在哪裡？（按 🔊）', o: ['車站前面', '車站後面', '超市旁邊', '公車站裡面'], a: '車站前面', say: 'いま、どこにいますか。えきのまえにいます。', sa: 'えきのまえにいます。',
+      ex: ex('駅の前にいます。', 'eki no mae ni imasu.', '前＝前面。', '') },
+    { tag: '聽力', listen: 1, q: '聽：為什麼沒買？（按 🔊）', o: ['因為太貴了', '因為沒時間', '因為不喜歡', '因為店休息'], a: '因為太貴了', say: 'どうしてくつをかいませんでしたか。たかかったですから。', sa: 'たかかったですから。',
+      ex: ex('高かったですから。', 'takakatta desu kara.', 'どうして → 聽「〜から」前面。', '') },
+    { tag: '聽力', listen: 1, q: '聽：誰比較高？（按 🔊）', o: ['姊姊', '我', '哥哥', '一樣高'], a: '姊姊', say: 'わたしよりあねのほうがせがたかいです。', sa: 'わたしよりあねのほうがせがたかいです。',
+      ex: ex('私より姉のほうが背が高いです。', 'watashi yori ane no hou ga se ga takai desu.', 'A より B のほうが＝B 比 A 更～。', '') },
+    { tag: '聽力', listen: 1, q: '聽一句話，選最好的回答（按 🔊）', o: ['ありがとうございます。姉にもらいました。', 'ありがとうございます。姉にあげました。', 'はい、いいですね。', 'いいえ、かばんです。'], a: 'ありがとうございます。姉にもらいました。', say: 'そのかばん、いいですね。', sa: 'ありがとうございます。あねにもらいました。',
+      ex: ex('そのかばん、いいですね。—ありがとうございます。姉にもらいました。', 'sono kaban, ii desu ne. — arigatou gozaimasu. ane ni moraimashita.', '被稱讚 → 道謝＋說從誰那裡收到（〔人〕にもらいました）。', '') },
+    { tag: '聽力', listen: 1, q: '聽：他會什麼？（按 🔊）', o: ['潛水', '滑雪', '跳舞', '彈鋼琴'], a: '潛水', say: 'わたしはダイビングができます。', sa: 'わたしはダイビングができます。',
+      ex: ex('私はダイビングができます。', 'watashi wa daibingu ga dekimasu.', 'ダイビング＝潛水。', '') }
+  ];
+
+  var app = document.getElementById('khApp');
+  var state;
+  function pointsFor(left, limit) { var e = Math.max(0, limit - left); return Math.round((1 - (e / limit) / 2) * 1000); }
+  function streakBonus(s) { return s < 2 ? 0 : Math.min(500, (s - 1) * 100); }
+  function rankOf(score, total) { var r = score / (total * 1000); return r >= 0.88 ? '🏆 天才！' : r >= 0.72 ? '🎉 很厲害' : r >= 0.55 ? '👍 不錯喔' : '💪 再練一次會更好'; }
+  function top() { var s = document.getElementById('kahoot'); if (s) s.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
+
+  function renderBoard(mine) {
+    var rows = loadBoard().slice().sort(function (a, b) { return b.score - a.score; });
+    if (mine) { var shown = false; rows = rows.map(function (r) { if (!shown && r.t === mine.t) { shown = true; return Object.assign({ me: true }, r); } return r; }); }
+    if (!rows.length) return '<p class="lead">還沒有本機紀錄，來拿第一名吧！</p>';
+    var h = '<h3>本機排行榜</h3><div class="tblwrap"><table class="kh-board"><thead><tr><th>#</th><th>分數</th><th>答對</th><th>連對</th><th>時間（東京）</th></tr></thead><tbody>';
+    rows.forEach(function (r, i) { h += '<tr' + (r.me ? ' class="me"' : '') + '><td>' + (i + 1) + '</td><td>' + r.score + '</td><td>' + r.correct + '/' + r.total + '</td><td>' + r.maxStreak + '</td><td>' + esc(r.when) + (r.me ? '　← 本次' : '') + '</td></tr>'; });
+    return h + '</tbody></table></div><p class="lead" style="font-size:.85rem">只存在這個瀏覽器，不會上傳，也不會出現名字。</p>';
+  }
+  function startScreen() {
+    app.innerHTML = '<div class="kh-hero"><h3>🎯 できる Kahoot</h3><p>照「定錨 → 八刀 → 壓縮」出題，加上漢字、第9課單字和聽力題型。共 <b>' + Q.length + ' 題</b>，其中 5 題聽力。</p><p>每題 20 秒，答得越快分越高，連對有加分。請打開聲音 🔊</p></div>' +
+      '<div class="kh-actions"><button class="kh-btn hot" id="khGo">▶ 開始</button></div>' + renderBoard(null);
+    document.getElementById('khGo').onclick = begin;
+  }
+  function begin() { state = { items: shuffle(Q), i: 0, score: 0, correct: 0, streak: 0, maxStreak: 0, log: [], left: TIME, timer: null, answered: false }; showQ(); top(); }
+  function showQ() {
+    var it = state.items[state.i];
+    var opts = shuffle(it.o).map(function (t, i) { return { text: t, color: SHAPES[i] }; });
+    state.answered = false; state.left = TIME;
+    app.innerHTML = '<div class="kh-stats"><span class="kh-chip">第 <span class="n">' + (state.i + 1) + '</span> / ' + state.items.length + '</span><span class="kh-chip">🔥 連對 <span class="n">' + state.streak + '</span></span><span class="kh-chip">分數 <span class="n">' + state.score + '</span></span><span class="kh-chip" id="khClock">⏱ ' + TIME + ' 秒</span></div>' +
+      '<div class="kh-timer" id="khBar"><i id="khBarI"></i></div>' +
+      '<div class="kh-q"><div class="tag">' + esc(it.tag) + (it.listen ? '　🎧 聽力題' : '') + '</div><div class="qt" lang="ja">' + it.q + '</div>' +
+      (it.say ? '<button class="kh-play" type="button" id="khListen">🔊 播放題目</button>' : '') + '</div>' +
+      '<div class="kh-grid" id="khOpts"></div><div id="khFb"></div>';
+    var box = document.getElementById('khOpts');
+    opts.forEach(function (op) {
+      var b = document.createElement('button');
+      b.className = 'kh-opt ' + op.color.cls; b.setAttribute('data-answer', op.text); b.lang = 'ja';
+      b.innerHTML = '<span class="shape">' + op.color.shape + '</span>' + esc(op.text);
+      b.onclick = function () { lock(op.text, box); };
+      box.appendChild(b);
+    });
+    var pl = document.getElementById('khListen');
+    if (pl) { pl.onclick = function () { sayJa(it.say); }; setTimeout(function () { sayJa(it.say); }, 280); }
+    tick();
+  }
+  function tick() {
+    clearInterval(state.timer);
+    var bar = document.getElementById('khBar'), barI = document.getElementById('khBarI'), clock = document.getElementById('khClock');
+    function paint() { barI.style.width = (state.left / TIME * 100) + '%'; bar.className = 'kh-timer' + (state.left <= 5 ? ' hot' : state.left <= 10 ? ' warn' : ''); clock.textContent = '⏱ ' + Math.ceil(state.left) + ' 秒'; }
+    paint();
+    var last = Date.now();
+    state.timer = setInterval(function () {
+      if (state.answered) { clearInterval(state.timer); return; }
+      var now = Date.now(); state.left -= (now - last) / 1000; last = now;
+      if (state.left <= 0) { state.left = 0; paint(); clearInterval(state.timer); lock(null, document.getElementById('khOpts')); return; }
+      paint();
+    }, 80);
+  }
+  function lock(choice, box) {
+    if (state.answered) return;
+    state.answered = true; clearInterval(state.timer);
+    var it = state.items[state.i], ok = choice === it.a, pts = 0, bonus = 0;
+    if (ok) { pts = pointsFor(state.left, TIME); state.streak++; if (state.streak > state.maxStreak) state.maxStreak = state.streak; bonus = streakBonus(state.streak); state.score += pts + bonus; state.correct++; }
+    else state.streak = 0;
+    state.log.push({ it: it, mine: choice, ok: ok });
+    Array.prototype.forEach.call(box.querySelectorAll('.kh-opt'), function (b) {
+      b.disabled = true; var l = b.getAttribute('data-answer');
+      if (l === it.a) b.classList.add('pick-ok'); else if (choice && l === choice) b.classList.add('pick-bad'); else b.classList.add('dim');
+    });
+    document.getElementById('khFb').innerHTML = '<div class="kh-fb ' + (ok ? 'ok' : 'bad') + '"><div class="result">' + (ok ? '✅ 答對了！' : choice == null ? '⏰ 時間到了' : '❌ 再記一下') + '</div>' +
+      (ok ? '<div class="pts">＋' + pts + ' 分' + (bonus ? '　連對加分 ＋' + bonus : '') + '　目前 ' + state.score + ' 分</div>' : '<div class="pts">正確答案：<b>' + esc(it.a) + '</b>　連對中斷，分數 ' + state.score + '</div>') +
+      '<div class="kh-ex">' + it.ex + '</div><div class="kh-actions"><button class="kh-btn hot" id="khNext">' + (state.i + 1 >= state.items.length ? '看結果' : '下一題 →') + '</button><button class="kh-btn alt" id="khRe">🔊 再聽一次</button></div></div>';
+    document.getElementById('khNext').onclick = function () { state.i++; if (state.i >= state.items.length) endScreen(); else showQ(); };
+    document.getElementById('khRe').onclick = function () { sayJa(it.sa || it.say); };
+    if (ok) setTimeout(function () { sayJa(it.sa || it.say); }, 250);
+  }
+  function tokyoWhen() { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) + '（東京時間）'; }
+  function endScreen() {
+    var rec = { score: state.score, correct: state.correct, total: state.items.length, maxStreak: state.maxStreak, when: tokyoWhen(), t: Date.now() };
+    var board = loadBoard(); board.push(rec); board.sort(function (a, b) { return b.score - a.score; }); saveBoard(board);
+    var wrong = state.log.filter(function (x) { return !x.ok; });
+    app.innerHTML = '<div class="kh-end"><div class="rank">' + rankOf(state.score, state.items.length) + '</div><div class="score">' + state.score + '</div><p>分</p>' +
+      '<div class="kh-podium"><div class="p p2"><b>' + (board[1] ? board[1].score : '—') + '</b><span>第 2</span></div><div class="p p1"><b>' + board[0].score + '</b><span>第 1</span></div><div class="p p3"><b>' + (board[2] ? board[2].score : '—') + '</b><span>第 3</span></div></div>' +
+      '<p>答對 <b>' + state.correct + ' / ' + state.items.length + '</b>　·　最高連對 <b>' + state.maxStreak + '</b></p></div>' + renderBoard(rec) +
+      (wrong.length ? '<h3>錯題回顧</h3>' + wrong.map(function (w, i) { return '<div class="box"><b>' + (i + 1) + '. ' + w.it.q + '</b><p>你的答案：<span style="color:var(--bad)">' + esc(w.mine || '（沒作答）') + '</span><br>正確：<b style="color:var(--ok)">' + esc(w.it.a) + '</b></p><div class="kh-ex">' + w.it.ex + '</div></div>'; }).join('') : '<p class="tip">全部答對，太厲害了！</p>') +
+      '<div class="kh-actions" style="justify-content:center"><button class="kh-btn hot" id="khAgain">再玩一次</button><a class="kh-btn alt" href="2026-11-18-manga.html">去看漫畫</a><a class="kh-btn alt" href="#compress">回去看「壓縮」</a></div>';
+    document.getElementById('khAgain').onclick = begin;
+    top();
+  }
+  startScreen();
+})();
+</script>
+</body>
+</html>
